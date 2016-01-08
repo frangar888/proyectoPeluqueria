@@ -27,3 +27,14 @@ function onShow(firstShow, event) {
 function onActionSalir(event) {
 	application.closeSolution()
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"DC9CCE76-83B6-4FDD-B5B4-51A30B444FF3"}
+ */
+function onActionConfig(event) {
+	forms.p_config.controller.show()
+}
