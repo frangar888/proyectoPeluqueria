@@ -36,7 +36,7 @@ function auntenticar(){
 }
 
 /**
- * TODO generated, please specify type and doc for the params
+ * 
  * @param lnk_tipo
  * @param lnk_mensaje
  * @param lnk_accion_btn_si
@@ -101,8 +101,48 @@ function validarUser(){
 		if(fs_users.search() == 0){
 			return 2
 		}else{
+			vg_user_id = fs_users.user_id
 			return 0
 		}
 	}
 	
+}
+
+/**
+ * 
+ * @param lnk_form
+ * 
+ *
+ * @properties={typeid:24,uuid:"B2DD8048-A8DA-4696-B5AB-FC944341C95E"}
+ */
+function validarPermisos(lnk_form){
+	/** @type {JSFoundset<db:/peluqueria/cfg_permisos>}*/
+	var fs_permisos = databaseManager.getFoundSet('peluqueria','cfg_permisos')
+	fs_permisos.find()
+	fs_permisos.user_id = globals.vg_user_id
+	
+	
+}
+
+/**
+ * @properties={typeid:24,uuid:"C8A9CF6B-F8F9-4593-BFB3-D3D22F50A348"}
+ * @AllowToRunInFind
+ */
+function grabarFormUUID(lnk_form, lnk_nombre_opcion){
+	var ds = security.getElementUUIDs(lnk_form)
+	var uuid = ds.getValue(1,2)
+	/** @type {JSFoundset<db:/peluqueria/cfg_formularios>}*/
+	var fs_forms = databaseManager.getFoundSet('peluqueria','cfg_formularios')
+	fs_forms.find()
+	fs_forms.form_uuid = uuid
+	if(fs_forms.search() == 0){
+		fs_forms.newRecord()
+		fs_forms.form_nombre = lnk_form
+		fs_forms.form_uuid = uuid
+		fs_forms.opcion_nombre = lnk_nombre_opcion
+		databaseManager.saveData(fs_forms)
+	}else{
+		fs_forms.opcion_nombre = lnk_nombre_opcion
+		databaseManager.saveData(fs_forms)
+	}
 }

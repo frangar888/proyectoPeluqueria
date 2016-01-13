@@ -1,0 +1,11 @@
+dataSource:"db:/peluqueria/prd_rubros",
+items:[
+{
+dataProviderIDToAggregate:"rubro_id",
+name:"aggr_cant_rubros",
+typeid:40,
+uuid:"EF3283F1-E13C-4570-B6CD-C8648D90835B"
+}
+],
+typeid:39,
+uuid:"3C5252F4-716F-485A-A7B4-F8726527DE8A"

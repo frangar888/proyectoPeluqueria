@@ -1,0 +1,11 @@
+dataSource:"db:/peluqueria/adn_usuarios",
+items:[
+{
+dataProviderIDToAggregate:"user_id",
+name:"aggr_cant_usuarios",
+typeid:40,
+uuid:"10F06EC1-A772-4480-9BE2-AF8C729C4109"
+}
+],
+typeid:39,
+uuid:"C532DAE6-F16F-4B4B-9F6F-33622D17BBBC"
