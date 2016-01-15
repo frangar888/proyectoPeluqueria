@@ -20,3 +20,14 @@ function onActionVolver(event) {
 function onLoad(event) {
 	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text)
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"7A5D4151-F379-44B7-B7FA-57CA3660B57C"}
+ */
+function onActionDetalle(event) {
+	forms.p_usuarios_detalle.controller.show()
+}

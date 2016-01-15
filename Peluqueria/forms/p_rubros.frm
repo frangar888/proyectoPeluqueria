@@ -124,6 +124,8 @@ mediaOptions:1,
 onActionMethodID:"-1",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
+showClick:false,
+showFocus:false,
 size:"20,20",
 typeid:7,
 uuid:"C1B287E6-2A47-4DCF-AB4A-673BDAD8716D"
