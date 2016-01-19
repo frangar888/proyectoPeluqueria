@@ -85,7 +85,7 @@ uuid:"839F82C4-D8A6-489E-93CA-D1B0740E56E7"
 },
 {
 formIndex:7,
-imageMediaID:"9056D998-751A-425B-8B21-44FBB221FC8E",
+imageMediaID:"5610BF5C-0B92-498B-911F-AC6937D161F7",
 location:"5,173",
 mediaOptions:1,
 onActionMethodID:"7A5D4151-F379-44B7-B7FA-57CA3660B57C",
@@ -127,7 +127,7 @@ uuid:"A560C4AF-7686-4EE1-B3E6-D2DEE713A754"
 },
 {
 formIndex:6,
-imageMediaID:"4586B1A8-3240-41E6-8773-BCF542CFB722",
+imageMediaID:"78EE323D-3835-4DE6-8166-B7AA78440F01",
 location:"236,67",
 mediaOptions:1,
 name:"btn_salirc",
@@ -189,7 +189,7 @@ uuid:"E9BE03BD-5426-4091-A978-B39599540500"
 },
 {
 formIndex:6,
-imageMediaID:"27E5A3B3-51A2-4A6C-94F7-7E69661699EF",
+imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
 location:"116,67",
 mediaOptions:1,
 name:"btn_salir",

@@ -19,13 +19,13 @@ uuid:"243EEC27-6A75-4FAC-B7F9-59F5C990BC02"
 },
 {
 formIndex:7,
-imageMediaID:"9056D998-751A-425B-8B21-44FBB221FC8E",
+imageMediaID:"5610BF5C-0B92-498B-911F-AC6937D161F7",
 location:"5,108",
 mediaOptions:1,
 onActionMethodID:"-1",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
-size:"37,20",
+size:"20,20",
 typeid:7,
 uuid:"357C2974-BAD7-46AF-9698-7B496D5402EF"
 },

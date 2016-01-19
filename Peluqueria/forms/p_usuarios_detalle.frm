@@ -37,7 +37,7 @@ uuid:"13EB83D3-02C2-415A-9955-E60CD955AE7B"
 },
 {
 formIndex:6,
-imageMediaID:"27E5A3B3-51A2-4A6C-94F7-7E69661699EF",
+imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
 location:"116,67",
 mediaOptions:1,
 name:"btn_salir",
@@ -80,7 +80,7 @@ uuid:"7D7CAE79-E676-4C90-AC3F-3EC75F85234B"
 },
 {
 formIndex:6,
-imageMediaID:"AA85A71C-C522-42F9-B8D5-2CDC99C04B8E",
+imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
 location:"236,67",
 mediaOptions:1,
 name:"btn_salirc",
