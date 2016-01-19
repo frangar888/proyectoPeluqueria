@@ -64,7 +64,7 @@ uuid:"41940288-8967-4987-AD4D-1750FE1AAB00"
 },
 {
 formIndex:8,
-imageMediaID:"82A03CFD-2791-4E89-8385-5151660ABBEB",
+imageMediaID:"3DEACBDD-267A-4331-88D5-C4FCDA6AA8FC",
 location:"15,10",
 name:"logo",
 size:"82,83",

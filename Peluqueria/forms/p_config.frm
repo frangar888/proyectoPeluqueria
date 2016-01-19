@@ -110,7 +110,7 @@ uuid:"9B62285C-AFA8-4591-9436-B1F2DD4E5DED"
 },
 {
 horizontalAlignment:0,
-imageMediaID:"82A03CFD-2791-4E89-8385-5151660ABBEB",
+imageMediaID:"3DEACBDD-267A-4331-88D5-C4FCDA6AA8FC",
 location:"10,10",
 size:"96,92",
 text:"",

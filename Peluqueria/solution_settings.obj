@@ -1,5 +1,6 @@
-firstFormID:"E630C45C-803F-4F85-B702-4CF559477963",
+firstFormID:"1B754C30-D474-49F7-825F-25F16B346CDC",
 loginFormID:"-1",
-modulesNames:"Relaciones",
+modulesNames:"Relaciones,Login",
+onOpenMethodID:"C3D2B4F8-8CD1-4E07-9040-BD408AD95CFD",
 typeid:43,
 uuid:"8BA57DD6-B346-4039-8E0D-9E7FD454B883"

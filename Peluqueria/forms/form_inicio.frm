@@ -1,7 +1,7 @@
 items:[
 {
 anchors:11,
-imageMediaID:"82A03CFD-2791-4E89-8385-5151660ABBEB",
+imageMediaID:"3DEACBDD-267A-4331-88D5-C4FCDA6AA8FC",
 location:"369,14",
 name:"logo",
 size:"272,263",

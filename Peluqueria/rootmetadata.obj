@@ -1,5 +1,5 @@
 fileVersion:47,
-mustAuthenticate:false,
+mustAuthenticate:true,
 name:"Peluqueria",
 solutionType:1,
 typeid:43,

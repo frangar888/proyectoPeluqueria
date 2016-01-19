@@ -51,7 +51,7 @@ uuid:"23F33F85-4D36-46C0-8DC9-48336049F9FA"
 },
 {
 formIndex:8,
-imageMediaID:"82A03CFD-2791-4E89-8385-5151660ABBEB",
+imageMediaID:"3DEACBDD-267A-4331-88D5-C4FCDA6AA8FC",
 location:"15,10",
 name:"logo",
 size:"82,83",
