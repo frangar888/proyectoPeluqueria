@@ -74,7 +74,6 @@ typeid:7,
 uuid:"5E937562-25E2-415B-B176-7F149E23BD2D"
 },
 {
-background:"#9a9a9a",
 borderType:"EmptyBorder,0,0,0,0",
 formIndex:9,
 labelFor:"rubro_cod",

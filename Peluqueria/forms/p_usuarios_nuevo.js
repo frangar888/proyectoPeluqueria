@@ -42,7 +42,7 @@ var vl_adn_nombre = null;
  * @properties={typeid:24,uuid:"75993073-BF25-4D19-825A-AB1FBD8BF233"}
  */
 function onLoad(event) {
-	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text)
+	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,1)
 }
 
 /**
@@ -54,14 +54,22 @@ function onLoad(event) {
  * @properties={typeid:24,uuid:"F8F5D77E-4B08-41B7-B826-D5AFAE92C370"}
  */
 function onShow(firstShow, event) {
-	if(!globals.checkearAdmin(globals.obtenerPermisos(globals.getFormID(controller.getName()),globals.vg_user_id),globals.getFormID(controller.getName()),[elements.btn_grabar.getName()],controller.getName())){
+//	if(!globals.checkearAdmin(globals.vg_user_id,globals.getFormID(controller.getName()),[elements.btn_grabar.getName()],controller.getName())){
+//		if(globals.validarLeer(globals.vg_user_id,globals.getFormID(controller.getName()))){
+			globals.validarPermisos(globals.vg_user_id,globals.getFormID(controller.getName()),1)
+	//	}else{
+	//		forms.p_usuarios.controller.show()
+	//		globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
+	//	}
+	
+/*	if(!globals.checkearAdmin(globals.obtenerPermisos(globals.getFormID(controller.getName()),globals.vg_user_id),globals.getFormID(controller.getName()),[elements.btn_grabar.getName()],controller.getName())){
 		if(globals.validarLeer(globals.obtenerPermisos(globals.getFormID(controller.getName()),globals.vg_user_id),globals.getFormID(controller.getName()))){
 			globals.validarPermisos(globals.obtenerPermisos(globals.getFormID(controller.getName()),globals.vg_user_id),controller.getName(),1)
 		}else{
 			forms.p_config.controller.show()
 			globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
 		}
-	}
+	}*/
 	vl_adn_nombre = null
 	vl_email = null
 	vl_password = null

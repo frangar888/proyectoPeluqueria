@@ -6,8 +6,12 @@
  * @param {JSEvent} event the event that triggered the action
  *
  * @properties={typeid:24,uuid:"5C7E5D94-B9AD-41FB-AA66-15DF1660FA0A"}
+ * @AllowToRunInFind
  */
 function onShow(firstShow, event) {
+	controller.find()
+	form_tipo = 0
+	controller.search()
 	obtenerPermisos()
 }
 
@@ -19,7 +23,7 @@ function onShow(firstShow, event) {
  * @properties={typeid:24,uuid:"592630DD-FB6C-4CDA-90D7-54FE568C6029"}
  */
 function onLoad(event) {
-	globals.grabarFormUUID(controller.getName(),elements.titulo.text)
+	globals.grabarFormUUID(controller.getName(),elements.titulo.text,1)
 }
 
 /**
@@ -27,6 +31,38 @@ function onLoad(event) {
  * @AllowToRunInFind
  */
 function obtenerPermisos(){
+	for (var index = 1; index <= foundset.getSize(); index++) {
+		var record = foundset.getRecord(index);
+		record.calc_admin = 0
+		record.calc_borrar = 0
+		record.calc_imprimir = 0
+		record.calc_leer = 0
+		record.calc_modificar = 0
+		record.calc_nuevo = 0
+		record.cfg_formularios_to_cfg_permisos_2.find()
+		record.cfg_formularios_to_cfg_permisos_2.user_id = forms.p_usuarios_detalle.user_id
+		if(record.cfg_formularios_to_cfg_permisos_2.search() != 0){
+		if(record.cfg_formularios_to_cfg_permisos_2.cfg_perm_leer == 1){
+			record.calc_leer = 1
+		}
+		if(record.cfg_formularios_to_cfg_permisos_2.cfg_perm_grabar == 1){
+			record.calc_modificar = 1
+		}
+		if(record.cfg_formularios_to_cfg_permisos_2.cfg_perm_nuevo == 1){
+			record.calc_nuevo = 1
+		}
+		if(record.cfg_formularios_to_cfg_permisos_2.cfg_perm_borrar == 1){
+			record.calc_borrar = 1
+		}
+		if(record.cfg_formularios_to_cfg_permisos_2.cfg_perm_print == 1){
+			record.calc_imprimir = 1
+		}
+		if(record.cfg_formularios_to_cfg_permisos_2.cfg_perm_admin == 1){
+			record.calc_admin = 1
+		}
+	}
+	}
+	/*
 	for (var index = 1; index <= foundset.getSize(); index++) {
 		var record = foundset.getRecord(index);
 		record.calc_admin = 0
@@ -73,7 +109,7 @@ function obtenerPermisos(){
 		}
 	
 	}
-
+*/
 }
 
 /**
@@ -81,20 +117,57 @@ function obtenerPermisos(){
  * @AllowToRunInFind
  */
 function actualizarPermisos(){
-	/*for (var index = 1; index <= foundset.getSize(); index++) {
-		var record = foundset.getRecord(index);
-		record.cfg_formularios_to_cfg_permisos.loadAllRecords()
-		if(utils.hasRecords(record.cfg_formularios_to_cfg_permisos)){
 
-				record.cfg_formularios_to_cfg_permisos.deleteAllRecords();
-
-		}
-	}*/
 	var cantReg = databaseManager.getFoundSetCount(foundset)
-	/** @type {JSFoundset<db:/peluqueria/cfg_permisos>}*/
-	var fs_permisos = databaseManager.getFoundSet('peluqueria','cfg_permisos')
-	
+	/** @type {JSFoundset<db:/peluqueria/cfg_permisos_2>}*/
+	var fs_permisos = databaseManager.getFoundSet('peluqueria','cfg_permisos_2')
+	fs_permisos.loadAllRecords()
+	fs_permisos.find()
+	fs_permisos.user_id = forms.p_usuarios_detalle.user_id
+	if(fs_permisos.search() != 0){
+		fs_permisos.deleteAllRecords()
+		databaseManager.saveData(fs_permisos)
+	}
 	for (var index = 1; index <= cantReg; index++) {
+		var record = foundset.getRecord(index);
+
+		fs_permisos.loadAllRecords()
+			fs_permisos.newRecord()
+			fs_permisos.form_id = record.form_id
+			fs_permisos.user_id = forms.p_usuarios_detalle.user_id
+			if(record.form_uuid == 'DA6E1FF1-8287-45B2-8A26-DE2809660D12' || record.form_uuid == 'FF14C89E-CF24-48DF-8D0E-B29F86A2BF8E' || record.form_uuid == '219184CF-FC76-4440-919C-A3C5E0421079'){
+				record.calc_leer = 1
+			}
+			if(record.calc_admin == 0){
+				if(record.calc_leer == 1){
+					fs_permisos.cfg_perm_leer = 1
+				}
+				if(record.calc_modificar == 1){
+					fs_permisos.cfg_perm_grabar = 1
+				}
+				if(record.calc_nuevo == 1){
+					fs_permisos.cfg_perm_nuevo = 1
+				}
+				if(record.calc_borrar == 1){
+					fs_permisos.cfg_perm_borrar = 1
+				}
+				if(record.calc_imprimir == 1){
+					fs_permisos.cfg_perm_print = 1
+				}
+			}else{
+				fs_permisos.cfg_perm_print = 1
+				fs_permisos.cfg_perm_borrar = 1
+				fs_permisos.cfg_perm_nuevo = 1
+				fs_permisos.cfg_perm_grabar = 1
+				fs_permisos.cfg_perm_admin = 1
+				fs_permisos.cfg_perm_leer = 1
+			}
+			databaseManager.saveData(fs_permisos)
+		
+	}
+	
+	
+/*	for (var index = 1; index <= cantReg; index++) {
 		var record = foundset.getRecord(index);
 		fs_permisos.find()
 		fs_permisos.user_id = forms.p_usuarios_detalle.user_id
@@ -163,8 +236,8 @@ function actualizarPermisos(){
 			record3.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
 		}
 	
-	}
-	databaseManager.saveData()
+	}*/
+	//databaseManager.saveData()
 }
 
 /**
