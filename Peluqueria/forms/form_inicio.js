@@ -12,7 +12,8 @@ function onShow(firstShow, event) {
 
 	elements.grp_botones.setLocation(ancho/2 - ancho/4,341)
 	elements.logo.setLocation(ancho/2 - ancho/16,14)
-	elements.btn_salir.setLocation(ancho - ancho/20,15)
+	elements.btn_salir.setLocation(ancho - ancho/15,15)
+	elements.btn_usuario.setLocation(ancho - ancho/9,15)
 	
 }
 
@@ -25,7 +26,7 @@ function onShow(firstShow, event) {
  * @properties={typeid:24,uuid:"330DF65B-53DE-474C-A794-4FC86400BBFE"}
  */
 function onActionSalir(event) {
-	application.closeSolution()
+	security.logout('Peluqueria')
 }
 
 /**
@@ -37,4 +38,16 @@ function onActionSalir(event) {
  */
 function onActionConfig(event) {
 	forms.p_config.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"0BE1A03F-F241-4523-8FB3-DC3C55106DF9"}
+ */
+function onActionUser(event) {
+	forms.p_usuario_propio.controller.loadRecords(globals.vg_user_id)
+	forms.p_usuario_propio.controller.show()
 }

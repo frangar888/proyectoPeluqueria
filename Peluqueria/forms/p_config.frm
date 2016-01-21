@@ -121,7 +121,7 @@ uuid:"EBBCECF3-D5E2-4833-B34C-AA1C88F4C47F"
 ],
 name:"p_config",
 navigatorID:"-1",
-onShowMethodID:"-1",
+onShowMethodID:"09A49535-B580-4700-AF10-CFB0E5BF36A5",
 showInMenu:true,
 size:"1000,480",
 styleClass:"main",

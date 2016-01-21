@@ -50,3 +50,17 @@ function onShow(firstShow, event) {
 		}
 	}
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"36C1A64C-46B9-49FF-8CF7-DC97236E502F"}
+ */
+function onActionNuevo(event) {
+	forms.p_usuarios_nuevo.controller.show()
+}
+
+
+

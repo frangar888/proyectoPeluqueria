@@ -105,7 +105,7 @@ typeid:7,
 uuid:"E647FFF8-7639-4833-A9C4-440EF1CAAA62"
 }
 ],
-name:"template_formulario",
+name:"template_listado",
 navigatorID:"-1",
 onLoadMethodID:"ADD4513C-80BA-4D33-9AC0-89F505BCF226",
 showInMenu:true,

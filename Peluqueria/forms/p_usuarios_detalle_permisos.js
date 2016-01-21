@@ -37,31 +37,37 @@ function obtenerPermisos(){
 		record.calc_nuevo = 0
 		record.cfg_formularios_to_cfg_permisos.find()
 		record.cfg_formularios_to_cfg_permisos.permiso_tipo = 0
+		record.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
 		if(record.cfg_formularios_to_cfg_permisos.search() != 0){
 			record.calc_leer = 1
 		}
 		record.cfg_formularios_to_cfg_permisos.find()
 		record.cfg_formularios_to_cfg_permisos.permiso_tipo = 1
+		record.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
 		if(record.cfg_formularios_to_cfg_permisos.search() != 0){
 			record.calc_modificar = 1
 		}
 		record.cfg_formularios_to_cfg_permisos.find()
 		record.cfg_formularios_to_cfg_permisos.permiso_tipo = 2
+		record.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
 		if(record.cfg_formularios_to_cfg_permisos.search() != 0){
 			record.calc_nuevo = 1
 		}
 		record.cfg_formularios_to_cfg_permisos.find()
 		record.cfg_formularios_to_cfg_permisos.permiso_tipo = 3
+		record.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
 		if(record.cfg_formularios_to_cfg_permisos.search() != 0){
 			record.calc_borrar = 1
 		}
 		record.cfg_formularios_to_cfg_permisos.find()
 		record.cfg_formularios_to_cfg_permisos.permiso_tipo = 4
+		record.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
 		if(record.cfg_formularios_to_cfg_permisos.search() != 0){
 			record.calc_imprimir = 1
 		}
 		record.cfg_formularios_to_cfg_permisos.find()
 		record.cfg_formularios_to_cfg_permisos.permiso_tipo = 5
+		record.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
 		if(record.cfg_formularios_to_cfg_permisos.search() != 0){
 			record.calc_admin = 1
 		}
@@ -72,65 +78,89 @@ function obtenerPermisos(){
 
 /**
  * @properties={typeid:24,uuid:"AB0999FD-A567-4AFB-B1F1-7F152F5A8E1E"}
+ * @AllowToRunInFind
  */
 function actualizarPermisos(){
-	for (var index = 1; index <= foundset.getSize(); index++) {
+	/*for (var index = 1; index <= foundset.getSize(); index++) {
 		var record = foundset.getRecord(index);
 		record.cfg_formularios_to_cfg_permisos.loadAllRecords()
 		if(utils.hasRecords(record.cfg_formularios_to_cfg_permisos)){
-		//	var cant = record.cfg_formularios_to_cfg_permisos.getSize()
-		//	for (var index2 = 1; index2 <= cant ; index2++) {
+
 				record.cfg_formularios_to_cfg_permisos.deleteAllRecords();
-		//	}
+
+		}
+	}*/
+	var cantReg = databaseManager.getFoundSetCount(foundset)
+	/** @type {JSFoundset<db:/peluqueria/cfg_permisos>}*/
+	var fs_permisos = databaseManager.getFoundSet('peluqueria','cfg_permisos')
+	
+	for (var index = 1; index <= cantReg; index++) {
+		var record = foundset.getRecord(index);
+		fs_permisos.find()
+		fs_permisos.user_id = forms.p_usuarios_detalle.user_id
+		fs_permisos.form_id = record.form_id
+		fs_permisos.search()
+		if(utils.hasRecords(fs_permisos)){
+			fs_permisos.deleteAllRecords()
 		}
 	}
+	
+
+	
 	databaseManager.saveData()
 	for (var index3 = 1; index3 <= foundset.getSize(); index3++) {
 		var record3 = foundset.getRecord(index3);
 		if(record3.form_uuid == 'DA6E1FF1-8287-45B2-8A26-DE2809660D12' || record3.form_uuid == 'FF14C89E-CF24-48DF-8D0E-B29F86A2BF8E' || record3.form_uuid == '219184CF-FC76-4440-919C-A3C5E0421079'){
 			record3.calc_leer = 1
 		}
-		if(record3.calc_leer == 1){
-			record3.cfg_formularios_to_cfg_permisos.newRecord()
-			record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
-			record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
-			record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 0
-			record3.cfg_formularios_to_cfg_permisos.user_id = globals.vg_user_id
-		}
-		if(record3.calc_modificar == 1){
-			record3.cfg_formularios_to_cfg_permisos.newRecord()
-			record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
-			record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
-			record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 1
-			record3.cfg_formularios_to_cfg_permisos.user_id = globals.vg_user_id
-		}
-		if(record3.calc_nuevo == 1){
-			record3.cfg_formularios_to_cfg_permisos.newRecord()
-			record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
-			record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
-			record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 2
-			record3.cfg_formularios_to_cfg_permisos.user_id = globals.vg_user_id
-		}
-		if(record3.calc_borrar == 1){
-			record3.cfg_formularios_to_cfg_permisos.newRecord()
-			record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
-			record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
-			record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 3
-			record3.cfg_formularios_to_cfg_permisos.user_id = globals.vg_user_id
-		}
-		if(record3.calc_imprimir == 1){
-			record3.cfg_formularios_to_cfg_permisos.newRecord()
-			record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
-			record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
-			record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 4
-			record3.cfg_formularios_to_cfg_permisos.user_id = globals.vg_user_id
-		}
-		if(record3.calc_admin == 1){
+		if(record3.calc_admin == 0){
+			if(record3.calc_leer == 1){
+				record3.cfg_formularios_to_cfg_permisos.newRecord()
+				record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
+				record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
+				record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 0
+				record3.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
+			}
+			if(record3.calc_modificar == 1){
+				record3.cfg_formularios_to_cfg_permisos.newRecord()
+				record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
+				record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
+				record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 1
+				record3.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
+			}
+			if(record3.calc_nuevo == 1){
+				record3.cfg_formularios_to_cfg_permisos.newRecord()
+				record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
+				record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
+				record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 2
+				record3.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
+			}
+			if(record3.calc_borrar == 1){
+				record3.cfg_formularios_to_cfg_permisos.newRecord()
+				record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
+				record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
+				record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 3
+				record3.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
+			}
+			if(record3.calc_imprimir == 1){
+				record3.cfg_formularios_to_cfg_permisos.newRecord()
+				record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
+				record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
+				record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 4
+				record3.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
+			}
+		}else{
 			record3.cfg_formularios_to_cfg_permisos.newRecord()
 			record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
 			record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
 			record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 5
-			record3.cfg_formularios_to_cfg_permisos.user_id = globals.vg_user_id
+			record3.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
+			
+			record3.cfg_formularios_to_cfg_permisos.newRecord()
+			record3.cfg_formularios_to_cfg_permisos.form_id = record3.form_id
+			record3.cfg_formularios_to_cfg_permisos.nombre_form = record3.form_nombre
+			record3.cfg_formularios_to_cfg_permisos.permiso_tipo = 0
+			record3.cfg_formularios_to_cfg_permisos.user_id = forms.p_usuarios_detalle.user_id
 		}
 	
 	}
