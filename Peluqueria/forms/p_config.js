@@ -49,3 +49,14 @@ function onShow(firstShow, event) {
 	}
 }
 
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"88DD5BF4-A31F-4AD8-B84A-C3927C5DD13D"}
+ */
+function onActionLineas(event) {
+	forms.p_lineas.controller.show()
+}

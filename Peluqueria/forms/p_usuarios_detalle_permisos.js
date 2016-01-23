@@ -23,7 +23,7 @@ function onShow(firstShow, event) {
  * @properties={typeid:24,uuid:"592630DD-FB6C-4CDA-90D7-54FE568C6029"}
  */
 function onLoad(event) {
-	globals.grabarFormUUID(controller.getName(),elements.titulo.text,1)
+	globals.grabarFormUUID(controller.getName(),elements.titulo.text,1,globals.getFormID(forms.p_usuarios.controller.getName()))
 }
 
 /**
