@@ -149,6 +149,20 @@ typeid:19,
 uuid:"B2B5C5E9-1BC4-4B2C-8DF1-BBB2DCDCAFBA"
 },
 {
+formIndex:6,
+imageMediaID:"8518F8EF-0583-49A6-9F08-B414A2CF7711",
+location:"356,67",
+mediaOptions:1,
+name:"btn_baja",
+onActionMethodID:"F2710926-0774-42C4-B5A7-FD5BEE12B5B3",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"132,30",
+text:"Dar de Baja",
+typeid:7,
+uuid:"C3008595-79D1-4E11-973F-7E77FC2205E6"
+},
+{
 anchors:11,
 formIndex:15,
 items:[

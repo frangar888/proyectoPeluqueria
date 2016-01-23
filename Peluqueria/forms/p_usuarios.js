@@ -18,7 +18,7 @@ function onActionVolver(event) {
  * @properties={typeid:24,uuid:"311E5484-303D-4BFA-82B9-2D003DED4482"}
  */
 function onLoad(event) {
-	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,0)
+	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,0,0)
 }
 
 /**
@@ -49,14 +49,6 @@ function onShow(firstShow, event) {
 			globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
 		}
 	}
-/*	if(!globals.checkearAdmin(globals.obtenerPermisos(globals.getFormID(controller.getName()),globals.vg_user_id),globals.getFormID(controller.getName()),[elements.btn_nuevo.getName()],controller.getName())){
-		if(globals.validarLeer(globals.obtenerPermisos(globals.getFormID(controller.getName()),globals.vg_user_id),globals.getFormID(controller.getName()))){
-			globals.validarPermisos(globals.obtenerPermisos(globals.getFormID(controller.getName()),globals.vg_user_id),controller.getName(),2)
-		}else{
-			forms.p_config.controller.show()
-			globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
-		}
-	}*/
 }
 
 /**
