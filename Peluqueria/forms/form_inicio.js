@@ -59,7 +59,7 @@ function onActionUser(event) {
 function CentrarCampos() {
 	
 	var ancho = application.getWindow().getWidth()
-	elements.grp_botones.setLocation((ancho - elements.grp_botones.getWidth()) / 2,200)
+	elements.grp_botones.setLocation((ancho - elements.grp_botones.getWidth()) / 2,150)
 	elements.grp_user.setLocation(ancho - elements.grp_user.getWidth()/0.9,15)
 
 
