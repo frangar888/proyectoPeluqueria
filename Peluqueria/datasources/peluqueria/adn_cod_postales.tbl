@@ -1,0 +1,11 @@
+dataSource:"db:/peluqueria/adn_cod_postales",
+items:[
+{
+dataProviderIDToAggregate:"cod_postal_id",
+name:"aggr_cant_cp",
+typeid:40,
+uuid:"E10A8B5E-1C64-4B3C-8D03-C68D1133FF9F"
+}
+],
+typeid:39,
+uuid:"8AB36CF5-0CF3-49BD-BD32-5547D240D206"

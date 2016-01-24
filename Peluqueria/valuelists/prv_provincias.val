@@ -1,0 +1,10 @@
+addEmptyValue:1,
+dataProviderID1:"prv_nombre",
+dataProviderID2:"provincia_id",
+dataSource:"db:/peluqueria/prv_provincias",
+name:"prv_provincias",
+returnDataProviders:2,
+showDataProviders:1,
+typeid:34,
+uuid:"015EEA48-0E91-4073-92F5-CA983AC1054D",
+valueListType:1

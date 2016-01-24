@@ -60,3 +60,14 @@ function onShow(firstShow, event) {
 function onActionLineas(event) {
 	forms.p_lineas.controller.show()
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"48525ECD-5732-4BF1-A49C-C09C712F505D"}
+ */
+function onActionCP(event) {
+	forms.p_cod_postales.controller.show()
+}
