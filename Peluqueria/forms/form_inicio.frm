@@ -1,6 +1,7 @@
 items:[
 {
 anchors:11,
+groupID:"grp_botones",
 imageMediaID:"3DEACBDD-267A-4331-88D5-C4FCDA6AA8FC",
 location:"369,14",
 name:"logo",
@@ -13,7 +14,7 @@ uuid:"060CE510-B82F-4709-80D4-65041C87F4AA"
 {
 borderType:"EmptyBorder,0,0,0,0",
 fontType:"Corbel,0,24",
-formIndex:3,
+formIndex:4,
 groupID:"grp_botones",
 imageMediaID:"7F40E6AC-9622-4E6D-A39C-3843F2C7CB44",
 location:"758,341",
@@ -29,6 +30,7 @@ uuid:"08351510-1773-4DAC-B718-118FE937BAC2"
 {
 borderType:"EmptyBorder,0,0,0,0",
 fontType:"Corbel,0,24",
+formIndex:1,
 groupID:"grp_botones",
 imageMediaID:"6D6B95FC-9309-4C89-8846-5B7C9AE715EF",
 location:"12,341",
@@ -54,7 +56,8 @@ typeid:19,
 uuid:"A53CA214-32FF-45E3-B9D2-7B9CC194EF92"
 },
 {
-formIndex:6,
+formIndex:1,
+groupID:"grp_user",
 imageMediaID:"D0C5FFEE-1748-486F-8E86-A95E96407894",
 location:"883,15",
 mediaOptions:1,
@@ -70,7 +73,7 @@ uuid:"AB07D032-687A-4F56-A4C0-FC250FC115F7"
 {
 borderType:"EmptyBorder,0,0,0,0",
 fontType:"Corbel,0,24",
-formIndex:1,
+formIndex:2,
 groupID:"grp_botones",
 imageMediaID:"8479B493-5023-427C-B11A-34B74FE89462",
 location:"262,341",
@@ -84,7 +87,7 @@ typeid:7,
 uuid:"AB8B7D59-5C07-401E-AEB8-F4E274327A69"
 },
 {
-formIndex:6,
+groupID:"grp_user",
 imageMediaID:"E634905B-8E5E-409F-BAEA-1AB075C47110",
 location:"811,15",
 mediaOptions:1,
@@ -111,7 +114,7 @@ uuid:"C7401F1E-1C82-44AE-8645-69C940612110"
 {
 borderType:"EmptyBorder,0,0,0,0",
 fontType:"Corbel,0,24",
-formIndex:2,
+formIndex:3,
 groupID:"grp_botones",
 imageMediaID:"280AB482-F959-455A-950F-E92F6A5C1799",
 location:"511,341",

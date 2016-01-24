@@ -8,12 +8,13 @@
  * @properties={typeid:24,uuid:"89C649D5-F7E4-4B8E-9772-ADE815FF8ED7"}
  */
 function onShow(firstShow, event) {
-	var ancho = application.getScreenWidth()
+/*	var ancho = application.getScreenWidth()
 
 	elements.grp_botones.setLocation(ancho/2 - ancho/4,341)
 	elements.logo.setLocation(ancho/2 - ancho/16,14)
 	elements.btn_salir.setLocation(ancho - ancho/15,15)
-	elements.btn_usuario.setLocation(ancho - ancho/9,15)
+	elements.btn_usuario.setLocation(ancho - ancho/9,15)*/
+	CentrarCampos()
 	
 }
 
@@ -58,8 +59,9 @@ function onActionUser(event) {
 function CentrarCampos() {
 	
 	var ancho = application.getWindow().getWidth()
-	elements.grp_botones.setLocation((ancho - elements.grp_botones.getWidth()) / 2,300)
-	elements.logo.setLocation(ancho - elements.logo.getWidth() / 2,450)
+	elements.grp_botones.setLocation((ancho - elements.grp_botones.getWidth()) / 2,200)
+	elements.grp_user.setLocation(ancho - elements.grp_user.getWidth()/0.9,15)
+
 
 	
 }
