@@ -51,3 +51,15 @@ function onActionUser(event) {
 	forms.p_usuario_propio.controller.loadRecords(globals.vg_user_id)
 	forms.p_usuario_propio.controller.show()
 }
+
+/**
+ * @properties={typeid:24,uuid:"901A96C7-98A3-43D9-ADCE-33108E16903D"}
+ */
+function CentrarCampos() {
+	
+	var ancho = application.getWindow().getWidth()
+	elements.grp_botones.setLocation((ancho - elements.grp_botones.getWidth()) / 2,300)
+	elements.logo.setLocation(ancho - elements.logo.getWidth() / 2,450)
+
+	
+}
