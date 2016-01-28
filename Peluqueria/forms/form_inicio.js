@@ -65,3 +65,13 @@ function CentrarCampos() {
 
 	
 }
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"49CE2DFA-6190-4AE0-9798-93950D3EC7BC"}
+ */
+function onActionVentas(event) {
+	forms.p_ventas.controller.show()
+}

@@ -1,0 +1,11 @@
+dataSource:"db:/peluqueria/pel_ventas",
+items:[
+{
+dataProviderIDToAggregate:"venta_id",
+name:"aggr_cant_vtas",
+typeid:40,
+uuid:"C9650054-8261-4DB7-B2C6-FC074429D901"
+}
+],
+typeid:39,
+uuid:"08AA8252-57FA-41DE-9C74-6A8867CA87C4"

@@ -1,0 +1,11 @@
+addEmptyValue:1,
+dataProviderID1:"prd_codigo",
+dataProviderID2:"prd_nombre",
+dataProviderID3:"prd_id",
+dataSource:"db:/peluqueria/prd_productos",
+name:"prd_productos",
+returnDataProviders:4,
+showDataProviders:3,
+typeid:34,
+uuid:"FE3D4883-D75C-4412-9A2A-AD4144062C91",
+valueListType:1
