@@ -28,6 +28,10 @@ function onActionVolver(event) {
  */
 function onShow(firstShow, event) {
 	globals.validarPermisosPadre(globals.getFormID(controller.getName()),globals.vg_user_id)
+	controller.newRecord()
+	forms.p_ventas_nuevo_prd.foundset.clear()
+	forms.p_ventas_nuevo_prd.vl_cant_prd = 0
+	forms.p_ventas_nuevo_prd.vl_total = 0
 }
 
 /**
@@ -55,15 +59,18 @@ function onActionNuevoProducto(event) {
  * @properties={typeid:24,uuid:"1EDA3919-4009-4989-83C6-00444E6D0605"}
  */
 function onActionGrabar(event) {
-	if(adn_id != null && adn_id != 0){
+	if(adn_id == null || adn_id == 0){
 		globals.lanzarVentanaEmergente(0,'Seleccione un Cliente.','Info',controller.getName(),null,null)
 		return
-	}else{
-		var win1 = application.createWindow("cerrarVta", JSWindow.MODAL_DIALOG);
-		win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
-		win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
-		win1.resizable = false
-		win1.title= 'Hair System';
 	}
+	if(forms.p_ventas_nuevo_prd.foundset.getSize() == 0){
+		globals.lanzarVentanaEmergente(0,'La Venta no tiene ningún producto.','Info',controller.getName(),null,null)
+		return
+	}
+	var win1 = application.createWindow("cerrarVta", JSWindow.MODAL_DIALOG);
+	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win1.resizable = false
+	win1.title= 'Hair System';
 	win1.show(forms.p_ventas_nuevo_cerrar);
 }

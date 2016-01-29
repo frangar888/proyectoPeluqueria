@@ -64,7 +64,7 @@ imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
 location:"236,66",
 mediaOptions:1,
 name:"btn_grabar",
-onActionMethodID:"-1",
+onActionMethodID:"FE591923-D530-497B-A425-A2E8FA112357",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"110,30",
@@ -154,7 +154,7 @@ typeid:7,
 uuid:"8E1AC892-3A0E-4F1D-92B3-5DFF4880446A"
 },
 {
-height:480,
+height:544,
 partType:5,
 typeid:19,
 uuid:"92ABF6B1-AA5B-4541-84FE-869A4569F939"
@@ -211,6 +211,18 @@ typeid:7,
 uuid:"F06CD90D-65F5-43B9-BAB4-F71DF176A353"
 },
 {
+dataProviderID:"vl_observa",
+displayType:1,
+formIndex:29,
+location:"234,427",
+name:"vl_observa",
+scrollbars:32,
+size:"346,97",
+text:"Vl Observa",
+typeid:4,
+uuid:"F14404D3-A12B-495B-903C-7EFB09AE8A13"
+},
+{
 anchors:11,
 background:"#2ba6d5",
 borderType:"LineBorder,1,#000000",
@@ -220,6 +232,17 @@ size:"744,118",
 text:"",
 typeid:7,
 uuid:"FA44980D-BB30-4DA3-ABD5-76751F9A4339"
+},
+{
+formIndex:28,
+labelFor:"vl_observa",
+location:"92,427",
+name:"vl_observa_label",
+size:"137,20",
+styleClass:"fieldlabel",
+text:"Observaciones:",
+typeid:7,
+uuid:"FE7FBC5A-F0DF-4B5F-B9E2-4151AA64D396"
 }
 ],
 name:"p_ventas_nuevo_cerrar",

@@ -222,6 +222,7 @@ function onActionAceptar(event) {
 		fs_prd.prd_id = vl_prd_id
 		if(fs_prd.search() != 0){
 			forms.p_ventas_nuevo_prd.controller.newRecord()
+			forms.p_ventas_nuevo_prd.venta_id = forms.p_ventas_nuevo.venta_id
 			forms.p_ventas_nuevo_prd.prd_cant = vl_cantidad
 			forms.p_ventas_nuevo_prd.prd_cod_bar = fs_prd.prd_cod_bar
 			forms.p_ventas_nuevo_prd.prd_codigo = fs_prd.prd_codigo

@@ -1,4 +1,11 @@
 /**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"B1319592-0721-4F30-952A-BF13EA5BB1DF"}
+ */
+var vl_observa = null;
+
+/**
  * @type {Number}
  *
  * @properties={typeid:35,uuid:"2BFB22BD-4590-4D24-AE1B-8D5046B19FDC",variableType:8}
@@ -165,4 +172,36 @@ function onActionCancelar(event) {
 	}else{
 		elements.vl_resta.bgcolor = '#80ff80'
 	}
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"FE591923-D530-497B-A425-A2E8FA112357"}
+ */
+function onActionGrabar(event) {
+	forms.p_ventas_nuevo.vta_cod_postal_id = forms.p_ventas_nuevo.pel_ventas_to_adn.cod_postal_id
+	forms.p_ventas_nuevo.vta_dom_cliente = forms.p_ventas_nuevo.pel_ventas_to_adn.adn_domicilio
+	forms.p_ventas_nuevo.vta_dto_1 = vl_descuento
+	forms.p_ventas_nuevo.vta_fecha_emision = application.getServerTimeStamp()
+	forms.p_ventas_nuevo.vta_importe_pago = vl_pago
+	forms.p_ventas_nuevo.vta_importe_total = vl_total_total
+	forms.p_ventas_nuevo.vta_nombre_cliente = forms.p_ventas_nuevo.pel_ventas_to_adn.adn_nombre
+	forms.p_ventas_nuevo.vta_observa = vl_observa
+	/** @type {JSFoundset<db:/peluqueria/prd_movimientos>}*/
+	var fs_mov = databaseManager.getFoundSet('peluqueria','prd_movimientos')
+	var cant = databaseManager.getFoundSetCount(forms.p_ventas_nuevo_prd.foundset)
+	for (var index = 1; index <= cant; index++) {
+		var record = forms.p_ventas_nuevo_prd.foundset.getRecord(index);
+		fs_mov.newRecord()
+		fs_mov.prd_id = record.prd_id
+		fs_mov.mov_ing = 0
+		fs_mov.mov_egr = record.prd_cant
+		fs_mov.venta_id = record.venta_id
+	}
+	databaseManager.saveData()
+	application.getWindow().hide()
+	forms.p_ventas.controller.show()
 }
