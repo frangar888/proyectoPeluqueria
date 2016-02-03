@@ -204,7 +204,13 @@ function onDataChangeCantidad(oldValue, newValue, event) {
  * @properties={typeid:24,uuid:"8A7E9A5F-A11B-470A-868B-838B4394EFF1"}
  */
 function cambiaCantidad(){
-	vl_subtotal = vl_cantidad * vl_precio_final
+	var cant_en_stock = globals.obtieneStock(vl_prd_id)
+	if(cant_en_stock >= vl_cantidad){
+		vl_subtotal = vl_cantidad * vl_precio_final
+	}else{
+		globals.lanzarVentanaEmergente(0,'La cantidad ingresada es mayor a la cantidad en stock del porducto. Cantidad: '+cant_en_stock,'Info',controller.getName(),null,null)
+		return
+	}
 }
 /**
  * Perform the element default action.
@@ -215,7 +221,19 @@ function cambiaCantidad(){
  * @AllowToRunInFind
  */
 function onActionAceptar(event) {
-	if(vl_prd_id != null && vl_prd_id != 0){
+	if(vl_prd_id == null || vl_prd_id == 0){
+		globals.lanzarVentanaEmergente(0,'Seleccione un producto.','Info',controller.getName(),null,null)
+		return
+	}
+	if(vl_cantidad == null || vl_cantidad == 0){
+		globals.lanzarVentanaEmergente(0,'Ingrese la cantidad.','Info',controller.getName(),null,null)
+		return
+	}
+	var cant_en_stock = globals.obtieneStock(vl_prd_id)
+	if(cant_en_stock < vl_cantidad){
+		globals.lanzarVentanaEmergente(0,'La cantidad ingresada es mayor a la cantidad en stock del porducto. Cantidad: '+cant_en_stock,'Info',controller.getName(),null,null)
+		return
+	}
 		/** @type {JSFoundset<db:/peluqueria/prd_productos>}*/
 		var fs_prd = databaseManager.getFoundSet('peluqueria','prd_productos')
 		fs_prd.find()
@@ -237,10 +255,7 @@ function onActionAceptar(event) {
 		}
 		inicializarVariables()
 		elements.vl_codigo.requestFocus()
-	}else{
-		globals.lanzarVentanaEmergente(0,'Seleccione un producto.','Info',controller.getName(),null,null)
-		return
-	}
+
 }
 
 /**

@@ -149,7 +149,7 @@ location:"92,372",
 name:"vl_resta_label",
 size:"137,45",
 styleClass:"fieldlabel",
-text:"Saldo:",
+text:"Vuelto:",
 typeid:7,
 uuid:"8E1AC892-3A0E-4F1D-92B3-5DFF4880446A"
 },

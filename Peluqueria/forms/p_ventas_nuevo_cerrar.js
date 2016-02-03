@@ -1,4 +1,11 @@
 /**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"0DC071C7-83F9-4E8A-9215-C00A4679A067",variableType:8}
+ */
+var vl_vuelto = null;
+
+/**
  * @type {String}
  *
  * @properties={typeid:35,uuid:"B1319592-0721-4F30-952A-BF13EA5BB1DF"}
@@ -149,6 +156,10 @@ function cambiaDescuento(){
  */
 function onDataChangePago(oldValue, newValue, event) {
 	vl_saldo = vl_total_total - vl_pago
+	vl_vuelto = vl_pago - vl_total_total
+	if(vl_vuelto < 0){
+		vl_vuelto = 0
+	}
 	if(vl_saldo != 0){
 		elements.vl_resta.bgcolor = '#ff3c3c'
 	}else{
@@ -167,6 +178,10 @@ function onDataChangePago(oldValue, newValue, event) {
 function onActionCancelar(event) {
 	vl_pago = vl_total_total
 	vl_saldo = vl_total_total - vl_pago
+	vl_vuelto = vl_pago - vl_total_total
+	if(vl_vuelto < 0){
+		vl_vuelto = 0
+	}
 	if(vl_saldo != 0){
 		elements.vl_resta.bgcolor = '#ff3c3c'
 	}else{
@@ -190,17 +205,48 @@ function onActionGrabar(event) {
 	forms.p_ventas_nuevo.vta_importe_total = vl_total_total
 	forms.p_ventas_nuevo.vta_nombre_cliente = forms.p_ventas_nuevo.pel_ventas_to_adn.adn_nombre
 	forms.p_ventas_nuevo.vta_observa = vl_observa
+	
+	
+	///////////Graba Stock/////////
 	/** @type {JSFoundset<db:/peluqueria/prd_movimientos>}*/
 	var fs_mov = databaseManager.getFoundSet('peluqueria','prd_movimientos')
 	var cant = databaseManager.getFoundSetCount(forms.p_ventas_nuevo_prd.foundset)
 	for (var index = 1; index <= cant; index++) {
 		var record = forms.p_ventas_nuevo_prd.foundset.getRecord(index);
-		fs_mov.newRecord()
-		fs_mov.prd_id = record.prd_id
-		fs_mov.mov_ing = 0
-		fs_mov.mov_egr = record.prd_cant
-		fs_mov.venta_id = record.venta_id
+		if(record.prd_id != 0){
+			if(record.pel_ventas_prd_to_prd_productos.prd_controla_stock == 0){
+				fs_mov.newRecord()
+				fs_mov.prd_id = record.prd_id
+				fs_mov.mov_ing = 0
+				fs_mov.mov_egr = record.prd_cant
+				fs_mov.venta_id = record.venta_id
+				
+			}
+		}
 	}
+	databaseManager.saveData(fs_mov)
+	
+	///////////Graba Caja/////////
+	/** @type {JSFoundset<db:/peluqueria/cj_ingresos>}*/
+	var fs_cj_ing = databaseManager.getFoundSet('peluqueria','cj_ingresos')
+	fs_cj_ing.newRecord()
+	fs_cj_ing.cj_ing_importe = vl_pago
+	fs_cj_ing.conc_cod = 1
+	fs_cj_ing.conc_nombre = fs_cj_ing.cj_ingresos_to_cj_conceptos.conc_nombre
+	fs_cj_ing.venta_id = forms.p_ventas_nuevo.venta_id
+	databaseManager.saveData(fs_cj_ing)
+	
+	if(vl_pago > vl_total_total){
+		/** @type {JSFoundset<db:/peluqueria/cj_egresos>}*/
+		var fs_cj_egr = databaseManager.getFoundSet('peluqueria','cj_egresos')
+		fs_cj_egr.newRecord()
+		fs_cj_egr.cj_egr_importe = vl_saldo * -1
+		fs_cj_egr.conc_cod = 2
+		fs_cj_egr.conc_nombre = fs_cj_egr.cj_egresos_to_cj_conceptos.conc_nombre
+		fs_cj_egr.venta_id = forms.p_ventas_nuevo.venta_id
+		databaseManager.saveData(fs_cj_egr)
+	}
+	
 	databaseManager.saveData()
 	application.getWindow().hide()
 	forms.p_ventas.controller.show()

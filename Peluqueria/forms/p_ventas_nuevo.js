@@ -74,3 +74,19 @@ function onActionGrabar(event) {
 	win1.title= 'Hair System';
 	win1.show(forms.p_ventas_nuevo_cerrar);
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"1F9E9183-F88D-45AC-BF7C-263B17966A54"}
+ */
+function onActionNuevoNoProducto(event) {
+	var win1 = application.createWindow("nuevoNoPrd", JSWindow.MODAL_DIALOG);
+	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win1.resizable = false
+	win1.title= 'Hair System';
+	win1.show(forms.p_ventas_nuevo_add_no_prd);
+}
