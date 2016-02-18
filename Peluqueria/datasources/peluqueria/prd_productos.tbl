@@ -1,0 +1,11 @@
+dataSource:"db:/peluqueria/prd_productos",
+items:[
+{
+dataProviderIDToAggregate:"prd_id",
+name:"aggr_cant_prd",
+typeid:40,
+uuid:"ACCD3257-6CF7-4E12-97E9-AF9078188C68"
+}
+],
+typeid:39,
+uuid:"E4C39486-C3C9-475F-94B9-1DF004AAEC9C"

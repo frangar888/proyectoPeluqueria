@@ -1,6 +1,19 @@
 dataSource:"db:/peluqueria/pel_ventas",
 items:[
 {
+dataProviderID:"vl_cliente",
+displayType:10,
+formIndex:37,
+location:"327,149",
+name:"vl_cliente",
+onDataChangeMethodID:"4DF731C5-1681-457E-909D-4A80D1D3F2C4",
+size:"278,20",
+text:"Vl Cliente",
+typeid:4,
+uuid:"18A65DA0-C481-4446-8E9F-96D24D299A29",
+valuelistID:"EEB12ED8-E46C-4912-8786-1AD34C54F751"
+},
+{
 fontType:"Corbel,2,36",
 foreground:"#000000",
 formIndex:6,
@@ -27,6 +40,17 @@ size:"110,30",
 text:"Nuevo",
 typeid:7,
 uuid:"35DCF0A5-167B-4230-94A1-E8BCE6F54808"
+},
+{
+formIndex:36,
+labelFor:"vl_cliente",
+location:"327,129",
+name:"vl_cliente_label",
+size:"278,20",
+styleClass:"encabezado",
+text:"Cliente",
+typeid:7,
+uuid:"360B4F3D-296C-46CC-B6E4-BA4CF4E9B79C"
 },
 {
 formIndex:22,

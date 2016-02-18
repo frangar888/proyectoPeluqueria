@@ -70,10 +70,13 @@ function inicializarVariables(){
 	vl_descuento = null
 	vl_pago = 0
 	vl_saldo = vl_total_total - vl_pago
+	if(vl_saldo < 0){
+		vl_saldo = 0
+	}
 	if(vl_saldo != 0){
-		elements.vl_resta.bgcolor = '#ff3c3c'
+		elements.vl_saldo.bgcolor = '#ff3c3c'
 	}else{
-		elements.vl_resta.bgcolor = '#80ff80'
+		elements.vl_saldo.bgcolor = '#80ff80'
 	}
 }
 /**
@@ -136,10 +139,14 @@ function cambiaDescuento(){
 	var descuento_imp = vl_total_vta * descuento_porc
 	vl_total_total = vl_total_vta - descuento_imp
 	vl_saldo = vl_total_total - vl_pago
+	vl_vuelto = vl_pago - vl_total_total
+	if(vl_saldo < 0){
+		vl_saldo = 0
+	}
 	if(vl_saldo != 0){
-		elements.vl_resta.bgcolor = '#ff3c3c'
+		elements.vl_saldo.bgcolor = '#ff3c3c'
 	}else{
-		elements.vl_resta.bgcolor = '#80ff80'
+		elements.vl_saldo.bgcolor = '#80ff80'
 	}
 }
 
@@ -160,10 +167,13 @@ function onDataChangePago(oldValue, newValue, event) {
 	if(vl_vuelto < 0){
 		vl_vuelto = 0
 	}
+	if(vl_saldo < 0){
+		vl_saldo = 0
+	}
 	if(vl_saldo != 0){
-		elements.vl_resta.bgcolor = '#ff3c3c'
+		elements.vl_saldo.bgcolor = '#ff3c3c'
 	}else{
-		elements.vl_resta.bgcolor = '#80ff80'
+		elements.vl_saldo.bgcolor = '#80ff80'
 	}
 	return true
 }
@@ -182,10 +192,13 @@ function onActionCancelar(event) {
 	if(vl_vuelto < 0){
 		vl_vuelto = 0
 	}
+	if(vl_saldo < 0){
+		vl_saldo = 0
+	}
 	if(vl_saldo != 0){
-		elements.vl_resta.bgcolor = '#ff3c3c'
+		elements.vl_saldo.bgcolor = '#ff3c3c'
 	}else{
-		elements.vl_resta.bgcolor = '#80ff80'
+		elements.vl_saldo.bgcolor = '#80ff80'
 	}
 }
 

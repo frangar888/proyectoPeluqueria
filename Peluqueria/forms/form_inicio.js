@@ -6,16 +6,21 @@
  * @param {JSEvent} event the event that triggered the action
  *
  * @properties={typeid:24,uuid:"89C649D5-F7E4-4B8E-9772-ADE815FF8ED7"}
+ * @AllowToRunInFind
  */
 function onShow(firstShow, event) {
-/*	var ancho = application.getScreenWidth()
-
-	elements.grp_botones.setLocation(ancho/2 - ancho/4,341)
-	elements.logo.setLocation(ancho/2 - ancho/16,14)
-	elements.btn_salir.setLocation(ancho - ancho/15,15)
-	elements.btn_usuario.setLocation(ancho - ancho/9,15)*/
 	CentrarCampos()
-	
+	/** @type {JSFoundset<db:/peluqueria/cfg_permisos_2>}*/
+	var fs_permisos = databaseManager.getFoundSet('peluqueria','cfg_permisos_2')
+	fs_permisos.find()
+	fs_permisos.form_id = globals.getFormID(forms.p_ventas.controller.getName())
+	fs_permisos.user_id = globals.vg_user_id
+	fs_permisos.cfg_perm_nuevo = 1
+	if(fs_permisos.search() != 0){
+		elements.btn_nueva_vta.enabled = true
+	}else{
+		elements.btn_nueva_vta.enabled = false
+	}
 }
 
 
@@ -74,4 +79,15 @@ function CentrarCampos() {
  */
 function onActionVentas(event) {
 	forms.p_ventas.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"17B0FE72-5A7A-45B7-82FF-E4CFAEF5AB23"}
+ */
+function onActionNuevaVenta(event) {
+	forms.p_ventas_nuevo.controller.show()
 }

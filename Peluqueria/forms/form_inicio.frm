@@ -1,5 +1,19 @@
 items:[
 {
+formIndex:7,
+imageMediaID:"78EE323D-3835-4DE6-8166-B7AA78440F01",
+location:"17,78",
+mediaOptions:1,
+name:"btn_nuevo_ing",
+onActionMethodID:"-1",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"142,30",
+text:"Nuevo Ingreso",
+typeid:7,
+uuid:"01BD616C-D549-44A8-92F4-510263A17BFC"
+},
+{
 borderType:"EmptyBorder,0,0,0,0",
 fontType:"Corbel,0,24",
 formIndex:3,
@@ -16,6 +30,20 @@ typeid:7,
 uuid:"08351510-1773-4DAC-B718-118FE937BAC2"
 },
 {
+formIndex:7,
+imageMediaID:"78EE323D-3835-4DE6-8166-B7AA78440F01",
+location:"17,44",
+mediaOptions:1,
+name:"btn_nueva_vta",
+onActionMethodID:"17B0FE72-5A7A-45B7-82FF-E4CFAEF5AB23",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"142,30",
+text:"Nueva Venta",
+typeid:7,
+uuid:"1B73D5BE-3715-4308-8329-57AA05B2F297"
+},
+{
 borderType:"EmptyBorder,0,0,0,0",
 dataProviderID:"scopes.globals.vg_user_logo",
 displayType:9,
@@ -29,6 +57,20 @@ size:"272,263",
 transparent:true,
 typeid:4,
 uuid:"2E1D0C79-E05C-4CE9-AACB-109239E5D991"
+},
+{
+formIndex:7,
+imageMediaID:"78EE323D-3835-4DE6-8166-B7AA78440F01",
+location:"17,113",
+mediaOptions:1,
+name:"btn_nuevo_egr",
+onActionMethodID:"-1",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"142,30",
+text:"Nuevo Egreso",
+typeid:7,
+uuid:"69420947-2AAE-418E-8F35-86F82094238F"
 },
 {
 borderType:"EmptyBorder,0,0,0,0",
@@ -51,6 +93,16 @@ height:529,
 partType:5,
 typeid:19,
 uuid:"8E7B6194-B708-4C3E-AA74-6F18CE3F0947"
+},
+{
+formIndex:6,
+horizontalAlignment:0,
+location:"18,19",
+size:"141,20",
+styleClass:"fieldlabel",
+text:"Accesos Rapidos",
+typeid:7,
+uuid:"A0A5C979-B945-496E-B024-C711CAEF56A7"
 },
 {
 height:567,

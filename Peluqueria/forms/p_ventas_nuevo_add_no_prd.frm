@@ -25,11 +25,12 @@ typeid:7,
 uuid:"11FE2B01-5785-43BE-84A5-51FAE592D0BA"
 },
 {
+fontType:"Trebuchet MS,0,14",
 formIndex:24,
 labelFor:"vl_nombre",
 location:"60,169",
 name:"vl_prd_id_label",
-size:"105,20",
+size:"105,30",
 styleClass:"fieldlabel",
 text:"Nombre:",
 typeid:7,
@@ -37,11 +38,12 @@ uuid:"1B637C1B-604B-4F7B-970F-DDD1CDE2E55E"
 },
 {
 dataProviderID:"vl_nombre",
+fontType:"Trebuchet MS,0,14",
 formIndex:25,
 location:"169,169",
 name:"vl_nombre",
 onDataChangeMethodID:"-1",
-size:"336,20",
+size:"336,30",
 text:"Vl Prd Id",
 typeid:4,
 uuid:"2A4A87E4-951C-4A80-A189-FACE625DAA1B"

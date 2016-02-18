@@ -30,6 +30,20 @@ typeid:4,
 uuid:"0ACB98C8-C887-4C0A-B081-2FC8DF896DF8"
 },
 {
+dataProviderID:"vl_saldo",
+editable:false,
+fontType:"Trebuchet MS,0,20",
+formIndex:31,
+format:"#,###.00",
+horizontalAlignment:4,
+location:"234,426",
+name:"vl_saldo",
+size:"203,45",
+text:"Vl Saldo",
+typeid:4,
+uuid:"2462E5F8-966A-49F4-8136-677F5D029352"
+},
+{
 fontType:"Corbel,2,36",
 foreground:"#000000",
 formIndex:6,
@@ -74,14 +88,14 @@ uuid:"494A5379-99FE-4F67-9611-0035EDCF0B7B"
 },
 {
 background:"#80ff80",
-dataProviderID:"vl_saldo",
+dataProviderID:"vl_vuelto",
 editable:false,
 fontType:"Trebuchet MS,0,20",
 formIndex:27,
 format:"#,###.00",
 horizontalAlignment:4,
 location:"234,372",
-name:"vl_resta",
+name:"vl_vuelto",
 size:"203,45",
 text:"Vl Resta",
 typeid:4,
@@ -154,7 +168,7 @@ typeid:7,
 uuid:"8E1AC892-3A0E-4F1D-92B3-5DFF4880446A"
 },
 {
-height:544,
+height:633,
 partType:5,
 typeid:19,
 uuid:"92ABF6B1-AA5B-4541-84FE-869A4569F939"
@@ -183,6 +197,18 @@ styleClass:"fieldlabel",
 text:"Descuento %:",
 typeid:7,
 uuid:"AAFBB56B-DD9F-4E53-8B04-1FFDFEDD64DD"
+},
+{
+fontType:"Trebuchet MS,0,20",
+formIndex:30,
+labelFor:"vl_saldo",
+location:"92,426",
+name:"vl_saldo_label",
+size:"137,45",
+styleClass:"fieldlabel",
+text:"Saldo:",
+typeid:7,
+uuid:"DFF19550-EDCA-4D57-9527-C2858FF5E0B4"
 },
 {
 formIndex:6,
@@ -214,7 +240,7 @@ uuid:"F06CD90D-65F5-43B9-BAB4-F71DF176A353"
 dataProviderID:"vl_observa",
 displayType:1,
 formIndex:29,
-location:"234,427",
+location:"234,517",
 name:"vl_observa",
 scrollbars:32,
 size:"346,97",
@@ -236,7 +262,7 @@ uuid:"FA44980D-BB30-4DA3-ABD5-76751F9A4339"
 {
 formIndex:28,
 labelFor:"vl_observa",
-location:"92,427",
+location:"92,517",
 name:"vl_observa_label",
 size:"137,20",
 styleClass:"fieldlabel",

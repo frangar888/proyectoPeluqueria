@@ -1,3 +1,9 @@
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"06E6F035-E00C-4C6E-9D7F-B355DCAF0718",variableType:4}
+ */
+var vl_cliente = null;
 
 /**
  * Callback method when form is (re)loaded.
@@ -22,6 +28,7 @@ function onShow(firstShow, event) {
 	if(firstShow){
 		globals.vg_fecha_final = application.getServerTimeStamp()
 		globals.vg_fecha_inicial = application.getServerTimeStamp()
+		vl_cliente = null
 		filtrar()
 	}
 	if(!globals.checkearAdmin(globals.vg_user_id,globals.getFormID(controller.getName()),[elements.btn_nuevo.getName()],controller.getName())){
@@ -53,6 +60,9 @@ function onActionVolver(event) {
  */
 function filtrar(){
 	controller.find()
+	if(vl_cliente != 0 && vl_cliente != null){
+		adn_id = vl_cliente
+	}
 	vta_fecha_emision = utils.dateFormat(globals.vg_fecha_inicial,'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(globals.vg_fecha_final,'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
 	controller.search()
 }
