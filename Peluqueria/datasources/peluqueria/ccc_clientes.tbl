@@ -1,0 +1,11 @@
+dataSource:"db:/peluqueria/ccc_clientes",
+items:[
+{
+dataProviderIDToAggregate:"cliente_id",
+name:"aggr_cant_clientes",
+typeid:40,
+uuid:"FC2272C5-6DAE-4FC6-B256-0F5D35DDADDC"
+}
+],
+typeid:39,
+uuid:"B69E395D-A22A-4046-9022-760A01770414"

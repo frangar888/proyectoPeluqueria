@@ -91,3 +91,14 @@ function onActionVentas(event) {
 function onActionNuevaVenta(event) {
 	forms.p_ventas_nuevo.controller.show()
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"5369E49D-6119-4B45-8638-CD289A57E0BF"}
+ */
+function onActionClientes(event) {
+	forms.p_clientes.controller.show()
+}

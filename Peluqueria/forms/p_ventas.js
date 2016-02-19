@@ -1,6 +1,13 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"D57F6CE5-23AD-4508-B8C5-A814B7089681",variableType:8}
+ */
+var vl_total_vtas = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"06E6F035-E00C-4C6E-9D7F-B355DCAF0718",variableType:4}
  */
 var vl_cliente = null;
@@ -39,6 +46,7 @@ function onShow(firstShow, event) {
 			globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
 		}
 	}
+	calcularTotal()
 
 }
 
@@ -65,6 +73,7 @@ function filtrar(){
 	}
 	vta_fecha_emision = utils.dateFormat(globals.vg_fecha_inicial,'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(globals.vg_fecha_final,'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
 	controller.search()
+	calcularTotal()
 }
 
 /**
@@ -76,4 +85,27 @@ function filtrar(){
  */
 function onActionNuevaVenta(event) {
 	forms.p_ventas_nuevo.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"6177CBF5-9562-45B1-BD52-B376C98FCD8C"}
+ */
+function onActionDetalle(event) {
+	forms.p_ventas_detalle.controller.show()
+}
+
+/**
+ * @properties={typeid:24,uuid:"9CDB342A-A6D7-4AB4-9DB1-5523D6955564"}
+ */
+function calcularTotal(){
+	vl_total_vtas = 0
+	var cant = databaseManager.getFoundSetCount(foundset)
+	for (var index = 1; index <= cant; index++) {
+		var record = foundset.getRecord(index);
+		vl_total_vtas += record.vta_importe_total
+	}
 }
