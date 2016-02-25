@@ -1,0 +1,9 @@
+addEmptyValue:1,
+customValues:"Responsable Inscripto|1\r\
+Monotributista|2\r\
+Exento|3\r\
+No Responsable|4\r\
+Consumidor Final|5",
+name:"adn_cat_iva",
+typeid:34,
+uuid:"2FD0A07E-2D67-4C32-AACD-698FB1426C27"

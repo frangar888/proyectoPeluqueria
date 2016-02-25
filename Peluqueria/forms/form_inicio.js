@@ -89,6 +89,7 @@ function onActionVentas(event) {
  * @properties={typeid:24,uuid:"17B0FE72-5A7A-45B7-82FF-E4CFAEF5AB23"}
  */
 function onActionNuevaVenta(event) {
+	forms.p_ventas_nuevo.vl_form_padre = controller.getName()
 	forms.p_ventas_nuevo.controller.show()
 }
 

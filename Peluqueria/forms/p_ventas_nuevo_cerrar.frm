@@ -158,7 +158,7 @@ uuid:"6B4586F3-D0C1-4748-8473-73591FA3BC0B"
 {
 fontType:"Trebuchet MS,0,20",
 formIndex:26,
-labelFor:"vl_resta",
+labelFor:"vl_vuelto",
 location:"92,372",
 name:"vl_resta_label",
 size:"137,45",

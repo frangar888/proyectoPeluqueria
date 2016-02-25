@@ -1,0 +1,10 @@
+addEmptyValue:1,
+dataProviderID1:"conc_nombre",
+dataProviderID2:"concepto_id",
+dataSource:"db:/peluqueria/cj_conceptos",
+name:"cj_conceptos",
+returnDataProviders:2,
+showDataProviders:1,
+typeid:34,
+uuid:"B0A210DF-B2E8-4DF9-ABE5-D4D224F5718C",
+valueListType:1

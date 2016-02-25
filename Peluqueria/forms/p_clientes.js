@@ -99,3 +99,14 @@ function onActionRefresh(event) {
 	vl_nro_doc = null
 	filtrar()
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"7DC53615-7986-40E2-8544-E386665B39C9"}
+ */
+function onActionDetalle(event) {
+	forms.p_clientes_ver.controller.show()
+}

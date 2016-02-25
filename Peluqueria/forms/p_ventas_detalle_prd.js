@@ -24,7 +24,7 @@ var vl_total_vta = null;
  */
 function calcularTotales(){
 	vl_total_vta =  forms.p_ventas_detalle.vta_importe_total
-	vl_pago = forms.p_ventas_detalle.vta_importe_pago
+	vl_pago = forms.p_ventas_detalle.calc_importe_pagado
 	vl_saldo = vl_total_vta - vl_pago
 	if(vl_saldo > 0){
 		elements.vl_saldo.bgcolor = '#ff4242'

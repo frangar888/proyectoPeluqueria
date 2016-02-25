@@ -1,3 +1,10 @@
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"B272B373-E0C3-4683-B932-B7702807621A"}
+ */
+var vl_form_padre = null;
+
 
 /**
  * Callback method when form is (re)loaded.
@@ -32,5 +39,5 @@ function onShow(firstShow, event) {
  */
 function onActionVolver(event) {
 	databaseManager.revertEditedRecords()
-	forms.p_ventas.controller.show()
+	forms[vl_form_padre].controller.show()
 }
