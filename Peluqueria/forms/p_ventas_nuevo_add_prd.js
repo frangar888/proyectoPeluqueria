@@ -234,7 +234,7 @@ function onActionAceptar(event) {
 	fs_prd.find()
 	fs_prd.prd_id = vl_prd_id
 	if(fs_prd.search() != 0){
-		if(fs_prd.prd_controla_stock == 0){
+		if(fs_prd.prd_controla_stock == 1){
 			var cant_en_stock = globals.obtieneStock(vl_prd_id)
 			if(cant_en_stock < vl_cantidad){
 				globals.lanzarVentanaEmergente(0,'La cantidad ingresada es mayor a la cantidad en stock del porducto. Cantidad: '+cant_en_stock,'Info',controller.getName(),null,null)

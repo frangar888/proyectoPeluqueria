@@ -1,0 +1,10 @@
+addEmptyValue:1,
+dataProviderID1:"marca_nombre",
+dataProviderID2:"marca_id",
+dataSource:"db:/peluqueria/prd_marcas",
+name:"prd_marcas",
+returnDataProviders:3,
+showDataProviders:1,
+typeid:34,
+uuid:"D1C9E6A3-952D-486E-88D9-46BA4F141B92",
+valueListType:1

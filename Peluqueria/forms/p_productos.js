@@ -70,3 +70,58 @@ function onShow(firstShow, event) {
 function onLoad(event) {
 	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,0,0)
 }
+
+/**
+ * @AllowToRunInFind
+ *
+ * @properties={typeid:24,uuid:"4DBAFC75-2763-4FF1-8E4A-A7084E7BD39A"}
+ */
+function filtrar(){
+	controller.find()
+	if(vl_codigo != null){
+		prd_codigo = vl_codigo
+	}
+	if(vl_cod_bar != null){
+		prd_cod_bar = vl_cod_bar
+	}
+	if(vl_nombre != null){
+		prd_nombre = '%'+vl_nombre+'%'
+	}
+	controller.search()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"52FAC59C-1D44-4B0E-944F-522A93DD26C6"}
+ */
+function onActionRefresh(event) {
+	vl_cod_bar = null
+	vl_codigo = null
+	vl_nombre = null
+	filtrar()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"1709A2F8-1B63-4A9A-A68C-F44B848A21CB"}
+ */
+function onActionNuevo(event) {
+	forms.p_productos_nuevo.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"24823AE4-61DA-43A3-867D-D175499BFC25"}
+ */
+function onActionVolver(event) {
+	forms.form_inicio.controller.show()
+}
