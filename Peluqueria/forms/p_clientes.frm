@@ -116,6 +116,18 @@ typeid:7,
 uuid:"4736F1A9-3352-4AF6-82B4-C45B350B05C6"
 },
 {
+fontType:"Trebuchet MS,0,16",
+formIndex:38,
+labelFor:"vl_total_saldo",
+location:"260,450",
+name:"vl_total_saldo_label",
+size:"109,27",
+styleClass:"fieldlabel",
+text:"Saldo Total:",
+typeid:7,
+uuid:"4D8EF8F7-47B7-4BD5-9437-1A54B185DDBC"
+},
+{
 anchors:11,
 dataProviderID:"ccc_clientes_to_adn.adn_to_adn_cod_postales.cpos_nombre",
 editable:false,
@@ -219,6 +231,20 @@ typeid:7,
 uuid:"9EFA774E-2D30-4F67-9917-84E11401457E"
 },
 {
+anchors:11,
+dataProviderID:"calc_saldo_cliente",
+editable:false,
+formIndex:37,
+format:"#,###.00",
+horizontalAlignment:4,
+location:"809,207",
+name:"calc_saldo_cliente",
+size:"140,20",
+text:"Calc Saldo Cliente",
+typeid:4,
+uuid:"A6442381-22F5-41B9-A7D8-84AF67B32BA2"
+},
+{
 formIndex:30,
 labelFor:"vl_codigo",
 location:"30,128",
@@ -247,6 +273,17 @@ typeid:7,
 uuid:"BEBAC585-C536-4065-8C50-698DF323FE94"
 },
 {
+formIndex:36,
+labelFor:"calc_saldo_cliente",
+location:"809,187",
+name:"calc_saldo_cliente_label",
+size:"140,20",
+styleClass:"encabezado",
+text:"Saldo",
+typeid:7,
+uuid:"BFAF29C1-C196-4BFE-B32D-E295EE827A80"
+},
+{
 dataProviderID:"vl_codigo",
 formIndex:31,
 horizontalAlignment:0,
@@ -257,6 +294,21 @@ size:"92,20",
 text:"Vl Codigo",
 typeid:4,
 uuid:"C3404EDB-5EF9-4AC1-91E8-BAC8F846AEDF"
+},
+{
+dataProviderID:"vl_total_saldo",
+editable:false,
+fontType:"Trebuchet MS,0,16",
+formIndex:39,
+format:"#,###.00",
+horizontalAlignment:4,
+location:"374,450",
+name:"vl_total_saldo",
+size:"140,27",
+styleClass:"disable",
+text:"Vl Total Saldo",
+typeid:4,
+uuid:"C3AC8FAC-A0ED-410D-A52D-7DDF1D65CCBF"
 },
 {
 anchors:11,

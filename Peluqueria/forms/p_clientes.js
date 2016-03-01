@@ -1,6 +1,13 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"FACDF361-8AE7-456F-B86C-F3893AED4B9D",variableType:8}
+ */
+var vl_total_saldo = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"993D09FC-CE92-404A-99BD-E6343A5EA61B",variableType:4}
  */
 var vl_nro_doc = null;
@@ -84,6 +91,7 @@ function filtrar(){
 		ccc_clientes_to_adn.adn_doc_nro = vl_nro_doc
 	}
 	controller.search()
+	calcularTotales()
 }
 
 /**
@@ -109,4 +117,16 @@ function onActionRefresh(event) {
  */
 function onActionDetalle(event) {
 	forms.p_clientes_ver.controller.show()
+}
+
+/**
+ * @properties={typeid:24,uuid:"A8E5DAE5-0406-4DDC-B5EF-239651820D6B"}
+ */
+function calcularTotales(){
+	vl_total_saldo = 0
+	var cant = databaseManager.getFoundSetCount(foundset)
+	for (var index = 1; index <= cant; index++) {
+		var record = foundset.getRecord(index);
+		vl_total_saldo += record.calc_saldo_cliente
+	}
 }
