@@ -233,7 +233,9 @@ function onActionGrabar(event) {
 				fs_mov.mov_ing = 0
 				fs_mov.mov_egr = record.prd_cant
 				fs_mov.venta_id = record.venta_id
-				
+				fs_mov.mov_fecha = application.getServerTimeStamp()
+				fs_mov.mov_tipo = 1
+				fs_mov.mov_causa = 1
 			}
 		}
 	}

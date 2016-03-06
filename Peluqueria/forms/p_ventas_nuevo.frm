@@ -1,7 +1,7 @@
 dataSource:"db:/peluqueria/pel_ventas",
 items:[
 {
-height:480,
+height:505,
 partType:5,
 typeid:19,
 uuid:"16AD5E1E-D7B2-4F3B-BD09-91DD749566CD"
@@ -9,7 +9,7 @@ uuid:"16AD5E1E-D7B2-4F3B-BD09-91DD749566CD"
 {
 formIndex:6,
 imageMediaID:"628D0971-04B8-433F-B454-E01ACA041A92",
-location:"8,240",
+location:"8,265",
 mediaOptions:1,
 name:"btn_addcc",
 onActionMethodID:"47F7618C-E632-41F0-8D85-E8C14A9650CE",
@@ -26,13 +26,13 @@ formIndex:18,
 items:[
 {
 containsFormID:"B5543DFE-F5F7-4721-9C2D-DE4C3C8D61D5",
-location:"351,220",
+location:"351,245",
 text:"p_ventas_nuevo_prd",
 typeid:15,
 uuid:"2003F064-71C3-4E86-BC54-A69C16302371"
 }
 ],
-location:"351,190",
+location:"351,215",
 name:"tabs",
 printable:false,
 size:"649,280",
@@ -80,6 +80,29 @@ typeid:7,
 uuid:"647323DE-33C6-4881-94EE-4E545787EC84"
 },
 {
+formIndex:23,
+labelFor:"vendedor_adn_id",
+location:"8,168",
+name:"vendedor_adn_id_label",
+size:"86,20",
+styleClass:"fieldlabel",
+text:"Vendedor:",
+typeid:7,
+uuid:"7E88EF69-540B-4E4D-A080-D4BBC87CA94B"
+},
+{
+dataProviderID:"vendedor_adn_id",
+displayType:10,
+formIndex:24,
+location:"97,168",
+name:"vendedor_adn_id",
+size:"306,20",
+text:"Vendedor Adn Id",
+typeid:4,
+uuid:"9B9EF02A-22CB-49F2-AA7C-C92400214EDD",
+valuelistID:"FB537067-393A-4DF5-B0FE-85B2F613B29D"
+},
+{
 anchors:11,
 background:"#2ba6d5",
 borderType:"LineBorder,1,#000000",
@@ -121,7 +144,7 @@ uuid:"CA832067-01AE-48AA-A03B-F2B3E407FC72"
 {
 formIndex:6,
 imageMediaID:"78EE323D-3835-4DE6-8166-B7AA78440F01",
-location:"8,274",
+location:"8,299",
 mediaOptions:1,
 name:"btn_addc",
 onActionMethodID:"1F9E9183-F88D-45AC-BF7C-263B17966A54",
@@ -148,7 +171,7 @@ valuelistID:"EEB12ED8-E46C-4912-8786-1AD34C54F751"
 dataProviderID:"vl_prd",
 fontType:"Trebuchet MS,0,18",
 formIndex:22,
-location:"8,190",
+location:"8,215",
 name:"vl_prd",
 onDataChangeMethodID:"647A67D0-4F88-465A-9B42-D92C88A29C29",
 placeholderText:"Agregar Producto...",

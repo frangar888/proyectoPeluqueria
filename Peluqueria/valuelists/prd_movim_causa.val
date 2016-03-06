@@ -1,0 +1,7 @@
+addEmptyValue:1,
+customValues:"Venta|1\r\
+Egreso Manual|2\r\
+Ingreso Manual|3",
+name:"prd_movim_causa",
+typeid:34,
+uuid:"49B801B1-36EE-4DF3-9794-7F419242BDA5"

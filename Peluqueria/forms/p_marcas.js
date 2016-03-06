@@ -1,10 +1,9 @@
-
 /**
  * Callback method when form is (re)loaded.
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"8A5F0EB0-DEBC-474C-BBCF-3FDBC364434D"}
+ * @properties={typeid:24,uuid:"4EBB724F-C776-4527-B42A-868829F74325"}
  */
 function onLoad(event) {
 	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,0,0)
@@ -16,7 +15,7 @@ function onLoad(event) {
  * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"33B25E85-9405-458A-9962-ED99F732839E"}
+ * @properties={typeid:24,uuid:"EFA5E314-320A-447A-9105-7FAD25194A90"}
  */
 function onShow(firstShow, event) {
 //	if(!globals.checkearAdmin(globals.vg_user_id,globals.getFormID(controller.getName()),[elements.btn_nuevo.getName()],controller.getName())){
@@ -26,7 +25,7 @@ function onShow(firstShow, event) {
 			forms.p_config.controller.show()
 			globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
 		}
-//	}
+//}
 }
 
 /**
@@ -34,7 +33,23 @@ function onShow(firstShow, event) {
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"5F9905FC-750F-4DC8-AAA6-F2F1AD884837"}
+ * @properties={typeid:24,uuid:"A68F0129-7F67-4C1E-8125-31D8EFC51F54"}
+ */
+function onActionNuevo(event) {
+	var win1 = application.createWindow("nuevaMarca", JSWindow.MODAL_DIALOG);
+	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win1.resizable = false
+	win1.title= 'Hair System';
+	win1.show(forms.p_marcas_nuevo);
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"7D02F2DA-ABE1-47D8-8F60-486C6D4019FD"}
  */
 function onActionVolver(event) {
 	forms.p_config.controller.show()
@@ -45,29 +60,13 @@ function onActionVolver(event) {
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"B33B03D9-E1E2-4B15-86C8-7D3D684AD339"}
- */
-function onActionNuevo(event) {
-	var win1 = application.createWindow("nuevaLinea", JSWindow.MODAL_DIALOG);
-	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
-	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
-	win1.resizable = false
-	win1.title= 'Hair System';
-	win1.show(forms.p_lineas_nuevo);
-}
-
-/**
- * Perform the element default action.
- *
- * @param {JSEvent} event the event that triggered the action
- *
- * @properties={typeid:24,uuid:"CC7B74ED-6F0B-48AB-BA25-71F767836682"}
+ * @properties={typeid:24,uuid:"8378E294-5FD9-4230-A925-AAA9B208E939"}
  */
 function onActionDetalle(event) {
-	var win1 = application.createWindow("detalleLinea", JSWindow.MODAL_DIALOG);
+	var win1 = application.createWindow("detalleMarca", JSWindow.MODAL_DIALOG);
 	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
 	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
 	win1.resizable = false
 	win1.title= 'Hair System';
-	win1.show(forms.p_lineas_detalle);
+	win1.show(forms.p_marcas_detalle);
 }

@@ -1,17 +1,23 @@
 /**
  * @type {Number}
  *
- * @properties={typeid:35,uuid:"1565D533-E5AA-4CCA-B20F-983B61B6BA17",variableType:8}
+ * @properties={typeid:35,uuid:"66E7464D-3CC1-4D36-B051-58A8AEB995E5",variableType:8}
  */
-var vl_ing_inicial = null;
+var vl_stock = null;
 
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"698EE10D-78E6-4A62-B1B3-7AB047382D0C"}
+ */
+var vl_form_padre = null;
 
 /**
  * Callback method when form is (re)loaded.
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"B71926AA-B0E8-4D06-9C66-D70B5A747EA4"}
+ * @properties={typeid:24,uuid:"E7FA2796-C81A-4F58-B570-E1FE1C36A6CA"}
  */
 function onLoad(event) {
 	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,1,globals.getFormID(forms.p_productos.controller.getName()))
@@ -23,28 +29,19 @@ function onLoad(event) {
  * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"9C200D11-8585-4A74-95EC-FEB41D15FC89"}
+ * @properties={typeid:24,uuid:"EA780129-9130-407C-8A86-A4C40F14C226"}
  */
 function onShow(firstShow, event) {
 	globals.validarPermisosPadre(globals.getFormID(controller.getName()),globals.vg_user_id)
-	controller.newRecord()
-	globals.vg_rubro = null
-	prd_controla_stock = 0
-	prd_tipo = 1
 	cambiaTipoPrd()
-}
-
-/**
- * @properties={typeid:24,uuid:"6D126A0C-0022-49BD-A9F8-3BA61063B13F"}
- */
-function visibilidad(){
-	if(prd_controla_stock == 0){
-		vl_ing_inicial = 0
-		elements.grp_stock.visible = false
+	vl_stock = globals.obtieneStock(prd_id)
+	if(utils.hasRecords(prd_productos_to_prd_lineas)){
+		globals.vg_rubro = prd_productos_to_prd_lineas.prd_lineas_to_prd_rubros.rubro_id
 	}else{
-		elements.grp_stock.visible = true
+		globals.vg_rubro = null
 	}
 }
+
 /**
  * Handle changed data, return false if the value should not be accepted. In NGClient you can return also a (i18n) string, instead of false, which will be shown as a tooltip.
  *
@@ -54,7 +51,7 @@ function visibilidad(){
  *
  * @return {Boolean}
  *
- * @properties={typeid:24,uuid:"3B09EC9B-569F-49C6-AC4F-E3F455BBC3D6"}
+ * @properties={typeid:24,uuid:"3DA5CB73-4973-40F1-AD75-797BCA094B30"}
  */
 function onDataChangeCosto(oldValue, newValue, event) {
 	prd_margen = ((prd_precio / prd_costo) - 1) * 100
@@ -70,7 +67,7 @@ function onDataChangeCosto(oldValue, newValue, event) {
  *
  * @return {Boolean}
  *
- * @properties={typeid:24,uuid:"D665C012-EA90-46E7-997B-7D205B609B77"}
+ * @properties={typeid:24,uuid:"C6137258-7CBC-4ED7-AC73-95A2675BFD87"}
  */
 function onDataChangeMargen(oldValue, newValue, event) {
 	var margen = (prd_margen / 100) + 1
@@ -89,7 +86,7 @@ function onDataChangeMargen(oldValue, newValue, event) {
  *
  * @return {Boolean}
  *
- * @properties={typeid:24,uuid:"B518096E-E815-47A3-9CB0-0104BF599E58"}
+ * @properties={typeid:24,uuid:"6ED58C5E-5ABE-4ABA-8752-92DC4E722C13"}
  */
 function onDataChangePrecio(oldValue, newValue, event) {
 	prd_margen = ((prd_precio / prd_costo) - 1) * 100
@@ -101,11 +98,11 @@ function onDataChangePrecio(oldValue, newValue, event) {
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"EC0314AD-B6C7-44E4-A0A5-8F4BDC4817C5"}
+ * @properties={typeid:24,uuid:"6DBC67C4-E11B-4D4D-98D5-1754764ACB73"}
  */
 function onActionVolver(event) {
 	databaseManager.revertEditedRecords()
-	forms.p_productos.controller.show()
+	forms[vl_form_padre].controller.show()
 }
 
 /**
@@ -117,7 +114,7 @@ function onActionVolver(event) {
  *
  * @return {Boolean}
  *
- * @properties={typeid:24,uuid:"00398657-D230-4E4B-B004-23A974EB503D"}
+ * @properties={typeid:24,uuid:"2D462AE1-8091-41E1-9C2F-BA35F135F162"}
  */
 function onDataChangeControlaStk(oldValue, newValue, event) {
 	visibilidad()
@@ -133,7 +130,7 @@ function onDataChangeControlaStk(oldValue, newValue, event) {
  *
  * @return {Boolean}
  *
- * @properties={typeid:24,uuid:"89C70026-1CB3-4657-B2C2-65F37557774B"}
+ * @properties={typeid:24,uuid:"EFD0D226-5EC9-4A87-B96A-607BD80563B4"}
  */
 function onDataChangeRubro(oldValue, newValue, event) {
 	linea_id = null
@@ -145,7 +142,7 @@ function onDataChangeRubro(oldValue, newValue, event) {
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"59D613F1-1F26-48A5-915B-66CA64FB45E0"}
+ * @properties={typeid:24,uuid:"E63637EE-1A90-4FEA-B3A2-811D5F91CDC5"}
  */
 function onActionGrabar(event) {
 	if(prd_codigo == 0 || prd_codigo == null){
@@ -173,11 +170,6 @@ function onActionGrabar(event) {
 		elements.prd_precio.requestFocus()
 		return
 	}
-	if(existeCodigo(prd_codigo)){
-		globals.lanzarVentanaEmergente(0,'Ya existe un producto con el còdigo ingresado. Verifique','Info',controller.getName(),null,null)
-		elements.prd_codigo.requestFocus()
-		return
-	}
 	if(prd_controla_stock == 1){
 		if(prd_stock_min == null){
 			globals.lanzarVentanaEmergente(0,'Debe ingresar el stock mínimo del producto.','Info',controller.getName(),null,null)
@@ -185,53 +177,23 @@ function onActionGrabar(event) {
 			return
 		}
 	}
-	
-	if(vl_ing_inicial != 0){
-		/** @type {JSFoundset<db:/peluqueria/prd_movimientos>}*/
-		var fs_prd_mov = databaseManager.getFoundSet('peluqueria','prd_movimientos')
-		fs_prd_mov.newRecord()
-		fs_prd_mov.mov_egr = 0 
-		fs_prd_mov.mov_ing = vl_ing_inicial
-		fs_prd_mov.prd_id = prd_id
-		fs_prd_mov.venta_id = 0
-	}
 	databaseManager.saveData()
-	forms.p_productos.controller.show()
+	forms[vl_form_padre].controller.show()
 }
 
 /**
- * Perform the element default action.
- *
- * @param {JSEvent} event the event that triggered the action
- *
- * @properties={typeid:24,uuid:"1CB11DFA-7C5B-4B09-AFC6-BD2E277D7F7A"}
+ * @properties={typeid:24,uuid:"2FA17240-BB74-46E9-B815-F04B6CAF7E42"}
  */
-function onActionUltLibre(event) {
-	prd_codigo = ultLibre()
-}
-/**
- * @properties={typeid:24,uuid:"D6AF411E-3E01-4734-94A6-362918D87517"}
- */
-function ultLibre(){
-	/** @type {JSFoundset<db:/peluqueria/prd_productos>}*/
-	var fs_prd = databaseManager.getFoundSet('peluqueria','prd_productos')
-	fs_prd.loadAllRecords()
-	fs_prd.sort("prd_codigo asc")
-	
-	var cant = databaseManager.getFoundSetCount(fs_prd)
-	var count = 1
-	for (var index = 1; index <= cant; index++) {
-		var record = fs_prd.getRecord(index);
-		if(record.prd_codigo != count){
-			return count
-		}
-		count += 1
+function visibilidad(){
+	if(prd_controla_stock == 0){
+		elements.grp_stock_min.visible = false
+	}else{
+		elements.grp_stock_min.visible = true
 	}
-	return count
 }
 
 /**
- * @properties={typeid:24,uuid:"ABAAA24C-2AA8-4B0B-90AD-9D4C144D56E4"}
+ * @properties={typeid:24,uuid:"AA6BCEAD-C1E0-4286-AB0E-293E465EF80E"}
  */
 function cambiaTipoPrd(){
 	if(prd_tipo == 1){
@@ -252,25 +214,9 @@ function cambiaTipoPrd(){
  *
  * @return {Boolean}
  *
- * @properties={typeid:24,uuid:"40A457A5-7629-495C-9732-6BC19ECF95C8"}
+ * @properties={typeid:24,uuid:"6439F3B7-BEA4-4F5F-8EA9-B735AFC68B45"}
  */
 function onDataChangeTipoPrd(oldValue, newValue, event) {
 	cambiaTipoPrd()
 	return true
-}
-
-/**
- * @properties={typeid:24,uuid:"E9A1FC7D-697D-49FB-B72A-BB0012179CB2"}
- * @AllowToRunInFind
- */
-function existeCodigo(lnk_cod){
-	/** @type {JSFoundset<db:/peluqueria/prd_productos>}*/
-	var fs_prd = databaseManager.getFoundSet('peluqueria','prd_productos')
-	fs_prd.loadAllRecords()
-	fs_prd.find()
-	fs_prd.prd_codigo = lnk_cod
-	if(fs_prd.search() != 0){
-		return true
-	}
-	return false
 }

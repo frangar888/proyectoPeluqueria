@@ -38,13 +38,13 @@ function onShow(firstShow, event) {
 		vl_cliente = null
 		filtrar()
 	}
-	if(!globals.checkearAdmin(globals.vg_user_id,globals.getFormID(controller.getName()),[elements.btn_nuevo.getName()],controller.getName())){
+//	if(!globals.checkearAdmin(globals.vg_user_id,globals.getFormID(controller.getName()),[elements.btn_nuevo.getName()],controller.getName())){
 		if(globals.validarLeer(globals.vg_user_id,globals.getFormID(controller.getName()))){
 			globals.validarPermisos(globals.vg_user_id,globals.getFormID(controller.getName()),2,null)
 		}else{
 			forms.form_inicio.controller.show()
 			globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
-		}
+//		}
 	}
 	calcularTotal()
 

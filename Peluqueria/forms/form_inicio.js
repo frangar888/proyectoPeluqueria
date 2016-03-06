@@ -112,5 +112,33 @@ function onActionClientes(event) {
  * @properties={typeid:24,uuid:"B4B6A12E-FA75-443D-B867-FFE5158C189E"}
  */
 function onActionProductos(event) {
-	forms.p_productos.controller.show()
+	forms.p_menu_productos.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"E6F62407-5021-4A5E-96AB-CCD139CFE4FF"}
+ */
+function onActionNuevoIng(event) {
+	forms.p_ingreso_nuevo.vl_form_padre = controller.getName()
+	var win1 = application.createWindow("nuevoIng", JSWindow.MODAL_DIALOG);
+	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win1.resizable = false
+	win1.title= 'Hair System';
+	win1.show(forms.p_ingreso_nuevo);
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"21E7C64D-D0EA-4540-9F02-A71EBB10F2D1"}
+ */
+function onActionEmpleados(event) {
+	forms.p_empleados.controller.show()
 }

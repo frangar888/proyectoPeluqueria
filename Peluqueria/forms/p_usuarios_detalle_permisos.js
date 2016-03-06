@@ -138,7 +138,7 @@ function actualizarPermisos(){
 			if(record.form_uuid == 'DA6E1FF1-8287-45B2-8A26-DE2809660D12' || record.form_uuid == 'FF14C89E-CF24-48DF-8D0E-B29F86A2BF8E' || record.form_uuid == '219184CF-FC76-4440-919C-A3C5E0421079'){
 				record.calc_leer = 1
 			}
-			if(record.calc_admin == 0){
+			
 				if(record.calc_leer == 1){
 					fs_permisos.cfg_perm_leer = 1
 				}
@@ -154,14 +154,10 @@ function actualizarPermisos(){
 				if(record.calc_imprimir == 1){
 					fs_permisos.cfg_perm_print = 1
 				}
-			}else{
-				fs_permisos.cfg_perm_print = 1
-				fs_permisos.cfg_perm_borrar = 1
-				fs_permisos.cfg_perm_nuevo = 1
-				fs_permisos.cfg_perm_grabar = 1
-				fs_permisos.cfg_perm_admin = 1
-				fs_permisos.cfg_perm_leer = 1
-			}
+				if(record.calc_admin == 1){
+					fs_permisos.cfg_perm_admin = 1
+				}
+		
 			databaseManager.saveData(fs_permisos)
 		
 	}
@@ -240,27 +236,7 @@ function actualizarPermisos(){
 	//databaseManager.saveData()
 }
 
-/**
- * Handle changed data, return false if the value should not be accepted. In NGClient you can return also a (i18n) string, instead of false, which will be shown as a tooltip.
- *
- * @param {Number} oldValue old value
- * @param {Number} newValue new value
- * @param {JSEvent} event the event that triggered the action
- *
- * @return {Boolean}
- *
- * @properties={typeid:24,uuid:"8EEB27E2-18B4-4AA6-86D0-5B7917DF69AA"}
- */
-function onDataChangeAdmin(oldValue, newValue, event) {
-	if(calc_admin == 1){
-		calc_borrar = 1
-		calc_imprimir = 1
-		calc_leer = 1
-		calc_modificar = 1
-		calc_nuevo = 1
-	}
-	return true
-}
+
 
 /**
  * Handle changed data, return false if the value should not be accepted. In NGClient you can return also a (i18n) string, instead of false, which will be shown as a tooltip.

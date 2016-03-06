@@ -78,6 +78,10 @@ function onActionGrabar(event) {
 		globals.lanzarVentanaEmergente(0,'Seleccione un Cliente.','Info',controller.getName(),null,null)
 		return
 	}
+	if(vendedor_adn_id == null || vendedor_adn_id == 0){
+		globals.lanzarVentanaEmergente(0,'Seleccione un Vendedor.','Info',controller.getName(),null,null)
+		return
+	}
 	if(forms.p_ventas_nuevo_prd.foundset.getSize() == 0){
 		globals.lanzarVentanaEmergente(0,'La Venta no tiene ningún producto.','Info',controller.getName(),null,null)
 		return

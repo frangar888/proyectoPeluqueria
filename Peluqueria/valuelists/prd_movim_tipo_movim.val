@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"Ingreso|0\r\
+Egreso|1",
+name:"prd_movim_tipo_movim",
+typeid:34,
+uuid:"21D9FB04-1AB5-4DC5-83A2-CC86DF94B351"

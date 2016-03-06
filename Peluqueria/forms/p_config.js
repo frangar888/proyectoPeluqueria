@@ -71,3 +71,25 @@ function onActionLineas(event) {
 function onActionCP(event) {
 	forms.p_cod_postales.controller.show()
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"8EAACDC3-7807-4780-A92C-E6F5B8777013"}
+ */
+function onActionMarcas(event) {
+	forms.p_marcas.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"F5395BC9-CCCC-4A46-822E-74607469580F"}
+ */
+function onActionEmpleados(event) {
+	forms.p_empleados.controller.show()
+}

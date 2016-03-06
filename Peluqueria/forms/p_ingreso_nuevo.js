@@ -139,7 +139,7 @@ function onActionGrabar(event) {
 		for (var index = 0; index < vl_array_ventas.length; index++) {
 			if(vl_resto > 0){
 			controller.newRecord()
-			
+			cj_ing_fecha = application.getServerTimeStamp()
 			/** @type {JSFoundset<db:/peluqueria/pel_ventas>}*/
 			var fs_vtas = databaseManager.getFoundSet('peluqueria','pel_ventas')
 			fs_vtas.loadAllRecords()

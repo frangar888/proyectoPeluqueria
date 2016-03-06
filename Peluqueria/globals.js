@@ -16,7 +16,7 @@ function onSolutionOpen(arg, queryParams) {
 	databaseManager.nullColumnValidatorEnabled = false
 	application.setNumpadEnterAsFocusNextEnabled(true)
 	globals.getUserId(globals.vg_user)
-
+	globals.vg_version = 'Version 1.0.0'
 	forms.form_inicio.controller.show()
 
 }
@@ -102,7 +102,7 @@ var args = new Array()
 		// real object not found in the current list, return 1 row with display,realvalue that will be added to the current list
 		// dont return a complete list in this mode because that will be added to the list that is already there
 		args = [realValue];
-		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(a.c_codigo as char),'-',b.adn_nombre), a.adn_id from ccc_clientes as a inner join adn as b on a.adn_id = b.adn_id where cliente_id = ?", args, -1);
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(a.c_codigo as char),'-',b.adn_nombre), a.adn_id from ccc_clientes as a inner join adn as b on a.adn_id = b.adn_id where adn_id = ?", args, -1);
 
 	}
 	return result;
@@ -239,6 +239,140 @@ var args = new Array()
 		// dont return a complete list in this mode because that will be added to the list that is already there
 		args = [globals.vg_rubro,realValue];
 		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(linea_cod as char),'-',linea_nombre), linea_id from prd_lineas where rubro_id = ? and linea_id = ?", args, -1);
+
+	}
+	return result;
+
+}
+
+/**
+ * Called when the valuelist needs data, it has 3 modes.
+ * real and display params both null: return the whole list
+ * only display is specified, called by a typeahead, return a filtered list
+ * only real value is specified, called when the list doesnt contain the real value for the give record value, this will insert this value into the existing list
+ *
+ * @param {String} displayValue The value of a lookupfield that a user types
+ * @param realValue The real value for a lookupfield where a display value should be get for
+ * @param {JSRecord} record The current record for the valuelist.
+ * @param {String} valueListName The valuelist name that triggers the method. (This is the FindRecord in find mode, which is like JSRecord has all the columns/dataproviders, but doesn't have its methods)
+ * @param {Boolean} findMode True if foundset of this record is in find mode
+ * @param {Boolean} rawDisplayValue The raw displayValue without being converted to lower case
+ *
+ * @return {JSDataSet} A dataset with 1 or 2 columns display[,real]
+ *
+ * @properties={typeid:24,uuid:"8026B4EA-93FA-4BEC-B6B4-8AEEF3916DE5"}
+ */
+function getDataSetForValueList_prd_productos_todos(displayValue, realValue, record, valueListName, findMode, rawDisplayValue) {
+var args = new Array()
+	/** @type  {JSDataSet} */
+	var result = null;
+	if (displayValue == null && realValue == null) 
+	{
+		args = []
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(prd_codigo as char),'-',prd_nombre), prd_id from prd_productos order by prd_codigo asc ", args, -1);
+	} 
+	else if (displayValue != null) 
+	{
+		// TYPE_AHEAD filter call, return a filtered list
+		args = ["%" + displayValue + "%",displayValue + "%"]
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(prd_codigo as char),'-',prd_nombre), prd_id from prd_productos where (prd_codigo like ? OR prd_nombre like ?) order by prd_codigo asc", args, -1);
+
+	} 
+	else if (realValue != null) 
+	{
+		// real object not found in the current list, return 1 row with display,realvalue that will be added to the current list
+		// dont return a complete list in this mode because that will be added to the list that is already there
+		args = [realValue];
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(prd_codigo as char),'-',prd_nombre), prd_id from prd_productos where prd_id = ?", args, -1);
+
+	}
+	return result;
+
+}
+
+/**
+ * Called when the valuelist needs data, it has 3 modes.
+ * real and display params both null: return the whole list
+ * only display is specified, called by a typeahead, return a filtered list
+ * only real value is specified, called when the list doesnt contain the real value for the give record value, this will insert this value into the existing list
+ *
+ * @param {String} displayValue The value of a lookupfield that a user types
+ * @param realValue The real value for a lookupfield where a display value should be get for
+ * @param {JSRecord} record The current record for the valuelist.
+ * @param {String} valueListName The valuelist name that triggers the method. (This is the FindRecord in find mode, which is like JSRecord has all the columns/dataproviders, but doesn't have its methods)
+ * @param {Boolean} findMode True if foundset of this record is in find mode
+ * @param {Boolean} rawDisplayValue The raw displayValue without being converted to lower case
+ *
+ * @return {JSDataSet} A dataset with 1 or 2 columns display[,real]
+ *
+ * @properties={typeid:24,uuid:"02856A3A-513B-4716-A7B3-1AAAB9E77636"}
+ */
+function getDataSetForValueList_prd_productos_activos(displayValue, realValue, record, valueListName, findMode, rawDisplayValue) {
+	var args = new Array()
+	/** @type  {JSDataSet} */
+	var result = null;
+	if (displayValue == null && realValue == null) 
+	{
+		args = []
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(prd_codigo as char),'-',prd_nombre), prd_id from prd_productos where prd_estado = 0 order by prd_codigo asc ", args, -1);
+	} 
+	else if (displayValue != null) 
+	{
+		// TYPE_AHEAD filter call, return a filtered list
+		args = ["%" + displayValue + "%",displayValue + "%"]
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(prd_codigo as char),'-',prd_nombre), prd_id from prd_productos where prd_estado = 0 and (prd_codigo like ? OR prd_nombre like ?) order by prd_codigo asc", args, -1);
+
+	} 
+	else if (realValue != null) 
+	{
+		// real object not found in the current list, return 1 row with display,realvalue that will be added to the current list
+		// dont return a complete list in this mode because that will be added to the list that is already there
+		args = [realValue];
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(prd_codigo as char),'-',prd_nombre), prd_id from prd_productos where prd_estado = 0 and prd_id = ?", args, -1);
+
+	}
+	return result;
+
+}
+
+/**
+ * Called when the valuelist needs data, it has 3 modes.
+ * real and display params both null: return the whole list
+ * only display is specified, called by a typeahead, return a filtered list
+ * only real value is specified, called when the list doesnt contain the real value for the give record value, this will insert this value into the existing list
+ *
+ * @param {String} displayValue The value of a lookupfield that a user types
+ * @param realValue The real value for a lookupfield where a display value should be get for
+ * @param {JSRecord} record The current record for the valuelist.
+ * @param {String} valueListName The valuelist name that triggers the method. (This is the FindRecord in find mode, which is like JSRecord has all the columns/dataproviders, but doesn't have its methods)
+ * @param {Boolean} findMode True if foundset of this record is in find mode
+ * @param {Boolean} rawDisplayValue The raw displayValue without being converted to lower case
+ *
+ * @return {JSDataSet} A dataset with 1 or 2 columns display[,real]
+ *
+ * @properties={typeid:24,uuid:"059EAD36-31FB-41C0-BFC3-AFF4DB8BF946"}
+ */
+function getDataSetForValueList_adn_vendedores(displayValue, realValue, record, valueListName, findMode, rawDisplayValue) {
+var args = new Array()
+	/** @type  {JSDataSet} */
+	var result = null;
+	if (displayValue == null && realValue == null) 
+	{
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(a.ven_codigo as char),'-',b.adn_nombre), a.adn_id from adn_vendedores as a inner join adn as b on a.adn_id = b.adn_id order by ven_codigo asc ", args, -1);
+	} 
+	else if (displayValue != null) 
+	{
+		// TYPE_AHEAD filter call, return a filtered list
+		args = [, "%" + displayValue + "%",displayValue + "%"]
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(a.ven_codigo as char),'-',b.adn_nombre), a.adn_id from adn_vendedores as a inner join adn as b on a.adn_id = b.adn_id where (a.ven_codigo like ? OR b.adn_nombre like ?) order by ven_codigo asc", args, -1);
+
+	} 
+	else if (realValue != null) 
+	{
+		// real object not found in the current list, return 1 row with display,realvalue that will be added to the current list
+		// dont return a complete list in this mode because that will be added to the list that is already there
+		args = [realValue];
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(a.ven_codigo as char),'-',b.adn_nombre), a.adn_id from adn_vendedores as a inner join adn as b on a.adn_id = b.adn_id where adn_id = ?", args, -1);
 
 	}
 	return result;

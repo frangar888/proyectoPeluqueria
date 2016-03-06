@@ -54,12 +54,12 @@ function onLoad(event) {
  * @properties={typeid:24,uuid:"D6E9DC1C-AFB2-4A31-9C90-560465A2864B"}
  */
 function onShow(firstShow, event) {
-	if(!globals.checkearAdmin(globals.vg_user_id,globals.getFormID(forms.p_lineas.controller.getName()),[elements.btn_nuevo.getName()],controller.getName())){
+	//if(!globals.checkearAdmin(globals.vg_user_id,globals.getFormID(forms.p_lineas.controller.getName()),[elements.btn_nuevo.getName()],controller.getName())){
 		if(globals.validarLeer(globals.vg_user_id,globals.getFormID(forms.p_lineas.controller.getName()))){
 			globals.validarPermisos(globals.vg_user_id,globals.getFormID(forms.p_lineas.controller.getName()),2,controller.getName())
 		}else{
 			forms.p_config.controller.show()
 			globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
 		}
-	}
+//	}
 }

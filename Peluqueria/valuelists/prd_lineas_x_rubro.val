@@ -1,6 +1,10 @@
 addEmptyValue:1,
-customValues:"1651AB5D-5EA7-4B38-8D46-33BC80119A43",
+dataProviderID1:"linea_nombre",
+dataProviderID2:"linea_id",
 name:"prd_lineas_x_rubro",
+relationName:"prd_rubros_to_prd_lineas_x_vg_rubro",
+returnDataProviders:2,
+showDataProviders:1,
 typeid:34,
 uuid:"F8321A8E-E496-4030-9B7C-BF645A9116D5",
-valueListType:4
+valueListType:1

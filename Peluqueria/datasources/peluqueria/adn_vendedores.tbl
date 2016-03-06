@@ -1,0 +1,11 @@
+dataSource:"db:/peluqueria/adn_vendedores",
+items:[
+{
+dataProviderIDToAggregate:"vendedor_id",
+name:"aggr_cant_vend",
+typeid:40,
+uuid:"3D3A3C03-B17F-4473-A19A-10AB85180D62"
+}
+],
+typeid:39,
+uuid:"87EBA981-EE85-4B43-BD22-FC72035BD46E"

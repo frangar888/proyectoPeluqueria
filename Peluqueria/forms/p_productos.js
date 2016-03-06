@@ -50,14 +50,14 @@ var vl_nombre = null;
  * @properties={typeid:24,uuid:"1CCEE796-BCCE-4457-B451-DEDBF57F4FC7"}
  */
 function onShow(firstShow, event) {
-	if(!globals.checkearAdmin(globals.vg_user_id,globals.getFormID(controller.getName()),[elements.btn_nuevo.getName()],controller.getName())){
+	//if(!globals.checkearAdmin(globals.vg_user_id,globals.getFormID(controller.getName()),[elements.btn_nuevo.getName()],controller.getName())){
 		if(globals.validarLeer(globals.vg_user_id,globals.getFormID(controller.getName()))){
 			globals.validarPermisos(globals.vg_user_id,globals.getFormID(controller.getName()),2,null)
 		}else{
 			forms.form_inicio.controller.show()
 			globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
 		}
-	}
+	//}
 }
 
 /**
@@ -123,5 +123,33 @@ function onActionNuevo(event) {
  * @properties={typeid:24,uuid:"24823AE4-61DA-43A3-867D-D175499BFC25"}
  */
 function onActionVolver(event) {
-	forms.form_inicio.controller.show()
+	forms.p_menu_productos.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"DB7C73DB-4209-4A1A-A718-4F5B16E00C45"}
+ */
+function onActionDetalle(event) {
+	forms.p_productos_detalle.vl_form_padre = controller.getName()
+	forms.p_productos_detalle.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"3A13233B-9F7B-4C0E-B898-61F41F2F72B3"}
+ */
+function onActionIngEgr(event) {
+	var win1 = application.createWindow("ingEgrPrd", JSWindow.MODAL_DIALOG);
+	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win1.resizable = false
+	win1.title= 'Hair System';
+	win1.show(forms.p_productos_ing_egr);
 }

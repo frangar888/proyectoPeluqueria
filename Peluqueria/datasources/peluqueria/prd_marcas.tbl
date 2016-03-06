@@ -1,0 +1,11 @@
+dataSource:"db:/peluqueria/prd_marcas",
+items:[
+{
+dataProviderIDToAggregate:"marca_id",
+name:"aggr_cant_marcas",
+typeid:40,
+uuid:"6B8E9D43-D330-40F5-AE89-8C14CD5088EE"
+}
+],
+typeid:39,
+uuid:"155688FC-E5D9-4D0E-B293-F0B66E95A8DE"
