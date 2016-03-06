@@ -140,5 +140,5 @@ function onActionNuevoIng(event) {
  * @properties={typeid:24,uuid:"21E7C64D-D0EA-4540-9F02-A71EBB10F2D1"}
  */
 function onActionEmpleados(event) {
-	forms.p_empleados.controller.show()
+	forms.p_menu_empleados.controller.show()
 }

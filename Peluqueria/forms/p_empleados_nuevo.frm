@@ -330,9 +330,11 @@ uuid:"BF853362-35A3-4E85-8B4A-6EAF20F1B3B3"
 },
 {
 dataProviderID:"vl_adn_observa",
+displayType:1,
 formIndex:29,
 location:"156,332",
 name:"vl_adn_observa",
+scrollbars:32,
 size:"271,64",
 tabSeq:12,
 text:"Vl Adn Observa",

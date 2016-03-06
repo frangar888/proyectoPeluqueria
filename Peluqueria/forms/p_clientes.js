@@ -130,3 +130,14 @@ function calcularTotales(){
 		vl_total_saldo += record.calc_saldo_cliente
 	}
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"B079754C-8E23-4394-B27E-89D4BF81DEC7"}
+ */
+function onActionNuevo(event) {
+	forms.p_clientes_nuevo.controller.show()
+}

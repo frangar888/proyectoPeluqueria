@@ -71,5 +71,16 @@ function onActionNuevo(event) {
  * @properties={typeid:24,uuid:"CAEFFCD9-100A-45E4-AA34-A1516D6B7A68"}
  */
 function onActionVolver(event) {
-	forms.form_inicio.controller.show()
+	forms.p_menu_empleados.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"2A83E7F0-29E3-4E51-B31C-D84AD815F2DE"}
+ */
+function onActionDetalle(event) {
+	forms.p_empleados_detalle.controller.show()
 }
