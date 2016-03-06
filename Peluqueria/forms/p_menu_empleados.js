@@ -3,25 +3,21 @@
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"9B9CCD32-60DF-4770-BE13-488E42524389"}
+ * @properties={typeid:24,uuid:"3788D24C-922C-4190-9BBC-60BBB83E1760"}
  */
 function onActionVolver(event) {
 	forms.form_inicio.controller.show()
 }
 
-
-
-
-
 /**
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"33C14F5C-FFE1-4696-B6AF-1E9451B17A13"}
+ * @properties={typeid:24,uuid:"0EEECA24-B24A-4C85-9183-FF24A8046F18"}
  */
-function onActionListadoPrd(event) {
-	forms.p_productos.controller.show()
+function onActionListadoEmp(event) {
+	forms.p_empleados.controller.show()
 }
 
 /**
@@ -29,7 +25,7 @@ function onActionListadoPrd(event) {
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"B1211CB4-F5B2-4C17-95E6-144E3CF6D00E"}
+ * @properties={typeid:24,uuid:"D258BF38-B81E-43D5-9729-C6347D1F1A1F"}
  */
 function onActionPrdMovim(event) {
 	forms.p_movimientos.controller.show()
@@ -41,7 +37,7 @@ function onActionPrdMovim(event) {
  * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"E7152014-ED62-4B39-941A-6D8D3D0B0F3E"}
+ * @properties={typeid:24,uuid:"5ECFC141-59FC-42AC-A5B2-8EE27F0F7F30"}
  */
 function onShow(firstShow, event) {
 	var ancho = application.getWindow().getWidth()
@@ -49,10 +45,21 @@ function onShow(firstShow, event) {
 }
 
 /**
- * 
+ * TODO generated, please specify type and doc for the params
  * @param event
  *
- * @properties={typeid:24,uuid:"9EB60ADC-5AC8-440B-B1EC-DD64CCB3D5A9"}
+ * @properties={typeid:24,uuid:"627DAED4-160B-4593-9E5C-4F41D1D37C5E"}
+ */
+function onActionNuevaVenta(event) {
+	forms.p_ventas_nuevo.vl_form_padre = controller.getName()
+	forms.p_ventas_nuevo.controller.show()
+}
+
+/**
+ * TODO generated, please specify type and doc for the params
+ * @param event
+ *
+ * @properties={typeid:24,uuid:"63D523BE-0ACD-47FC-8570-60FA0D9EDECB"}
  */
 function onActionNuevoIng(event) {
 	forms.p_ingreso_nuevo.vl_form_padre = controller.getName()
@@ -62,15 +69,4 @@ function onActionNuevoIng(event) {
 	win1.resizable = false
 	win1.title= 'Hair System';
 	win1.show(forms.p_ingreso_nuevo);
-}
-
-/**
- * TODO generated, please specify type and doc for the params
- * @param event
- *
- * @properties={typeid:24,uuid:"7FE1710B-586C-436A-B6DF-FCCA1AA90023"}
- */
-function onActionNuevaVenta(event) {
-	forms.p_ventas_nuevo.vl_form_padre = controller.getName()
-	forms.p_ventas_nuevo.controller.show()
 }
