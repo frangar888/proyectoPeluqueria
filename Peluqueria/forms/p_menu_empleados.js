@@ -27,8 +27,8 @@ function onActionListadoEmp(event) {
  *
  * @properties={typeid:24,uuid:"D258BF38-B81E-43D5-9729-C6347D1F1A1F"}
  */
-function onActionPrdMovim(event) {
-	forms.p_movimientos.controller.show()
+function onActionComPorEmpleado(event) {
+	forms.p_empleados_consulta.controller.show()
 }
 
 /**
