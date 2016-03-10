@@ -115,6 +115,7 @@ function onActionVolver(event) {
  * @properties={typeid:24,uuid:"7CBDD9CC-E380-426F-9177-D51EFCCE09CD"}
  */
 function onActionAceptar(){
+	forms.p_empleados_consulta_com.vl_vendedor_adn_id = vl_ven_adn_id
 	forms.p_empleados_consulta_com.controller.show()
 }
 
