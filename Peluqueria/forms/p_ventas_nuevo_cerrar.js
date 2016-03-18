@@ -227,7 +227,7 @@ function onActionGrabar(event) {
 	for (var index = 1; index <= cant; index++) {
 		var record = forms.p_ventas_nuevo_prd.foundset.getRecord(index);
 		if(record.prd_id != 0){
-			if(record.pel_ventas_prd_to_prd_productos.prd_controla_stock == 0){
+			if(record.pel_ventas_prd_to_prd_productos.prd_controla_stock == 1){
 				fs_mov.newRecord()
 				fs_mov.prd_id = record.prd_id
 				fs_mov.mov_ing = 0
@@ -249,6 +249,8 @@ function onActionGrabar(event) {
 	fs_cj_ing.conc_cod = 1
 	fs_cj_ing.conc_nombre = fs_cj_ing.cj_ingresos_to_cj_conceptos.conc_nombre
 	fs_cj_ing.venta_id = forms.p_ventas_nuevo.venta_id
+	fs_cj_ing.cj_ing_fecha = application.getServerTimeStamp()
+	fs_cj_ing.user_id = globals.vg_user_id
 	databaseManager.saveData(fs_cj_ing)
 	
 	if(vl_pago > vl_total_total){
@@ -259,6 +261,8 @@ function onActionGrabar(event) {
 		fs_cj_egr.conc_cod = 2
 		fs_cj_egr.conc_nombre = fs_cj_egr.cj_egresos_to_cj_conceptos.conc_nombre
 		fs_cj_egr.venta_id = forms.p_ventas_nuevo.venta_id
+		fs_cj_egr.cj_egr_fecha = application.getServerTimeStamp()
+		fs_cj_ing.user_id = globals.vg_user_id
 		databaseManager.saveData(fs_cj_egr)
 	}
 	

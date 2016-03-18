@@ -134,6 +134,7 @@ function onActionGrabar(event) {
 			}
 		}
 	}
+	if(vl_form_padre == forms.p_clientes_ver_tab_vtas.controller.getName()){
 	if(vl_array_ventas != null){
 		var vl_resto = vl_cj_ing_importe
 		for (var index = 0; index < vl_array_ventas.length; index++) {
@@ -161,9 +162,20 @@ function onActionGrabar(event) {
 			user_id = globals.vg_user_id
 			venta_id = vl_array_ventas[index]
 			databaseManager.saveData()
+			forms.p_clientes_ver_tab_vtas.calcularTotales()
 		}
 		}
 	}
-	forms.p_clientes_ver_tab_vtas.calcularTotales()
+}else{
+	controller.newRecord()
+	cj_ing_fecha = application.getServerTimeStamp()
+	cj_ing_importe = vl_cj_ing_importe
+	conc_cod = vl_conc_cod
+	user_id = globals.vg_user_id
+	venta_id = 0
+	conc_nombre = application.getValueListDisplayValue('cj_conceptos',vl_conc_cod)
+	databaseManager.saveData()
+}
+	
 	application.getWindow().hide()
 }
