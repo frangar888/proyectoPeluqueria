@@ -134,7 +134,7 @@ uuid:"E1057256-2FB8-4570-8E86-0BE3EBF7C5BA"
 {
 formIndex:2,
 groupID:"grp_accesos",
-imageMediaID:"B88EF8AE-EB76-412B-90C1-B62C70218B61",
+imageMediaID:"7D681E74-9059-4751-92C5-FB13EDBD0C43",
 location:"843,64",
 mediaOptions:1,
 name:"btn_nuevo_ing",

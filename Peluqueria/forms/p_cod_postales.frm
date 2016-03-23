@@ -81,6 +81,7 @@ uuid:"46B1A524-F591-4777-8567-6E8948C8278A"
 },
 {
 dataProviderID:"cpos_codigo",
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 location:"30,173",
 name:"cpos_codigo",
@@ -91,6 +92,7 @@ uuid:"607F27BB-0E88-4E7D-A59C-044A42A34F63"
 },
 {
 dataProviderID:"adn_cod_postales_to_prv_provincias.prv_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"365,173",
 name:"prv_nombre",
@@ -107,6 +109,7 @@ uuid:"6CA206E4-12AC-4DFB-9F3D-C9A6F3858103"
 },
 {
 dataProviderID:"cpos_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"128,173",
 name:"cpos_nombre",

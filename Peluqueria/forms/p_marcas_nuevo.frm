@@ -39,6 +39,7 @@ uuid:"2AF339B8-F7D6-46E7-AE94-A46A3491B57A"
 },
 {
 dataProviderID:"marca_cod",
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 horizontalAlignment:0,
 location:"121,145",
@@ -121,6 +122,7 @@ uuid:"C32E1971-1878-4157-BAC8-41EF6B0155D2"
 },
 {
 dataProviderID:"marca_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"121,171",
 name:"marca_nombre",

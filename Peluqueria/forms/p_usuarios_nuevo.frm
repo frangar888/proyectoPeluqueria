@@ -27,6 +27,7 @@ uuid:"1C083C26-F6EE-448F-9853-BF7EDDF3AFC0"
 },
 {
 dataProviderID:"vl_email",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"166,172",
 name:"vl_email",
@@ -59,6 +60,7 @@ uuid:"2288E818-21C7-44EC-8DB2-FD86E60F3396"
 },
 {
 dataProviderID:"vl_user_name",
+fontType:"Trebuchet MS,0,15",
 formIndex:16,
 location:"166,199",
 name:"vl_user_name",
@@ -80,6 +82,7 @@ uuid:"5721C028-1C4A-4FB3-A50E-1CC016274EC4"
 },
 {
 dataProviderID:"vl_adn_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 location:"166,145",
 name:"vl_adn_nombre",
@@ -120,6 +123,7 @@ uuid:"6FD215E7-F3E0-409F-A2CD-6897ECDCDF32"
 {
 dataProviderID:"vl_password",
 displayType:6,
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"166,227",
 name:"vl_password",

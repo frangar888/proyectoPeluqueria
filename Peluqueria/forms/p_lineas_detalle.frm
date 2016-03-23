@@ -28,6 +28,7 @@ uuid:"28A49449-1B34-49E1-AA9C-DEF96933A98C"
 {
 dataProviderID:"rubro_id",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:16,
 location:"134,228",
 name:"rubro_nombre",
@@ -62,6 +63,7 @@ uuid:"2F9A1BB1-A37D-47CC-996E-89882DE5F119"
 {
 dataProviderID:"linea_id",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 horizontalAlignment:0,
 location:"134,147",
@@ -94,6 +96,7 @@ uuid:"380E72AD-D987-4151-A080-09FD03D5E0BE"
 },
 {
 dataProviderID:"linea_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"134,201",
 name:"linea_nombre",
@@ -104,6 +107,7 @@ uuid:"44154F54-82B4-419C-A449-E6E16C2918E2"
 },
 {
 dataProviderID:"linea_cod",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 horizontalAlignment:0,
 location:"134,174",

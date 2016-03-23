@@ -15,6 +15,7 @@ uuid:"042C736B-47AF-40BA-AFB0-836CDBF967C1"
 dataProviderID:"vl_conc_cod",
 displayType:2,
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:23,
 location:"158,153",
 name:"vl_conc_cod",
@@ -26,6 +27,7 @@ valuelistID:"B0A210DF-B2E8-4DF9-ABE5-D4D224F5718C"
 },
 {
 dataProviderID:"vl_cj_ing_importe",
+fontType:"Trebuchet MS,0,15",
 formIndex:21,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -88,6 +90,7 @@ uuid:"696A9B26-2056-4F85-8794-30FB5BFECB35"
 {
 dataProviderID:"vl_caja_id",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:19,
 location:"158,178",
 name:"vl_caja_id",
@@ -160,6 +163,7 @@ uuid:"E75F5DD3-D754-4134-A9D6-DA98902D6847"
 {
 dataProviderID:"vl_imp_total",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:27,
 format:"#,###.00",
 horizontalAlignment:4,

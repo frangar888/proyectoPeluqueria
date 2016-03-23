@@ -39,6 +39,7 @@ uuid:"4889CE36-FB84-41FA-8810-58B67FE0FE7F"
 {
 dataProviderID:"cpos_codigo",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 location:"127,148",
 name:"cpos_codigo",
@@ -64,6 +65,7 @@ uuid:"568B0D9A-D298-4E63-BEAC-2E58453B79A7"
 },
 {
 dataProviderID:"cpos_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"127,175",
 name:"cpos_nombre",
@@ -92,6 +94,7 @@ uuid:"AF0F6AEE-868E-422E-AA52-A19BD5FBDDA4"
 {
 dataProviderID:"provincia_id",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"127,202",
 name:"provincia_id",

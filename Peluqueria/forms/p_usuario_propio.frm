@@ -50,6 +50,7 @@ uuid:"39D077DA-E7F2-4E20-9CF3-9382A1F72CA2"
 {
 dataProviderID:"user_pass",
 displayType:6,
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"164,184",
 name:"user_pass",
@@ -60,6 +61,7 @@ uuid:"3DD5262A-FE9F-4BE3-800C-1DB969BF5D90"
 },
 {
 dataProviderID:"adn_usuarios_to_adn.adn_email_1",
+fontType:"Trebuchet MS,0,15",
 formIndex:16,
 location:"164,244",
 name:"adn_email_1",
@@ -155,6 +157,7 @@ uuid:"BEF84CBE-8885-44EA-8BEB-23883EFF03ED"
 },
 {
 dataProviderID:"user_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 location:"164,154",
 name:"user_nombre",
@@ -165,6 +168,7 @@ uuid:"DB171DF9-194F-4BE3-B01E-71535A8D831C"
 },
 {
 dataProviderID:"adn_usuarios_to_adn.adn_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"164,214",
 name:"adn_nombre",

@@ -106,6 +106,7 @@ uuid:"69911037-7B82-4A6A-AE59-54425F807B1A"
 },
 {
 dataProviderID:"ven_com_x_serv",
+fontType:"Trebuchet MS,0,15",
 formIndex:23,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -142,6 +143,7 @@ uuid:"77AFEC74-8FE8-4BA2-A090-224F0A3078DE"
 },
 {
 dataProviderID:"vl_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:43,
 location:"156,182",
 name:"vl_nombre",
@@ -167,6 +169,7 @@ uuid:"7AE829D3-DAC8-4ECA-8028-91CC0CA7FD42"
 dataProviderID:"vl_doc_tipo",
 displayType:2,
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:35,
 location:"156,282",
 name:"vl_doc_tipo",
@@ -194,6 +197,7 @@ uuid:"7EE79D27-B240-4B5F-A89D-B60EB388BCC3"
 },
 {
 dataProviderID:"vl_email_2",
+fontType:"Trebuchet MS,0,15",
 formIndex:41,
 location:"592,232",
 name:"vl_email_2",
@@ -253,6 +257,7 @@ uuid:"94790EF0-9141-4E5D-8BD8-1C0E4BBF51C1"
 },
 {
 dataProviderID:"vl_cod_postal_id",
+fontType:"Trebuchet MS,0,15",
 formIndex:31,
 location:"156,232",
 name:"vl_cod_postal_id",
@@ -277,6 +282,7 @@ uuid:"AB619EB9-69E7-4405-8C27-A223AE1EFDC1"
 },
 {
 dataProviderID:"ven_com_x_prd",
+fontType:"Trebuchet MS,0,15",
 formIndex:21,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -291,6 +297,7 @@ uuid:"AC7EFA3B-7FCD-4D7F-BACD-582A3AACBD00"
 },
 {
 dataProviderID:"vl_tel_2",
+fontType:"Trebuchet MS,0,15",
 formIndex:47,
 location:"592,182",
 name:"vl_tel_2",
@@ -302,6 +309,7 @@ uuid:"B7AE6BAC-1731-44D1-9FDB-AED0189CFD14"
 },
 {
 dataProviderID:"vl_domicilio",
+fontType:"Trebuchet MS,0,15",
 formIndex:37,
 location:"156,207",
 name:"vl_domicilio",
@@ -319,6 +327,7 @@ uuid:"BDFAFF6B-BB1B-4BFB-8BDA-589840FAF78A"
 },
 {
 dataProviderID:"vl_tel_1",
+fontType:"Trebuchet MS,0,15",
 formIndex:45,
 location:"592,158",
 name:"vl_tel_1",
@@ -331,6 +340,7 @@ uuid:"BF853362-35A3-4E85-8B4A-6EAF20F1B3B3"
 {
 dataProviderID:"vl_adn_observa",
 displayType:1,
+fontType:"Trebuchet MS,0,15",
 formIndex:29,
 location:"156,332",
 name:"vl_adn_observa",
@@ -356,6 +366,7 @@ uuid:"C223761E-BD11-4776-951A-8ED27EF5BFBC"
 {
 dataProviderID:"vl_adn_fec_nac",
 displayType:5,
+fontType:"Trebuchet MS,0,15",
 formIndex:27,
 format:"dd-MM-yyyy|mask",
 location:"156,257",
@@ -368,6 +379,7 @@ uuid:"C353CDE7-D4CF-4A03-80E8-582ABD835CCB"
 },
 {
 dataProviderID:"vl_doc_nro",
+fontType:"Trebuchet MS,0,15",
 formIndex:33,
 location:"156,307",
 name:"vl_doc_nro",
@@ -379,6 +391,7 @@ uuid:"CEB0C992-5A12-46C2-8DFB-9FAE78634F22"
 },
 {
 dataProviderID:"vl_email_1",
+fontType:"Trebuchet MS,0,15",
 formIndex:39,
 location:"592,207",
 name:"vl_email_1",
@@ -449,6 +462,7 @@ uuid:"F70080A4-8ECC-4A22-8DA3-AE1BF752E862"
 },
 {
 dataProviderID:"ven_codigo",
+fontType:"Trebuchet MS,0,15",
 formIndex:19,
 horizontalAlignment:0,
 location:"156,158",

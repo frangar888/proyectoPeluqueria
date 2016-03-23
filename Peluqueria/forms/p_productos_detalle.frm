@@ -1,9 +1,10 @@
 dataSource:"db:/peluqueria/prd_productos",
 items:[
 {
-groupID:"grp_stock_min",
+fontType:"Trebuchet MS,0,13",
+groupID:"grp_stock",
 labelFor:"prd_stock_min",
-location:"563,294",
+location:"563,360",
 name:"prd_stock_min_label",
 size:"93,20",
 styleClass:"fieldlabel",
@@ -76,6 +77,7 @@ uuid:"179D3DDC-B85B-4886-B84E-73CF26C2CE8C"
 dataProviderID:"prd_tipo",
 displayType:2,
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:46,
 location:"166,254",
 name:"prd_tipo",
@@ -89,8 +91,9 @@ valuelistID:"2467A98E-5E81-4DD4-9730-0BCBE6301D2A"
 {
 dataProviderID:"prd_controla_stock",
 displayType:4,
+fontType:"Trebuchet MS,0,15",
 formIndex:29,
-location:"563,237",
+location:"563,303",
 name:"prd_controla_stock",
 onDataChangeMethodID:"2D462AE1-8091-41E1-9C2F-BA35F135F162",
 size:"176,20",
@@ -130,12 +133,24 @@ typeid:7,
 uuid:"3FEEE548-71DB-4EE0-8D9D-81360DBCC356"
 },
 {
+formIndex:47,
+labelFor:"prd_comision_porc",
+location:"563,229",
+name:"prd_comision_porc_label",
+size:"86,20",
+styleClass:"fieldlabel",
+text:"Comisión:",
+typeid:7,
+uuid:"47EFEC09-FB1D-4412-B6C6-3E2AFC4F54E1"
+},
+{
 dataProviderID:"prd_stock_min",
+fontType:"Trebuchet MS,0,15",
 formIndex:1,
 format:"#,###.00",
-groupID:"grp_stock_min",
+groupID:"grp_stock",
 horizontalAlignment:4,
-location:"659,294",
+location:"659,360",
 name:"prd_stock_min",
 size:"97,20",
 text:"Prd Stock Min",
@@ -157,9 +172,10 @@ typeid:7,
 uuid:"4C4CF82A-0217-456E-A166-EC63E3F05BBF"
 },
 {
-formIndex:43,
+formIndex:2,
+groupID:"grp_stock",
 labelFor:"vl_stock",
-location:"563,267",
+location:"563,333",
 name:"vl_stock_label",
 size:"93,20",
 styleClass:"fieldlabel",
@@ -179,6 +195,19 @@ typeid:7,
 uuid:"54EF359D-618D-414F-B362-B220E812A195"
 },
 {
+dataProviderID:"prd_comision_porc",
+fontType:"Trebuchet MS,0,15",
+formIndex:48,
+format:"#,###.00",
+horizontalAlignment:4,
+location:"654,229",
+name:"prd_comision_porc",
+size:"102,20",
+text:"Prd Comision Porc",
+typeid:4,
+uuid:"619211ED-EA84-49F8-BE1D-82F89547E789"
+},
+{
 anchors:11,
 background:"#2ba6d5",
 borderType:"LineBorder,1,#000000",
@@ -192,6 +221,7 @@ uuid:"740A17FB-8E2F-4246-BD85-BC2EB9F4EBC6"
 {
 dataProviderID:"marca_id",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:21,
 location:"166,303",
 name:"marca_id",
@@ -221,6 +251,7 @@ uuid:"83D556E9-B43B-42CF-B7DF-07ABC96C5867"
 {
 dataProviderID:"linea_id",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:19,
 location:"166,353",
 name:"linea_id",
@@ -232,6 +263,7 @@ valuelistID:"F8321A8E-E496-4030-9B7C-BF645A9116D5"
 },
 {
 dataProviderID:"prd_presentacion",
+fontType:"Trebuchet MS,0,15",
 formIndex:39,
 location:"166,278",
 name:"prd_presentacion",
@@ -242,6 +274,7 @@ uuid:"8485EA70-F93C-4339-8D1A-2DF1E9ECACB8"
 },
 {
 dataProviderID:"prd_cod_bar",
+fontType:"Trebuchet MS,0,15",
 formIndex:25,
 location:"166,204",
 name:"prd_cod_bar",
@@ -252,6 +285,7 @@ uuid:"8546C12D-B16D-4073-96B2-DA507266C9C0"
 },
 {
 dataProviderID:"prd_margen",
+fontType:"Trebuchet MS,0,15",
 formIndex:33,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -267,6 +301,7 @@ uuid:"8E51D304-2D06-4CB9-9B8D-B960818B3BE2"
 {
 dataProviderID:"prd_codigo",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:27,
 format:"#",
 horizontalAlignment:0,
@@ -291,6 +326,7 @@ uuid:"A86F79CB-5DC3-40C2-A0B7-2C25457D9EB2"
 },
 {
 dataProviderID:"prd_costo",
+fontType:"Trebuchet MS,0,15",
 formIndex:31,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -314,6 +350,7 @@ uuid:"B9C5B33B-D2CF-428B-B659-48B8814385BD"
 },
 {
 dataProviderID:"prd_precio",
+fontType:"Trebuchet MS,0,15",
 formIndex:37,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -328,6 +365,7 @@ uuid:"BBC6F7AA-2DD9-4315-9B49-526DC785B4DA"
 },
 {
 dataProviderID:"prd_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:35,
 location:"166,179",
 name:"prd_nombre",
@@ -339,10 +377,12 @@ uuid:"C38F0F44-735A-4846-BAE7-E107A47125CE"
 {
 dataProviderID:"vl_stock",
 editable:false,
-formIndex:44,
+fontType:"Trebuchet MS,0,15",
+formIndex:3,
 format:"#,###.00",
+groupID:"grp_stock",
 horizontalAlignment:4,
-location:"659,267",
+location:"659,333",
 name:"vl_stock",
 size:"97,20",
 styleClass:"disable",
@@ -401,6 +441,7 @@ uuid:"ECDD6150-3AE2-4101-9590-2F1225F938A1"
 {
 dataProviderID:"scopes.globals.vg_rubro",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:42,
 location:"166,328",
 name:"vg_rubro",
@@ -413,6 +454,7 @@ valuelistID:"8751D918-DB79-4226-88C8-88B1AC338A20"
 },
 {
 dataProviderID:"prd_cod_alt",
+fontType:"Trebuchet MS,0,15",
 formIndex:23,
 location:"166,229",
 name:"prd_cod_alt",

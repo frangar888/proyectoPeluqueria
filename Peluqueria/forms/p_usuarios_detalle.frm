@@ -3,6 +3,7 @@ items:[
 {
 dataProviderID:"user_nombre",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"30,149",
 name:"user_nombre",
@@ -98,6 +99,7 @@ uuid:"8659FDFA-BD3E-42A2-B8DB-9373034E9E8D"
 },
 {
 dataProviderID:"adn_usuarios_to_adn.adn_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"290,149",
 name:"adn_nombre",
@@ -135,6 +137,7 @@ uuid:"9DFCE7A6-0685-405B-A345-4A33B3E97E55"
 },
 {
 dataProviderID:"user_estado",
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 horizontalAlignment:0,
 location:"569,149",

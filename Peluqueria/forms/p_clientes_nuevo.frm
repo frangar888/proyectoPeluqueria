@@ -2,6 +2,7 @@ dataSource:"db:/peluqueria/ccc_clientes",
 items:[
 {
 dataProviderID:"vl_tel_1",
+fontType:"Trebuchet MS,0,15",
 formIndex:45,
 location:"592,158",
 name:"vl_tel_1",
@@ -36,6 +37,7 @@ uuid:"0BDBBA89-9F2E-47C3-ADF0-3D76F6B58382"
 {
 dataProviderID:"vl_adn_fec_nac",
 displayType:5,
+fontType:"Trebuchet MS,0,15",
 formIndex:27,
 format:"dd-MM-yyyy|mask",
 location:"156,257",
@@ -166,6 +168,7 @@ uuid:"60C7D1D9-BA29-452B-979D-8D6C2DCA9E86"
 dataProviderID:"vl_doc_tipo",
 displayType:2,
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:35,
 location:"156,282",
 name:"vl_doc_tipo",
@@ -178,6 +181,7 @@ valuelistID:"B9E453AE-2C99-4F44-8B98-089300956E74"
 },
 {
 dataProviderID:"c_codigo",
+fontType:"Trebuchet MS,0,15",
 formIndex:19,
 horizontalAlignment:0,
 location:"156,158",
@@ -190,6 +194,7 @@ uuid:"6A0A5192-A913-4920-A8A5-EB66C82B7309"
 },
 {
 dataProviderID:"vl_cod_postal_id",
+fontType:"Trebuchet MS,0,15",
 formIndex:31,
 location:"156,232",
 name:"vl_cod_postal_id",
@@ -202,6 +207,7 @@ valuelistID:"D3A5D94B-E0AC-49CD-843C-D0488A60F1E6"
 },
 {
 dataProviderID:"vl_adn_observa",
+fontType:"Trebuchet MS,0,15",
 formIndex:29,
 location:"156,332",
 name:"vl_adn_observa",
@@ -213,6 +219,7 @@ uuid:"79E5FAE7-DEFE-40FC-983F-1E3B9ADD86BA"
 },
 {
 dataProviderID:"vl_domicilio",
+fontType:"Trebuchet MS,0,15",
 formIndex:37,
 location:"156,207",
 name:"vl_domicilio",
@@ -251,6 +258,7 @@ uuid:"8AC25D8C-641C-4545-B7CD-C5EFF8CA3554"
 },
 {
 dataProviderID:"vl_email_2",
+fontType:"Trebuchet MS,0,15",
 formIndex:41,
 location:"592,232",
 name:"vl_email_2",
@@ -262,6 +270,7 @@ uuid:"9800269D-AE5C-4869-8AC5-7F9DE7446E1D"
 },
 {
 dataProviderID:"vl_email_1",
+fontType:"Trebuchet MS,0,15",
 formIndex:39,
 location:"592,207",
 name:"vl_email_1",
@@ -273,6 +282,7 @@ uuid:"984F172A-88BA-4D0E-88B2-053B2763E4CE"
 },
 {
 dataProviderID:"vl_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:43,
 location:"156,182",
 name:"vl_nombre",
@@ -296,6 +306,7 @@ uuid:"C0EE559E-ACC2-4D87-BEA6-39E84FFE0F73"
 },
 {
 dataProviderID:"vl_doc_nro",
+fontType:"Trebuchet MS,0,15",
 formIndex:33,
 location:"156,307",
 name:"vl_doc_nro",
@@ -361,6 +372,7 @@ uuid:"DCB1CB26-7B34-46A4-817A-8C26A97A89CD"
 },
 {
 dataProviderID:"vl_tel_2",
+fontType:"Trebuchet MS,0,15",
 formIndex:47,
 location:"592,182",
 name:"vl_tel_2",

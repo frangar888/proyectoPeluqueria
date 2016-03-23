@@ -24,6 +24,7 @@ uuid:"2EE2CF4A-12E2-4E1E-A99E-C18B18713955"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.adn_tel_2",
+fontType:"Trebuchet MS,0,15",
 formIndex:32,
 location:"130,216",
 name:"adn_tel_2",
@@ -45,6 +46,7 @@ uuid:"334F3C40-9988-4DE4-BFB5-78CC4CD855A5"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.adn_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:26,
 location:"130,87",
 name:"adn_nombre",
@@ -77,6 +79,7 @@ uuid:"4F28FD98-6D92-422C-95DC-768CB52AD950"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.adn_doc_nro",
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 location:"524,112",
 name:"adn_doc_nro",
@@ -98,6 +101,7 @@ uuid:"5E185876-248E-427C-BD8B-2A26784B8EAD"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.adn_email_1",
+fontType:"Trebuchet MS,0,15",
 formIndex:18,
 location:"130,243",
 name:"adn_email_1",
@@ -108,6 +112,7 @@ uuid:"620AFA92-1A65-4575-90FF-1C2C14A2081F"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.cod_postal_id",
+fontType:"Trebuchet MS,0,15",
 formIndex:34,
 location:"130,138",
 name:"cod_postal_id",
@@ -119,6 +124,7 @@ valuelistID:"D3A5D94B-E0AC-49CD-843C-D0488A60F1E6"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.adn_email_2",
+fontType:"Trebuchet MS,0,15",
 formIndex:20,
 location:"130,270",
 name:"adn_email_2",
@@ -140,6 +146,7 @@ uuid:"83995261-B0C4-4DED-93F3-CFBE523087F9"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.adn_tel_1",
+fontType:"Trebuchet MS,0,15",
 formIndex:30,
 location:"130,190",
 name:"adn_tel_1",
@@ -209,6 +216,7 @@ uuid:"B247C227-662C-4F92-88D0-86950794AFF5"
 {
 dataProviderID:"ccc_clientes_to_adn.adn_fecha_nac",
 displayType:5,
+fontType:"Trebuchet MS,0,15",
 formIndex:22,
 format:"dd-MM-yyyy|mask",
 location:"130,164",
@@ -221,6 +229,7 @@ uuid:"BC8013B7-9851-4CA5-9240-4B12EA813165"
 {
 dataProviderID:"ccc_clientes_to_adn.adn_observa",
 displayType:1,
+fontType:"Trebuchet MS,0,15",
 formIndex:28,
 location:"130,298",
 name:"adn_observa",
@@ -232,6 +241,7 @@ uuid:"C2437C7E-58DE-49E2-8573-2C4A46C504BC"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.adn_domicilio",
+fontType:"Trebuchet MS,0,15",
 formIndex:16,
 location:"130,112",
 name:"adn_domicilio",
@@ -270,6 +280,7 @@ uuid:"E904414E-A41B-4B13-BF69-30E054E480B4"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.adn_cat_iva",
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"524,138",
 name:"adn_cat_iva",
@@ -303,6 +314,7 @@ uuid:"FB2124D2-6A9F-4949-8670-F1C35EA9B949"
 },
 {
 dataProviderID:"ccc_clientes_to_adn.adn_doc_tipo",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"524,87",
 name:"adn_doc_tipo",

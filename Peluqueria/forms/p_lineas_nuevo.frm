@@ -16,6 +16,7 @@ uuid:"315B1C06-EE98-4795-92D2-B0BA4E4E31F5"
 },
 {
 dataProviderID:"linea_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"121,171",
 name:"linea_nombre",
@@ -53,6 +54,7 @@ uuid:"5A966970-98C4-4C3C-914A-FE1D98BAD9FC"
 {
 dataProviderID:"rubro_id",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"121,198",
 name:"rubro_id",
@@ -132,6 +134,7 @@ uuid:"AAF16403-A641-40EE-A544-0A4E86A58F62"
 },
 {
 dataProviderID:"linea_cod",
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 horizontalAlignment:0,
 location:"121,145",

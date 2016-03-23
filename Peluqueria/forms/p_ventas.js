@@ -84,8 +84,8 @@ function filtrar(){
  * @properties={typeid:24,uuid:"8C0F6E70-BF97-468E-96A7-5338D3F55E76"}
  */
 function onActionNuevaVenta(event) {
-	forms.p_ventas_nuevo.vl_form_padre = controller.getName()
-	forms.p_ventas_nuevo.controller.show()
+	forms.p_ventas_new.vl_form_padre = controller.getName()
+	forms.p_ventas_new.controller.show()
 }
 
 /**

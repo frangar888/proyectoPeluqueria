@@ -51,6 +51,7 @@ uuid:"0BE1B56F-5139-4FE3-A8C0-1BFF65B5B25F"
 },
 {
 dataProviderID:"prd_codigo",
+fontType:"Trebuchet MS,0,15",
 formIndex:27,
 format:"#",
 horizontalAlignment:0,
@@ -90,6 +91,7 @@ uuid:"30A74853-228B-425C-A468-F670C30A0642"
 {
 dataProviderID:"scopes.globals.vg_rubro",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:42,
 location:"166,331",
 name:"vg_rubro",
@@ -116,6 +118,7 @@ uuid:"3FC16D97-140C-42BA-A7A2-79DD8ED92551"
 },
 {
 dataProviderID:"prd_costo",
+fontType:"Trebuchet MS,0,15",
 formIndex:31,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -156,6 +159,7 @@ uuid:"4BDE7072-9B03-42C6-BD72-BC6C113B16D6"
 {
 dataProviderID:"linea_id",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:19,
 location:"166,356",
 name:"linea_id",
@@ -180,6 +184,7 @@ uuid:"58795785-CD56-4FB0-AF6F-BB6C450114AC"
 },
 {
 dataProviderID:"prd_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:35,
 location:"166,207",
 name:"prd_nombre",
@@ -191,6 +196,7 @@ uuid:"62000D04-38D9-4E10-A7AA-7FB56BF89343"
 },
 {
 dataProviderID:"vl_ing_inicial",
+fontType:"Trebuchet MS,0,15",
 formIndex:1,
 format:"#,###.00",
 groupID:"grp_stock",
@@ -205,6 +211,7 @@ uuid:"6A137C9D-AAF7-40AC-AFEB-44DCFE5257C0"
 },
 {
 dataProviderID:"prd_precio",
+fontType:"Trebuchet MS,0,15",
 formIndex:37,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -249,6 +256,7 @@ uuid:"6E1A87C6-66CF-4E36-8F24-8FA7E57F7140"
 {
 dataProviderID:"prd_controla_stock",
 displayType:4,
+fontType:"Trebuchet MS,0,15",
 formIndex:29,
 location:"563,237",
 name:"prd_controla_stock",
@@ -262,6 +270,7 @@ uuid:"7AE2B007-DA4F-45D7-9CB7-2D38915D4375"
 {
 dataProviderID:"marca_id",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:21,
 location:"166,306",
 name:"marca_id",
@@ -313,6 +322,7 @@ uuid:"9EFF0746-CF88-4059-A845-8195B8445725"
 },
 {
 dataProviderID:"prd_margen",
+fontType:"Trebuchet MS,0,15",
 formIndex:33,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -371,6 +381,7 @@ uuid:"CFF6A471-D76A-467A-BEAE-4C702C65EE10"
 },
 {
 dataProviderID:"prd_cod_bar",
+fontType:"Trebuchet MS,0,15",
 formIndex:25,
 location:"166,232",
 name:"prd_cod_bar",
@@ -396,6 +407,7 @@ uuid:"DACF1DF9-EF5C-42AE-BCF5-E8B9850E6563"
 dataProviderID:"prd_tipo",
 displayType:2,
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:44,
 location:"166,157",
 name:"prd_tipo",
@@ -421,6 +433,7 @@ uuid:"E3CCB07D-21E9-4FF0-BF5E-79EF167DA460"
 },
 {
 dataProviderID:"prd_cod_alt",
+fontType:"Trebuchet MS,0,15",
 formIndex:23,
 location:"166,257",
 name:"prd_cod_alt",
@@ -432,6 +445,7 @@ uuid:"ED8DDF05-3D3F-430F-8D4A-06C5E44DBA0B"
 },
 {
 dataProviderID:"prd_presentacion",
+fontType:"Trebuchet MS,0,15",
 formIndex:39,
 location:"166,281",
 name:"prd_presentacion",
@@ -443,6 +457,7 @@ uuid:"EF72849A-2228-48F4-A9C2-66EDF7F97E88"
 },
 {
 dataProviderID:"prd_stock_min",
+fontType:"Trebuchet MS,0,15",
 formIndex:3,
 format:"#,###.00",
 groupID:"grp_stock",

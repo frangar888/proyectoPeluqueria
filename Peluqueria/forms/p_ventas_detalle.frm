@@ -25,6 +25,7 @@ uuid:"28F6F294-994D-47E0-BFB5-EBB5C801B9EC"
 {
 dataProviderID:"vta_nombre_cliente",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:21,
 location:"135,148",
 name:"vta_nombre_cliente",
@@ -37,6 +38,7 @@ uuid:"572A908D-A455-43C9-B44D-05C146ACC0B0"
 {
 dataProviderID:"venta_id",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:19,
 horizontalAlignment:0,
 location:"40,148",

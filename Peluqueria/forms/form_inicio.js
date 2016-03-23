@@ -89,8 +89,8 @@ function onActionVentas(event) {
  * @properties={typeid:24,uuid:"17B0FE72-5A7A-45B7-82FF-E4CFAEF5AB23"}
  */
 function onActionNuevaVenta(event) {
-	forms.p_ventas_nuevo.vl_form_padre = controller.getName()
-	forms.p_ventas_nuevo.controller.show()
+	forms.p_ventas_new.vl_form_padre = controller.getName()
+	forms.p_ventas_new.controller.show()
 }
 
 /**
@@ -123,13 +123,13 @@ function onActionProductos(event) {
  * @properties={typeid:24,uuid:"E6F62407-5021-4A5E-96AB-CCD139CFE4FF"}
  */
 function onActionNuevoIng(event) {
-	forms.p_ingreso_nuevo.vl_form_padre = controller.getName()
+	forms.p_productos_ing_egr.vl_form_padre = "Ingreso"
 	var win1 = application.createWindow("nuevoIng", JSWindow.MODAL_DIALOG);
 	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
 	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
 	win1.resizable = false
 	win1.title= 'Hair System';
-	win1.show(forms.p_ingreso_nuevo);
+	win1.show(forms.p_productos_ing_egr);
 }
 
 /**

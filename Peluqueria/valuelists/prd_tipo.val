@@ -1,6 +1,7 @@
 addEmptyValue:1,
 customValues:"Producto|1\r\
-Servicio|2",
+Servicio|2\r\
+Trabajo Técnico|3",
 name:"prd_tipo",
 typeid:34,
 uuid:"2467A98E-5E81-4DD4-9730-0BCBE6301D2A"

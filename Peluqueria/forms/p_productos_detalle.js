@@ -186,9 +186,9 @@ function onActionGrabar(event) {
  */
 function visibilidad(){
 	if(prd_controla_stock == 0){
-		elements.grp_stock_min.visible = false
+		elements.grp_stock.visible = false
 	}else{
-		elements.grp_stock_min.visible = true
+		elements.grp_stock.visible = true
 	}
 }
 

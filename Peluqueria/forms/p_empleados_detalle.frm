@@ -2,6 +2,7 @@ dataSource:"db:/peluqueria/adn_vendedores",
 items:[
 {
 dataProviderID:"adn_vendedores_to_adn.cod_postal_id",
+fontType:"Trebuchet MS,0,15",
 formIndex:34,
 location:"282,258",
 name:"cod_postal_id",
@@ -39,6 +40,7 @@ uuid:"02B097F3-9D2A-49D0-B5B5-2EA771AA804A"
 {
 dataProviderID:"ven_codigo",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:19,
 horizontalAlignment:0,
 location:"15,148",
@@ -71,6 +73,7 @@ uuid:"12D8DBF3-9037-47D5-98DE-86AE7E910DE1"
 },
 {
 dataProviderID:"ven_com_x_prd",
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -83,6 +86,7 @@ uuid:"1EE6F8FE-8F9C-4DCE-B84D-0BD90251AB6D"
 },
 {
 dataProviderID:"adn_vendedores_to_adn.adn_tel_1",
+fontType:"Trebuchet MS,0,15",
 formIndex:30,
 location:"647,208",
 name:"adn_tel_1",
@@ -93,6 +97,7 @@ uuid:"21F97EF3-B6EC-471C-9EBE-0E5A4E3863A4"
 },
 {
 dataProviderID:"adn_vendedores_to_adn.adn_email_1",
+fontType:"Trebuchet MS,0,15",
 formIndex:18,
 location:"647,258",
 name:"adn_email_1",
@@ -210,6 +215,7 @@ uuid:"4608BC8B-D7B6-420D-AEE8-B8E601555FC6"
 dataProviderID:"ven_estado",
 displayType:2,
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:22,
 location:"136,148",
 name:"ven_estado",
@@ -230,6 +236,7 @@ uuid:"5058327A-FB39-4D9F-B803-8893B0BEBA70"
 },
 {
 dataProviderID:"ven_com_x_serv",
+fontType:"Trebuchet MS,0,15",
 formIndex:8,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -253,6 +260,7 @@ uuid:"60C6CFB9-1BEA-47C4-A520-8DB2D2931AD6"
 },
 {
 dataProviderID:"adn_vendedores_to_adn.adn_tel_2",
+fontType:"Trebuchet MS,0,15",
 formIndex:32,
 location:"647,233",
 name:"adn_tel_2",
@@ -263,6 +271,7 @@ uuid:"65703287-42D6-4F92-AC83-2ACAC71B90B8"
 },
 {
 dataProviderID:"adn_vendedores_to_adn.adn_domicilio",
+fontType:"Trebuchet MS,0,15",
 formIndex:16,
 location:"282,233",
 name:"adn_domicilio",
@@ -363,6 +372,7 @@ uuid:"BEE3A1D6-9389-4B07-8061-E073ED952846"
 },
 {
 dataProviderID:"adn_vendedores_to_adn.adn_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:24,
 location:"282,208",
 name:"adn_nombre",
@@ -401,6 +411,7 @@ uuid:"D439B38B-5FC5-4605-8AC2-D97C35548B32"
 },
 {
 dataProviderID:"adn_vendedores_to_adn.adn_email_2",
+fontType:"Trebuchet MS,0,15",
 formIndex:20,
 location:"647,283",
 name:"adn_email_2",
@@ -412,6 +423,7 @@ uuid:"DA4AAB55-8660-4D4B-A5CA-05D082A9B5FD"
 {
 dataProviderID:"adn_vendedores_to_adn.adn_observa",
 displayType:1,
+fontType:"Trebuchet MS,0,15",
 formIndex:28,
 location:"282,358",
 name:"adn_observa",
@@ -425,6 +437,7 @@ uuid:"E8F107C0-84D5-498F-8449-07121E42B186"
 dataProviderID:"adn_vendedores_to_adn.adn_doc_tipo",
 displayType:2,
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"282,308",
 name:"adn_doc_tipo",
@@ -437,6 +450,7 @@ valuelistID:"B9E453AE-2C99-4F44-8B98-089300956E74"
 {
 dataProviderID:"adn_vendedores_to_adn.adn_fecha_nac",
 displayType:5,
+fontType:"Trebuchet MS,0,15",
 formIndex:22,
 location:"282,283",
 name:"adn_fecha_nac",
@@ -447,6 +461,7 @@ uuid:"F505A13E-8B49-40B2-8EC2-6DAEBE3E7756"
 },
 {
 dataProviderID:"adn_vendedores_to_adn.adn_doc_nro",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"282,333",
 name:"adn_doc_nro",

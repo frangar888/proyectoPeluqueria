@@ -54,6 +54,7 @@ function calcularTotal(){
 		vl_total += record.calc_subtotal
 		vl_cant_prd += record.prd_cant
 	}
+	forms.p_ventas_new.inicializarVariables()
 }
 
 /**
@@ -65,5 +66,64 @@ function calcularTotal(){
  */
 function onActionBorrar(event) {
 	controller.deleteRecord()
+	calcularTotal()
+}
+
+/**
+ * Handle changed data, return false if the value should not be accepted. In NGClient you can return also a (i18n) string, instead of false, which will be shown as a tooltip.
+ *
+ * @param {Number} oldValue old value
+ * @param {Number} newValue new value
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * 
+ *
+ * @properties={typeid:24,uuid:"B02409AF-D719-4176-AA40-8D1CCA449D3D"}
+ */
+function onDataChangeCambiaCant(oldValue, newValue, event) {
+	if(pel_ventas_prd_to_prd_productos.prd_controla_stock == 1){
+		var cant_en_stock = globals.obtieneStock(prd_id)
+		if(cant_en_stock < prd_cant){
+			globals.lanzarVentanaEmergente(0,'La cantidad ingresada es mayor a la cantidad en stock del porducto. Cantidad: '+cant_en_stock,'Info',controller.getName(),null,null)
+			prd_cant = oldValue
+			calcularTotal()
+			return
+		}else{
+			calcularTotal()
+		}
+	}
+	//return true
+}
+
+/**
+ * 
+ * @param lnk_prd_id
+ *
+ * @properties={typeid:24,uuid:"1DBAAB45-FD06-4706-BB37-34022EA034B8"}
+ */
+function validarExistencia(lnk_prd_id){
+	var cant = databaseManager.getFoundSetCount(foundset)
+	for (var index = 1; index <= cant; index++) {
+		var record = foundset.getRecord(index);
+		if(record.prd_id == lnk_prd_id){
+			return record
+		}
+	}
+	return null
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"754A4BDB-A6E7-4DE3-8741-1DC1C9EA9B5F"}
+ */
+function onActionRestar(event) {
+	if(prd_cant == 1){
+		controller.deleteRecord()
+	}else{
+		prd_cant -= 1
+	}
 	calcularTotal()
 }

@@ -3,6 +3,7 @@ items:[
 {
 dataProviderID:"rubro_cod",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 horizontalAlignment:0,
 location:"139,147",
@@ -59,6 +60,7 @@ uuid:"375F46E2-94BD-447B-B7C6-243EA1B73CFD"
 {
 dataProviderID:"rubro_id",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 horizontalAlignment:0,
 location:"31,147",
@@ -82,6 +84,7 @@ uuid:"5EBDE2FD-E95D-4CA4-B380-1F4DB867FBCA"
 },
 {
 dataProviderID:"rubro_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"249,147",
 name:"rubro_nombre",

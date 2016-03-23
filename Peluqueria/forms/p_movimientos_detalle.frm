@@ -38,12 +38,13 @@ uuid:"05C2A37B-EAFD-4E74-9948-D2D686FC034F"
 },
 {
 dataProviderID:"mov_causa",
-displayType:2,
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:21,
 location:"205,237",
 name:"mov_causa",
 size:"140,20",
+styleClass:"disable",
 text:"Mov Causa",
 typeid:4,
 uuid:"119C3327-DC83-4C33-AFD6-96537CFCA4CD",
@@ -63,6 +64,7 @@ uuid:"13DFC570-3C27-4F99-9F14-2D3567772515"
 {
 dataProviderID:"mov_tipo",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:29,
 location:"205,212",
 name:"mov_tipo",
@@ -87,6 +89,7 @@ uuid:"4BC7DC2B-05FD-4B19-93E7-1E3520170966"
 {
 dataProviderID:"mov_ing",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:1,
 format:"#,###.00",
 groupID:"grp_ingreso",
@@ -156,6 +159,7 @@ uuid:"98552806-3ACA-4944-8397-598187496510"
 {
 dataProviderID:"mov_id",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:19,
 horizontalAlignment:0,
 location:"205,162",
@@ -169,6 +173,7 @@ uuid:"B9B0EBF3-B2DD-4885-AE88-EEC011BB173B"
 {
 dataProviderID:"mov_fecha",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:25,
 format:"dd-MM-yyyy HH:mm",
 location:"205,187",
@@ -249,6 +254,7 @@ uuid:"D66232F4-942C-47FE-BD53-15EFE9A3E8B3"
 {
 dataProviderID:"prd_id",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:31,
 location:"205,276",
 name:"prd_id",
@@ -273,6 +279,7 @@ uuid:"EAD988DF-B373-4151-8640-CAEA499B4A9B"
 {
 dataProviderID:"venta_id",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:1,
 groupID:"grp_venta",
 horizontalAlignment:0,

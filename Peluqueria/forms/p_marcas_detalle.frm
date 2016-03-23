@@ -2,6 +2,7 @@ dataSource:"db:/peluqueria/prd_marcas",
 items:[
 {
 dataProviderID:"marca_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"134,201",
 name:"marca_nombre",
@@ -13,6 +14,7 @@ uuid:"1108A1CE-01B6-4F0E-AE1D-D436BFB81961"
 {
 dataProviderID:"marca_id",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 horizontalAlignment:0,
 location:"134,147",
@@ -40,6 +42,7 @@ uuid:"5C734938-95DD-4F41-BD1F-B2D93FB78AC1"
 },
 {
 dataProviderID:"marca_cod",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 horizontalAlignment:0,
 location:"134,174",

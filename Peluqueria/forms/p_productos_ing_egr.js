@@ -1,6 +1,13 @@
 /**
  * @type {String}
  *
+ * @properties={typeid:35,uuid:"A3BB8A11-3720-4BCC-B750-CE822C772804"}
+ */
+var vl_form_padre = null;
+
+/**
+ * @type {String}
+ *
  * @properties={typeid:35,uuid:"A92C326A-559E-4173-A20F-56CFC62FE558"}
  */
 var vl_cod_alt = null;
@@ -93,6 +100,17 @@ function onShow(firstShow, event) {
 	inicializarVariables()
 	textoEnEtiqueta()
 	elements.vl_cod_bar.requestFocus()
+	if(vl_form_padre == forms.p_productos.controller.getName()){
+		elements.vl_tipo_movim.enabled = true
+	}
+	if(vl_form_padre == 'Ingreso'){
+		vl_tipo_movim = 0
+		elements.vl_tipo_movim.enabled = false
+	}
+	if(vl_form_padre == 'Egreso'){
+		vl_tipo_movim = 1
+		elements.vl_tipo_movim.enabled = false
+	}
 }
 /**
  * @properties={typeid:24,uuid:"3706CD8B-2A37-4C01-9776-A109E3C66775"}
@@ -164,7 +182,7 @@ function buscarPorCodBar(){
 	fs_prd.find()
 	fs_prd.prd_cod_bar = vl_cod_bar
 	if(fs_prd.search() != 0){
-		if(prd_controla_stock == 1){
+		if(fs_prd.prd_controla_stock == 1){
 			vl_codigo = fs_prd.prd_codigo
 			vl_prd_id = fs_prd.prd_id
 			vl_cod_alt = fs_prd.prd_cod_alt
@@ -195,7 +213,7 @@ function buscarPorCod(){
 	fs_prd.find()
 	fs_prd.prd_codigo = vl_codigo
 	if(fs_prd.search() != 0){
-		if(prd_controla_stock == 1){
+		if(fs_prd.prd_controla_stock == 1){
 			vl_cod_bar= fs_prd.prd_cod_bar
 			vl_prd_id = fs_prd.prd_id
 			vl_cod_alt = fs_prd.prd_cod_alt
@@ -226,7 +244,7 @@ function buscarPorCodAlt(){
 	fs_prd.find()
 	fs_prd.prd_cod_alt = vl_cod_alt
 	if(fs_prd.search() != 0){
-		if(prd_controla_stock == 1){
+		if(fs_prd.prd_controla_stock == 1){
 			vl_cod_bar = fs_prd.prd_cod_bar
 			vl_prd_id = fs_prd.prd_id
 			vl_codigo = fs_prd.prd_codigo
@@ -257,7 +275,7 @@ function buscarPorId(){
 	fs_prd.find()
 	fs_prd.prd_id = vl_prd_id
 	if(fs_prd.search() != 0){
-		if(prd_controla_stock == 1){
+		if(fs_prd.prd_controla_stock == 1){
 			vl_cod_bar = fs_prd.prd_cod_bar
 			vl_codigo = fs_prd.prd_codigo
 			vl_cod_alt = fs_prd.prd_cod_alt

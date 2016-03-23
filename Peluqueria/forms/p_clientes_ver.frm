@@ -82,6 +82,7 @@ uuid:"9B5AA93C-4F3E-41A6-BB33-29E63A79D8E4"
 {
 dataProviderID:"ccc_clientes_to_adn.adn_nombre",
 editable:false,
+fontType:"Trebuchet MS,0,15",
 formIndex:20,
 location:"183,149",
 name:"adn_nombre",
@@ -124,6 +125,7 @@ uuid:"DBBAFA74-8EBB-4901-8493-090B5746E6CC"
 },
 {
 dataProviderID:"c_codigo",
+fontType:"Trebuchet MS,0,15",
 formIndex:22,
 horizontalAlignment:0,
 location:"28,149",

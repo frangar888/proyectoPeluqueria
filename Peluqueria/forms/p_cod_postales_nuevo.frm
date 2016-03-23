@@ -3,6 +3,7 @@ items:[
 {
 dataProviderID:"provincia_id",
 displayType:10,
+fontType:"Trebuchet MS,0,15",
 formIndex:14,
 location:"127,202",
 name:"provincia_id",
@@ -67,6 +68,7 @@ uuid:"8C8F7039-FC25-4BD6-849A-35EF4F455FFA"
 },
 {
 dataProviderID:"cpos_nombre",
+fontType:"Trebuchet MS,0,15",
 formIndex:12,
 location:"127,175",
 name:"cpos_nombre",
@@ -98,6 +100,7 @@ uuid:"A5971DF7-C133-4B54-8EA9-495382006DC9"
 },
 {
 dataProviderID:"cpos_codigo",
+fontType:"Trebuchet MS,0,15",
 formIndex:10,
 location:"127,148",
 name:"cpos_codigo",
