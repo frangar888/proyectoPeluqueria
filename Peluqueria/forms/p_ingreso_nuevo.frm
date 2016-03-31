@@ -9,7 +9,8 @@ size:"130,20",
 styleClass:"fieldlabel",
 text:"Caja:",
 typeid:7,
-uuid:"042C736B-47AF-40BA-AFB0-836CDBF967C1"
+uuid:"042C736B-47AF-40BA-AFB0-836CDBF967C1",
+visible:false
 },
 {
 dataProviderID:"vl_conc_cod",
@@ -98,7 +99,8 @@ size:"329,20",
 text:"Vl Caja Id",
 typeid:4,
 uuid:"8C92E4D4-23D9-47D8-8BEB-E693307F6864",
-valuelistID:"88B8088B-8930-40BF-B551-E34A1415B5F8"
+valuelistID:"88B8088B-8930-40BF-B551-E34A1415B5F8",
+visible:false
 },
 {
 height:380,

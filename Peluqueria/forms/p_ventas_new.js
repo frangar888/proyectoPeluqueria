@@ -315,6 +315,7 @@ function onActionCerrar(event) {
 	fs_cj_ing.venta_id = forms.p_ventas_nuevo.venta_id
 	fs_cj_ing.cj_ing_fecha = application.getServerTimeStamp()
 	fs_cj_ing.user_id = globals.vg_user_id
+	fs_cj_ing.vendedor_adn_id = vendedor_adn_id
 	databaseManager.saveData(fs_cj_ing)
 	
 	if(vl_pago > vl_total_total){

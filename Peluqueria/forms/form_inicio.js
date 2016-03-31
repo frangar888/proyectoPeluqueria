@@ -142,3 +142,25 @@ function onActionNuevoIng(event) {
 function onActionEmpleados(event) {
 	forms.p_menu_empleados.controller.show()
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"4D08AD23-834E-476B-8D70-EDA66059C1F0"}
+ */
+function onActionCaja(event) {
+	forms.p_caja.controller.show()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"FF5DB58D-6BB6-496B-BB23-2682751D6112"}
+ */
+function onActionRefresh(event) {
+	application.updateUI()
+}

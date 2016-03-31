@@ -116,16 +116,16 @@ function onActionCancelarTotal(event) {
  * @AllowToRunInFind
  */
 function onActionGrabar(event) {
-	if(vl_caja_id == 0 || vl_caja_id == null){
+/*	if(vl_caja_id == 0 || vl_caja_id == null){
 		globals.lanzarVentanaEmergente(0,'Por favor seleccione una caja.','Info',controller.getName(),null,null)
 		elements.vl_caja_id.requestFocus()
 		return
-	}
+	}*/
 	if(vl_cj_ing_importe == 0){
 		globals.lanzarVentanaEmergente(0,'Debe completar el importe del ingreso.','Info',controller.getName(),null,null)
 		elements.vl_cj_ing_importe.requestFocus()
 		return
-	}else{
+	}/*else{
 		if(vl_imp_total != 0 && vl_imp_total != null){
 			if(vl_cj_ing_importe > vl_imp_total){
 				globals.lanzarVentanaEmergente(0,'El importe del ingreso no puede ser mayor que la deuda.','Info',controller.getName(),null,null)
@@ -133,7 +133,7 @@ function onActionGrabar(event) {
 				return
 			}
 		}
-	}
+	}*/
 	if(vl_form_padre == forms.p_clientes_ver_tab_vtas.controller.getName()){
 	if(vl_array_ventas != null){
 		var vl_resto = vl_cj_ing_importe

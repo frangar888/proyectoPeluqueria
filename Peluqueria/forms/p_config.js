@@ -93,3 +93,14 @@ function onActionMarcas(event) {
 function onActionEmpleados(event) {
 	forms.p_empleados.controller.show()
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"FF685206-BE6B-41F5-9A9D-FB66E8F43B0B"}
+ */
+function onActionConceptos(event) {
+	forms.p_conceptos.controller.show()
+}
