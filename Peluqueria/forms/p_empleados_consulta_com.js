@@ -133,10 +133,11 @@ function pagarComisiones(){
 	fs_egr.newRecord()
 	fs_egr.cj_egr_fecha = forms.p_empleados_consulta_com_pagar.vl_fecha_pago
 	fs_egr.cj_egr_importe = total
-	fs_egr.conc_cod = 5
+	fs_egr.conc_cod = 4
 	fs_egr.conc_nombre = 'Pago de Comisiones'
 	fs_egr.user_id = globals.vg_user_id
 	fs_egr.vendedor_adn_id = 0
 	fs_egr.venta_id = 0
+	fs_egr.cj_desc = "Pago de Comisiones a Empleado: "+application.getValueListDisplayValue('adn_vendedores_todos',vl_vendedor_adn_id)
 	databaseManager.saveData()
 }

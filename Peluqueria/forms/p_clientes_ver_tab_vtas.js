@@ -95,14 +95,14 @@ function onActionPago(event) {
 	if(count == 0){
 		globals.lanzarVentanaEmergente(0,'Debe seleccionar al menos una venta para ingresar el pago.','Info',controller.getName(),null,null)
 	}else{
-		forms.p_ingreso_nuevo.vl_form_padre = controller.getName()
-		forms.p_ingreso_nuevo.vl_imp_total = importe
-		forms.p_ingreso_nuevo.vl_array_ventas = arrayVtas
+		//forms.p_clientes_ver_tab_vtas_pago.vl_form_padre = controller.getName()
+		forms.p_clientes_ver_tab_vtas_pago.vl_imp_total = importe
+		forms.p_clientes_ver_tab_vtas_pago.vl_array_ventas = arrayVtas
 		var win1 = application.createWindow("nuevoIng", JSWindow.MODAL_DIALOG);
 		win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
 		win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
 		win1.resizable = false
 		win1.title= 'Hair System';
-		win1.show(forms.p_ingreso_nuevo);
+		win1.show(forms.p_clientes_ver_tab_vtas_pago);
 	}
 }

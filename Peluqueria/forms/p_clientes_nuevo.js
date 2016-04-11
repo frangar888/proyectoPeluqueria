@@ -184,7 +184,7 @@ function existeCodigo(lnk_cod){
  */
 function onActionVolver(event) {
 	databaseManager.revertEditedRecords()
-	forms.p_empleados.controller.show()
+	forms.p_clientes.controller.show()
 }
 
 /**

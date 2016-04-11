@@ -379,6 +379,7 @@ uuid:"F8260435-A954-4BFC-BC65-AFFEF1E8BD0E"
 }
 ],
 name:"p_productos",
+namedFoundSet:"separate",
 navigatorID:"-1",
 onLoadMethodID:"931FA628-3A75-446C-90B2-E74914B47DA2",
 onShowMethodID:"1CCEE796-BCCE-4457-B451-DEDBF57F4FC7",

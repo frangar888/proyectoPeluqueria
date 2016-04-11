@@ -373,7 +373,7 @@ var args = new Array()
 		// real object not found in the current list, return 1 row with display,realvalue that will be added to the current list
 		// dont return a complete list in this mode because that will be added to the list that is already there
 		args = [realValue];
-		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(a.ven_codigo as char),'-',b.adn_nombre), a.adn_id from adn_vendedores as a inner join adn as b on a.adn_id = b.adn_id where adn_id = ?", args, -1);
+		result =  databaseManager.getDataSetByQuery("peluqueria", "select concat(cast(a.ven_codigo as char),'-',b.adn_nombre), a.adn_id from adn_vendedores as a inner join adn as b on a.adn_id = b.adn_id where a.adn_id = ?", args, -1);
 
 	}
 	return result;

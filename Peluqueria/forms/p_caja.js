@@ -1,4 +1,18 @@
 /**
+ * @type {Date}
+ *
+ * @properties={typeid:35,uuid:"F6942245-C15C-48C7-96F1-DDD70CE89DA9",variableType:93}
+ */
+var vl_fecha_final = null;
+
+/**
+ * @type {Date}
+ *
+ * @properties={typeid:35,uuid:"4649FC03-87F5-49D0-81EC-8C63B9BA9656",variableType:93}
+ */
+var vl_fecha_inicial = null;
+
+/**
  * @type {Number}
  *
  * @properties={typeid:35,uuid:"C0FD90F1-7103-4F1B-A6EA-158A4A7DDBB3",variableType:8}
@@ -35,35 +49,7 @@ function onActionVolver(event) {
  * @AllowToRunInFind
  */
 function filtrar(){
-	forms.p_caja_egresos.controller.find()
-	forms.p_caja_egresos.cj_egr_fecha = utils.dateFormat(globals.vg_fecha_inicial,'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(globals.vg_fecha_final,'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
-	forms.p_caja_egresos.controller.search()
-	
-	forms.p_caja_ingresos.controller.find()
-	forms.p_caja_ingresos.cj_ing_fecha = utils.dateFormat(globals.vg_fecha_inicial,'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(globals.vg_fecha_final,'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
-	forms.p_caja_ingresos.controller.search()
-	
-	vl_saldo_ini = globals.obtenerSaldoIni(globals.vg_fecha_inicial)
-	vl_saldo_periodo = forms.p_caja_ingresos.aggr_ing_imp_total - forms.p_caja_egresos.aggr_egr_imp_total
-	vl_saldo_fin = vl_saldo_ini + vl_saldo_periodo
-}
-
-/**
- * Callback method for when form is shown.
- *
- * @param {Boolean} firstShow form is shown first time after load
- * @param {JSEvent} event the event that triggered the action
- *
- * @properties={typeid:24,uuid:"61D6B4A3-280D-4086-90F9-AB3E5D968880"}
- */
-function onShow(firstShow, event) {
-	elements.split.dividerLocation = 0.5
-	if(firstShow){
-		globals.vg_fecha_final = application.getServerTimeStamp()
-		globals.vg_fecha_inicial = application.getServerTimeStamp()
-		filtrar()
-	}
-	filtrar()
+	forms.p_caja_inicio.controller.show()
 }
 
 /**
@@ -96,4 +82,19 @@ function onActionEgrManual(event) {
 	win1.resizable = false
 	win1.title= 'Hair System';
 	win1.show(forms.p_caja_egr_manual);
+}
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"F54BAA04-32A6-4B95-8E26-2B2D4AE07F00"}
+ */
+function onActionPagoProv(event) {
+	var win1 = application.createWindow("nuevoPago", JSWindow.MODAL_DIALOG);
+	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win1.resizable = false
+	win1.title= 'Hair System';
+	win1.show(forms.p_caja_egr_pago_prov);
 }

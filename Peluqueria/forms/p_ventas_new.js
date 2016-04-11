@@ -1,4 +1,11 @@
 /**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"3DAEBC5E-0B10-4DF6-936C-64BD7A345364"}
+ */
+var vl_no_cliente = null;
+
+/**
  * @type {Number}
  *
  * @properties={typeid:35,uuid:"B350C07E-B5FD-4B1C-879F-CCD37B347AA6",variableType:8}
@@ -71,6 +78,9 @@ function onShow(firstShow, event) {
 	forms.p_ventas_nuevo_prd.foundset.clear()
 	forms.p_ventas_nuevo_prd.vl_cant_prd = 0
 	forms.p_ventas_nuevo_prd.vl_total = 0
+	elements.vl_no_cliente.visible = false
+	elements.vl_cliente.visible = true
+	elements.btn_no_cli.text = 'No Cliente'
 	inicializarVariables()
 /*	var ancho = elements.tabs.getWidth()
 	var pos = elements.tabs.getLocationX()
@@ -104,6 +114,10 @@ function onActionConsFinal(event) {
 	if(fs_ccc.search() != 0){
 		adn_id = fs_ccc.adn_id
 	}
+	elements.vl_cliente.visible = true
+	elements.vl_no_cliente.visible = false
+	vl_no_cliente = null
+	elements.btn_no_cli.text = 'No Cliente'
 }
 
 /**
@@ -214,9 +228,16 @@ function onActionCancelar(event) {
  * @properties={typeid:24,uuid:"57CD5771-9A7A-4E9F-9906-F2E9A443286D"}
  */
 function onActionCerrar(event) {
-	if(adn_id == null || adn_id == 0){
-		globals.lanzarVentanaEmergente(0,'Seleccione un Cliente.','Info',controller.getName(),null,null)
-		return
+	if(elements.btn_no_cli.text == 'Cliente'){
+		if(vl_no_cliente == null || vl_no_cliente == ''){
+			globals.lanzarVentanaEmergente(0,'Ingrese nombre del Cliente.','Info',controller.getName(),null,null)
+			return
+		}
+	}else{
+		if(adn_id == null || adn_id == 0){
+			globals.lanzarVentanaEmergente(0,'Seleccione un Cliente.','Info',controller.getName(),null,null)
+			return
+		}
 	}
 	if(vendedor_adn_id == null || vendedor_adn_id == 0){
 		globals.lanzarVentanaEmergente(0,'Seleccione un Vendedor.','Info',controller.getName(),null,null)
@@ -226,13 +247,20 @@ function onActionCerrar(event) {
 		globals.lanzarVentanaEmergente(0,'La Venta no tiene ningún producto.','Info',controller.getName(),null,null)
 		return
 	}
-	vta_cod_postal_id = pel_ventas_to_adn.cod_postal_id
-	vta_dom_cliente = pel_ventas_to_adn.adn_domicilio
+	if(elements.btn_no_cli.text == 'Cliente'){
+		vta_nombre_cliente = vl_no_cliente
+		vta_cod_postal_id = 0
+		vta_dom_cliente = null
+	}else{
+		vta_nombre_cliente = pel_ventas_to_adn.adn_nombre
+		vta_cod_postal_id = pel_ventas_to_adn.cod_postal_id
+		vta_dom_cliente = pel_ventas_to_adn.adn_domicilio
+	}
 	vta_dto_1 = vl_descuento
 	vta_fecha_emision = application.getServerTimeStamp()
 	vta_importe_pago = vl_pago
 	vta_importe_total = vl_total_total
-	vta_nombre_cliente = pel_ventas_to_adn.adn_nombre
+	
 	vta_observa = vl_observa
 	
 	
@@ -316,7 +344,8 @@ function onActionCerrar(event) {
 	fs_cj_ing.cj_ing_fecha = application.getServerTimeStamp()
 	fs_cj_ing.user_id = globals.vg_user_id
 	fs_cj_ing.vendedor_adn_id = vendedor_adn_id
-	databaseManager.saveData(fs_cj_ing)
+	
+	
 	
 	if(vl_pago > vl_total_total){
 		fs_cj_egr.newRecord()
@@ -325,13 +354,49 @@ function onActionCerrar(event) {
 		fs_cj_egr.conc_nombre = fs_cj_egr.cj_egresos_to_cj_conceptos.conc_nombre
 		fs_cj_egr.venta_id = forms.p_ventas_nuevo.venta_id
 		fs_cj_egr.cj_egr_fecha = application.getServerTimeStamp()
-		fs_cj_ing.user_id = globals.vg_user_id
-		databaseManager.saveData(fs_cj_egr)
+		fs_cj_egr.user_id = globals.vg_user_id
+		
+		
 	}
 	
 
 	
 	databaseManager.saveData()
 	databaseManager.saveData(fs_com)
+	fs_cj_ing.cj_desc = "Ingreso por Venta "+venta_id+"; Cliente: "+vta_nombre_cliente
+	fs_cj_egr.cj_desc = "Vuelto por Venta "+venta_id+"; Cliente: "+vta_nombre_cliente
+	databaseManager.saveData(fs_cj_ing)
+	databaseManager.saveData(fs_cj_egr)
 	onShow(null,null)
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"C6ED89F7-1619-4D57-A490-76A04A9452FD"}
+ * @AllowToRunInFind
+ */
+function onActionNoCliente(event) {
+	if(elements.btn_no_cli.text == 'No Cliente'){
+		/** @type {JSFoundset<db:/peluqueria/ccc_clientes>}*/
+		var fs_ccc = databaseManager.getFoundSet('peluqueria','ccc_clientes')
+		fs_ccc.loadAllRecords()
+		fs_ccc.find()
+		fs_ccc.c_codigo = "0"
+		if(fs_ccc.search() != 0){
+			adn_id = fs_ccc.adn_id
+		}
+		elements.vl_cliente.visible = false
+		elements.vl_no_cliente.visible = true
+		vl_no_cliente = "No Cliente"
+		elements.btn_no_cli.text = 'Cliente'
+	}else{
+		adn_id = null
+		elements.vl_cliente.visible = true
+		elements.vl_no_cliente.visible = false
+		vl_no_cliente = null
+		elements.btn_no_cli.text = 'No Cliente'
+	}
 }

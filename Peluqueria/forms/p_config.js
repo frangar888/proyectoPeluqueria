@@ -104,3 +104,14 @@ function onActionEmpleados(event) {
 function onActionConceptos(event) {
 	forms.p_conceptos.controller.show()
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"4C931C3B-03C0-473D-9989-D6C1CCF92D50"}
+ */
+function onActionProveedores(event) {
+	forms.p_proveedores.controller.show()
+}

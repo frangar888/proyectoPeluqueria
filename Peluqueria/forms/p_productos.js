@@ -135,6 +135,7 @@ function onActionVolver(event) {
  */
 function onActionDetalle(event) {
 	forms.p_productos_detalle.vl_form_padre = controller.getName()
+	forms.p_productos_detalle.controller.loadRecords(prd_id)
 	forms.p_productos_detalle.controller.show()
 }
 

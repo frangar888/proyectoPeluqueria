@@ -3,7 +3,7 @@
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"9374757D-4C3E-420C-9DD3-E72EE2C603EC"}
+ * @properties={typeid:24,uuid:"21EB264A-4C33-4651-A47D-2744B082144C"}
  */
 function onActionVolver(event) {
 	databaseManager.revertEditedRecords()
@@ -17,7 +17,7 @@ function onActionVolver(event) {
  *
  * @return {Boolean}
  *
- * @properties={typeid:24,uuid:"AC6E9D95-105B-4725-9344-742EACB8CCCD"}
+ * @properties={typeid:24,uuid:"FB59DDA0-BEB3-4814-9C00-42050F21217E"}
  */
 function onHide(event) {
 	databaseManager.revertEditedRecords()
@@ -31,7 +31,7 @@ function onHide(event) {
  * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"B81F9A05-17FD-417A-8373-98447286DD78"}
+ * @properties={typeid:24,uuid:"8C3FF349-345F-4FD6-8C0C-CCEA2C8E5A26"}
  */
 function onShow(firstShow, event) {
 	controller.newRecord()
@@ -43,21 +43,22 @@ function onShow(firstShow, event) {
  *
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"EC8648D0-9573-4C75-BB43-95CBF5FD7C5C"}
+ * @properties={typeid:24,uuid:"F51FBF50-A095-444F-9FDF-00348F0E544D"}
  */
 function onActionGrabar(event) {
 	if(cj_egr_fecha == null){
 		globals.lanzarVentanaEmergente(0,'Ingrese fecha del ingreso.','Info',controller.getName(),null,null)
 		return
 	}
-	if(conc_cod == null || conc_cod == 0){
-		globals.lanzarVentanaEmergente(0,'Seleccione concepto del ingreso.','Info',controller.getName(),null,null)
+	if(proveedor_adn_id == null) {
+		globals.lanzarVentanaEmergente(0,'Seleccione un proveedor.','Info',controller.getName(),null,null)
 		return
 	}
 	if(cj_egr_importe == 0 || cj_egr_importe == null){
 		globals.lanzarVentanaEmergente(0,'Ingrese importe del ingreso.','Info',controller.getName(),null,null)
 		return
 	}
+	conc_cod = 3
 	conc_nombre = cj_ingresos_to_cj_conceptos.conc_nombre
 	databaseManager.saveData()
 	forms.p_caja_inicio.controller.show()

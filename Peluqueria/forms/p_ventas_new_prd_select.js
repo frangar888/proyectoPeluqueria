@@ -1,6 +1,13 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"E300F89E-FCDB-4AA2-83AB-0A61DD594693",variableType:4}
+ */
+var vl_prd_tipo = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"B906EE65-C2C0-4BD4-9DD0-A9D6E50D7BD0",variableType:4}
  */
 var vl_prd_tipo_tt = null;
@@ -92,6 +99,7 @@ function onShow(firstShow, event) {
 	vl_prd_tipo_prd = 0
 	vl_prd_tipo_serv = 1
 	vl_prd_tipo_tt = 0
+	vl_prd_tipo = 2
 	filtrar()
 }
 
@@ -101,7 +109,10 @@ function onShow(firstShow, event) {
  */
 function filtrar(){
 	controller.find()
-	if(vl_prd_tipo_prd == 1 && vl_prd_tipo_serv == 0 && vl_prd_tipo_tt == 0){
+	if(vl_prd_tipo != null){
+		prd_tipo = vl_prd_tipo
+	}
+/*	if(vl_prd_tipo_prd == 1 && vl_prd_tipo_serv == 0 && vl_prd_tipo_tt == 0){
 		prd_tipo = 1
 	}
 	if(vl_prd_tipo_prd == 0 && vl_prd_tipo_serv == 1 && vl_prd_tipo_tt == 0){
@@ -121,7 +132,8 @@ function filtrar(){
 	}
 	if(vl_prd_tipo_prd == 1 && vl_prd_tipo_serv == 1 && vl_prd_tipo_tt == 1){
 		prd_tipo = '1 || 2 || 3'
-	}
+	}*/
+	
 	controller.search()
 }
 

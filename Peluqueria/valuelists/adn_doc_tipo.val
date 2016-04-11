@@ -2,7 +2,8 @@ addEmptyValue:1,
 customValues:"DNI|0\r\
 CI|1\r\
 LE|2\r\
-LC|4",
+LC|4\r\
+CUIT|5",
 name:"adn_doc_tipo",
 typeid:34,
 uuid:"B9E453AE-2C99-4F44-8B98-089300956E74"
