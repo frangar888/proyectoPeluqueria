@@ -2,7 +2,7 @@ dataSource:"db:/peluqueria/prd_lineas",
 items:[
 {
 formIndex:6,
-imageMediaID:"78EE323D-3835-4DE6-8166-B7AA78440F01",
+imageMediaID:"D37E5F09-608A-470E-BBBF-08140144FA44",
 location:"236,67",
 mediaOptions:1,
 name:"btn_nuevo",
@@ -33,7 +33,7 @@ uuid:"1BA7075A-1201-438F-94BE-CD375AFEA396"
 },
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"0D22D325-B7DD-404D-AF0D-9AA3ED4AA32A",
 location:"116,67",
 mediaOptions:1,
 name:"btn_salir",
@@ -98,7 +98,7 @@ uuid:"6270EBBD-8B52-4746-9DE4-2FDBAD7E5B96"
 },
 {
 formIndex:7,
-imageMediaID:"5610BF5C-0B92-498B-911F-AC6937D161F7",
+imageMediaID:"7C3F5578-7608-42A3-A348-1D45C927C0D0",
 location:"5,173",
 mediaOptions:1,
 onActionMethodID:"CC7B74ED-6F0B-48AB-BA25-71F767836682",

@@ -2,7 +2,7 @@ dataSource:"db:/peluqueria/adn_usuarios",
 items:[
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"0D22D325-B7DD-404D-AF0D-9AA3ED4AA32A",
 location:"116,66",
 mediaOptions:1,
 name:"btn_salir",
@@ -93,7 +93,7 @@ uuid:"67530A02-B881-4800-BCE7-35194C80C34F"
 },
 {
 formIndex:6,
-imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
+imageMediaID:"65F75DC3-37E9-49B5-8F0E-11D9B5765806",
 location:"236,66",
 mediaOptions:1,
 name:"btn_grabar",

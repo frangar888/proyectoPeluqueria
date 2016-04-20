@@ -3,4 +3,5 @@
 	<buildpathentry excluding=".stp/|medias/" kind="src" path=""/>
 	<buildpathentry exported="true" kind="prj" path="/Login"/>
 	<buildpathentry exported="true" kind="prj" path="/Relaciones"/>
+	<buildpathentry exported="true" kind="prj" path="/caja"/>
 </buildpath>

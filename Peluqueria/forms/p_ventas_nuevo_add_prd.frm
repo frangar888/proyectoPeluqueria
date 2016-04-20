@@ -72,7 +72,7 @@ uuid:"1E2317DA-7817-4654-9825-D978D760E27C"
 {
 formIndex:7,
 horizontalAlignment:0,
-imageMediaID:"0D797673-37AB-42C5-B69C-22BE339FEA29",
+imageMediaID:"651CB6E8-EF3F-4233-8123-798D666480DC",
 location:"231,261",
 mediaOptions:1,
 onActionMethodID:"73CA2A24-06CB-4888-B003-E01C132AA3E2",
@@ -136,7 +136,7 @@ uuid:"57C5D09E-5270-436B-89D1-600E779AAC4B"
 },
 {
 formIndex:6,
-imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
+imageMediaID:"65F75DC3-37E9-49B5-8F0E-11D9B5765806",
 location:"236,66",
 mediaOptions:1,
 name:"btn_grabar",
@@ -292,7 +292,7 @@ uuid:"D4FCCA94-4D68-4928-8E63-8C2A30F79E2D"
 },
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"0D22D325-B7DD-404D-AF0D-9AA3ED4AA32A",
 location:"116,66",
 mediaOptions:1,
 name:"btn_salir",

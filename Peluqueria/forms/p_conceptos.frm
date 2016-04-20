@@ -37,7 +37,7 @@ size:"140,20",
 text:"Vl Tipo Conc",
 typeid:4,
 uuid:"2E406204-2483-44BD-96F9-C90D98962F16",
-valuelistID:"F6D3E649-F9F4-4C05-B900-D1C8F210DA89"
+valuelistID:"34148B4E-FB1E-4E20-8D50-FE5A13106365"
 },
 {
 borderType:"EmptyBorder,0,0,0,0",
@@ -88,7 +88,7 @@ size:"140,20",
 text:"Conc Tipo",
 typeid:4,
 uuid:"6D4D1925-2C72-4473-A33F-41CA05168350",
-valuelistID:"F6D3E649-F9F4-4C05-B900-D1C8F210DA89"
+valuelistID:"34148B4E-FB1E-4E20-8D50-FE5A13106365"
 },
 {
 height:490,
@@ -98,7 +98,7 @@ uuid:"6E500C36-16DD-4807-B6E7-00F6132F837F"
 },
 {
 formIndex:6,
-imageMediaID:"78EE323D-3835-4DE6-8166-B7AA78440F01",
+imageMediaID:"D37E5F09-608A-470E-BBBF-08140144FA44",
 location:"236,67",
 mediaOptions:1,
 name:"btn_nuevo",
@@ -136,7 +136,7 @@ uuid:"7C595262-97E9-4FE1-ADAD-FB313255037F"
 },
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"0D22D325-B7DD-404D-AF0D-9AA3ED4AA32A",
 location:"116,67",
 mediaOptions:1,
 name:"btn_salir",
@@ -170,7 +170,7 @@ uuid:"CC5B7D25-C583-43CE-BB19-D560613B9987"
 },
 {
 formIndex:7,
-imageMediaID:"5610BF5C-0B92-498B-911F-AC6937D161F7",
+imageMediaID:"7C3F5578-7608-42A3-A348-1D45C927C0D0",
 location:"5,203",
 mediaOptions:1,
 onActionMethodID:"88519B47-7A67-45E3-9F67-A0738ED7048C",

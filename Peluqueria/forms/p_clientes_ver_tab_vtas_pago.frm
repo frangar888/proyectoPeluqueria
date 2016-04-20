@@ -15,7 +15,7 @@ uuid:"1A46EE08-233F-4E82-B2ED-E166B93E0E15"
 },
 {
 formIndex:28,
-imageMediaID:"5C1DFF11-303E-4836-BF1A-0F03546478F1",
+imageMediaID:"F6801D17-CA70-4BAE-8147-0DEFF16DFBCA",
 location:"303,172",
 mediaOptions:1,
 name:"btn_monedas",
@@ -70,7 +70,7 @@ uuid:"D39D6FFF-3C20-4567-A4E6-57FF0D3C97CE"
 },
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"D9E5FF97-F987-429C-9627-069F1547E29A",
 location:"116,66",
 mediaOptions:1,
 name:"btn_salir",
@@ -99,7 +99,7 @@ uuid:"E30AAF3E-A108-486A-A8F6-181511995F1A"
 },
 {
 formIndex:6,
-imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
+imageMediaID:"AFAF5472-3C5F-4A8F-B550-DF92FCED0766",
 location:"236,66",
 mediaOptions:1,
 name:"btn_grabar",

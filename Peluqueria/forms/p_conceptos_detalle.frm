@@ -58,7 +58,7 @@ styleClass:"disable",
 text:"Conc Tipo",
 typeid:4,
 uuid:"3B255EA2-B103-4EE6-A2B1-0F8A076BBC06",
-valuelistID:"F6D3E649-F9F4-4C05-B900-D1C8F210DA89"
+valuelistID:"34148B4E-FB1E-4E20-8D50-FE5A13106365"
 },
 {
 dataProviderID:"conc_nombre",
@@ -120,7 +120,7 @@ uuid:"B0D0954E-422E-4CA9-9E90-8244DD39B3DE"
 },
 {
 formIndex:6,
-imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
+imageMediaID:"65F75DC3-37E9-49B5-8F0E-11D9B5765806",
 location:"236,66",
 mediaOptions:1,
 name:"btn_grabar",
@@ -134,7 +134,7 @@ uuid:"B97E635F-D40A-41BC-B60B-5B1E7A179EAE"
 },
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"0D22D325-B7DD-404D-AF0D-9AA3ED4AA32A",
 location:"116,66",
 mediaOptions:1,
 name:"btn_salir",

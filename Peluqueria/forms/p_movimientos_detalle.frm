@@ -13,7 +13,7 @@ uuid:"015ABC40-D45D-4741-AD86-2B9AFE8EFEBF"
 },
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"0D22D325-B7DD-404D-AF0D-9AA3ED4AA32A",
 location:"116,66",
 mediaOptions:1,
 name:"btn_salir",
@@ -146,7 +146,7 @@ uuid:"9123CBA9-5972-48ED-BC3E-A04B040FEAD1"
 {
 formIndex:2,
 groupID:"grp_venta",
-imageMediaID:"5610BF5C-0B92-498B-911F-AC6937D161F7",
+imageMediaID:"7C3F5578-7608-42A3-A348-1D45C927C0D0",
 location:"306,326",
 mediaOptions:1,
 onActionMethodID:"FF7AE399-6747-413D-980F-2B5CC2A839A6",
@@ -239,7 +239,7 @@ uuid:"D611D644-6903-4657-8F52-A8DD8785D290"
 },
 {
 formIndex:6,
-imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
+imageMediaID:"65F75DC3-37E9-49B5-8F0E-11D9B5765806",
 location:"236,66",
 mediaOptions:1,
 name:"btn_grabar",

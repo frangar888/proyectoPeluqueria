@@ -14,7 +14,7 @@ uuid:"0FDDC1FB-3A36-4AB9-8F85-E3AA217E1297"
 },
 {
 formIndex:6,
-imageMediaID:"78EE323D-3835-4DE6-8166-B7AA78440F01",
+imageMediaID:"D37E5F09-608A-470E-BBBF-08140144FA44",
 location:"406,73",
 mediaOptions:1,
 name:"btn_addc",
@@ -29,7 +29,7 @@ uuid:"20047021-0716-4AB4-95C0-EC64D950E8F3"
 {
 formIndex:7,
 horizontalAlignment:0,
-imageMediaID:"78EE323D-3835-4DE6-8166-B7AA78440F01",
+imageMediaID:"D37E5F09-608A-470E-BBBF-08140144FA44",
 location:"546,167",
 mediaOptions:1,
 onActionMethodID:"602C7E7F-4D06-438F-BFC3-FE5FE7E8451E",

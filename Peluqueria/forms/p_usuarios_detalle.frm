@@ -38,7 +38,7 @@ uuid:"13EB83D3-02C2-415A-9955-E60CD955AE7B"
 },
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"0D22D325-B7DD-404D-AF0D-9AA3ED4AA32A",
 location:"116,67",
 mediaOptions:1,
 name:"btn_salir",
@@ -85,7 +85,7 @@ uuid:"7D7CAE79-E676-4C90-AC3F-3EC75F85234B"
 },
 {
 formIndex:6,
-imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
+imageMediaID:"65F75DC3-37E9-49B5-8F0E-11D9B5765806",
 location:"236,67",
 mediaOptions:1,
 name:"btn_grabar",
@@ -157,7 +157,7 @@ uuid:"B2B5C5E9-1BC4-4B2C-8DF1-BBB2DCDCAFBA"
 },
 {
 formIndex:6,
-imageMediaID:"8518F8EF-0583-49A6-9F08-B414A2CF7711",
+imageMediaID:"9BCAC4AE-BD24-473E-B153-CE07A9E2E743",
 location:"356,67",
 mediaOptions:1,
 name:"btn_baja",

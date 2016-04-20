@@ -19,7 +19,7 @@ uuid:"243EEC27-6A75-4FAC-B7F9-59F5C990BC02"
 },
 {
 formIndex:7,
-imageMediaID:"5610BF5C-0B92-498B-911F-AC6937D161F7",
+imageMediaID:"7C3F5578-7608-42A3-A348-1D45C927C0D0",
 location:"5,108",
 mediaOptions:1,
 onActionMethodID:"-1",

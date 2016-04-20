@@ -2,7 +2,7 @@ dataSource:"db:/peluqueria/prd_marcas",
 items:[
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"0D22D325-B7DD-404D-AF0D-9AA3ED4AA32A",
 location:"116,66",
 mediaOptions:1,
 name:"btn_salir",
@@ -16,7 +16,7 @@ uuid:"037F8EB4-7DCC-4FD9-8C52-A3C67734FF3C"
 },
 {
 formIndex:13,
-imageMediaID:"628D0971-04B8-433F-B454-E01ACA041A92",
+imageMediaID:"BCBDC116-531E-4387-A523-344DC4347C26",
 location:"216,142",
 mediaOptions:1,
 onActionMethodID:"442DAFF3-14FB-4D15-98E1-775869AC39DA",
@@ -65,7 +65,7 @@ uuid:"73980DA9-D4EF-4A7B-8D79-2C37F5F34A88"
 },
 {
 formIndex:6,
-imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
+imageMediaID:"65F75DC3-37E9-49B5-8F0E-11D9B5765806",
 location:"236,66",
 mediaOptions:1,
 name:"btn_grabar",

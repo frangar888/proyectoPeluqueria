@@ -151,7 +151,7 @@ function onActionEmpleados(event) {
  * @properties={typeid:24,uuid:"4D08AD23-834E-476B-8D70-EDA66059C1F0"}
  */
 function onActionCaja(event) {
-	forms.p_caja_inicio.controller.show()
+	forms.p_caja_alt_1.controller.show()
 }
 
 /**

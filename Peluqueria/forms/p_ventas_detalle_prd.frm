@@ -56,7 +56,7 @@ uuid:"29720FDC-0E2D-46DD-9AF5-6353DD0E8655"
 },
 {
 formIndex:7,
-imageMediaID:"5610BF5C-0B92-498B-911F-AC6937D161F7",
+imageMediaID:"7C3F5578-7608-42A3-A348-1D45C927C0D0",
 location:"5,113",
 mediaOptions:1,
 onDoubleClickMethodID:"-1",

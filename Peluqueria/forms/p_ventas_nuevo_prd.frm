@@ -64,7 +64,7 @@ uuid:"2B503E9C-F4C4-410E-A551-B16E12E86669"
 {
 formIndex:7,
 horizontalAlignment:0,
-imageMediaID:"C852F5DD-DCC9-4F65-85AE-2FE43E033444",
+imageMediaID:"62B55BF9-98A8-4CD4-BA1B-6B80BDD95752",
 location:"622,113",
 mediaOptions:1,
 onActionMethodID:"754A4BDB-A6E7-4DE3-8741-1DC1C9EA9B5F",
@@ -134,7 +134,7 @@ uuid:"AB0572D0-A23B-4CA9-AF19-09B803E8C225"
 {
 formIndex:7,
 horizontalAlignment:0,
-imageMediaID:"8518F8EF-0583-49A6-9F08-B414A2CF7711",
+imageMediaID:"9BCAC4AE-BD24-473E-B153-CE07A9E2E743",
 location:"652,113",
 mediaOptions:1,
 onActionMethodID:"E3C9F50B-3606-4101-85CD-7230531A16DE",
@@ -202,18 +202,6 @@ height:436,
 partType:8,
 typeid:19,
 uuid:"F3DF6D9E-8EED-498B-9CFC-A2CA9818DA6A"
-},
-{
-anchors:11,
-borderType:"SpecialMatteBorder,2.0,0.0,0.0,0.0,#2ba6d5,#000000,#000000,#000000,0.0,",
-formIndex:23,
-horizontalAlignment:4,
-location:"0,384",
-size:"832,3",
-text:"",
-transparent:true,
-typeid:7,
-uuid:"FB5A1B35-1899-4E0A-A9CE-D211F85EC074"
 },
 {
 dataProviderID:"prd_cant",

@@ -66,7 +66,7 @@ valuelistID:"8751D918-DB79-4226-88C8-88B1AC338A20"
 },
 {
 formIndex:6,
-imageMediaID:"E01B381E-1497-4037-91A9-6E97C5AB215D",
+imageMediaID:"65F75DC3-37E9-49B5-8F0E-11D9B5765806",
 location:"236,66",
 mediaOptions:1,
 name:"btn_grabar",
@@ -80,7 +80,7 @@ uuid:"66150FBB-E07E-45DD-AE06-C5253A90E59A"
 },
 {
 formIndex:6,
-imageMediaID:"5BD6B7F3-39F8-49D9-82F7-7D3AFFB23A0A",
+imageMediaID:"0D22D325-B7DD-404D-AF0D-9AA3ED4AA32A",
 location:"116,66",
 mediaOptions:1,
 name:"btn_salir",
@@ -94,7 +94,7 @@ uuid:"6EB9BD1E-280E-41FA-B1E7-D6ED35B0F007"
 },
 {
 formIndex:13,
-imageMediaID:"628D0971-04B8-433F-B454-E01ACA041A92",
+imageMediaID:"BCBDC116-531E-4387-A523-344DC4347C26",
 location:"216,142",
 mediaOptions:1,
 onActionMethodID:"7D4F377C-BBDF-41F2-8109-6530CBBB3D73",
