@@ -13,6 +13,17 @@ typeid:7,
 uuid:"16AFAD49-E282-43A0-9E4B-9B839436AEEE"
 },
 {
+formIndex:49,
+labelFor:"ven_com_x_tt",
+location:"508,362",
+name:"ven_com_x_tt_label",
+size:"167,20",
+styleClass:"fieldlabel",
+text:"Comisión por Trabajo Tec.:",
+typeid:7,
+uuid:"25264BD5-2721-4F7C-8EFF-90C8C233B4FB"
+},
+{
 formIndex:46,
 labelFor:"vl_tel_2",
 location:"508,182",
@@ -424,6 +435,19 @@ tabSeq:-2,
 text:"Email 2:",
 typeid:7,
 uuid:"E2FBDCBF-9B46-48A0-95D5-427C476FEC2A"
+},
+{
+dataProviderID:"ven_com_x_tt",
+formIndex:50,
+format:"#,###.00",
+horizontalAlignment:4,
+location:"678,362",
+name:"ven_com_x_tt",
+selectOnEnter:true,
+size:"78,20",
+text:"Ven Com X Tt",
+typeid:4,
+uuid:"E5AA8B4A-854C-4C43-B7FD-7B17B5BB9C2A"
 },
 {
 formIndex:6,

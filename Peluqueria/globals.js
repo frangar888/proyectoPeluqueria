@@ -17,7 +17,7 @@ function onSolutionOpen(arg, queryParams) {
 	application.setNumpadEnterAsFocusNextEnabled(true)
 	globals.getUserId(globals.vg_user)
 	globals.vg_version = 'Version 1.0.0'
-	plugins.DateUtils.register("Francisco Garcia","123456")
+	//plugins.DateUtils.register("Francisco Garcia","123456")
 	forms.form_inicio.controller.show()
 
 }

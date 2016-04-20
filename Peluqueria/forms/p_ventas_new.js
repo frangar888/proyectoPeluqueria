@@ -71,9 +71,9 @@ var vl_form_padre = null;
  */
 function onShow(firstShow, event) {
 	globals.validarPermisosPadre(globals.getFormID(controller.getName()),globals.vg_user_id)
-	elements.tabs.leftFormMinSize = 600
+//	elements.tabs.leftFormMinSize = 600
 	//elements.tabs.setSize(800,500)
-	//elements.tabs.dividerLocation = 400
+	elements.tabs.dividerLocation = 0.5
 	controller.newRecord()
 	forms.p_ventas_nuevo_prd.foundset.clear()
 	forms.p_ventas_nuevo_prd.vl_cant_prd = 0
@@ -231,6 +231,10 @@ function onActionCerrar(event) {
 	if(elements.btn_no_cli.text == 'Cliente'){
 		if(vl_no_cliente == null || vl_no_cliente == ''){
 			globals.lanzarVentanaEmergente(0,'Ingrese nombre del Cliente.','Info',controller.getName(),null,null)
+			return
+		}
+		if(vl_saldo != 0){
+			globals.lanzarVentanaEmergente(0,'Esta vendiendo a un No Cliente. No puede quedar saldo a cuenta corriente.','Info',controller.getName(),null,null)
 			return
 		}
 	}else{

@@ -69,6 +69,17 @@ typeid:7,
 uuid:"25102D76-3615-41DE-B142-1E654E345BC7"
 },
 {
+formIndex:30,
+labelFor:"ven_com_x_tt",
+location:"614,182",
+name:"ven_com_x_tt_label",
+size:"167,20",
+styleClass:"encabezado",
+text:"Comision por Trabajo Tec.",
+typeid:7,
+uuid:"2F943243-2EA9-4634-AAE0-F1998C8E030B"
+},
+{
 borderType:"EmptyBorder,0,0,0,0",
 dataProviderID:"scopes.globals.vg_user_logo",
 displayType:9,
@@ -106,6 +117,19 @@ styleClass:"disable",
 text:"Aggr Cant Vend",
 typeid:4,
 uuid:"3CA8E9B4-0316-4F01-B6C3-BAFB308AA3BE"
+},
+{
+dataProviderID:"ven_com_x_tt",
+fontType:"Trebuchet MS,0,15",
+formIndex:31,
+format:"#,###.00",
+horizontalAlignment:4,
+location:"614,202",
+name:"ven_com_x_tt",
+size:"167,20",
+text:"Ven Com X Tt",
+typeid:4,
+uuid:"40D5F14D-9F08-42B6-8D2D-BEF585E6079D"
 },
 {
 height:490,

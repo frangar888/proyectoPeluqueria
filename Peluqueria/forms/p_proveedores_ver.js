@@ -43,7 +43,7 @@ function onActionVolver(event) {
 function onActionGrabar(event) {
 	if(ccp_proveedores_to_adn.adn_nombre == null || ccp_proveedores_to_adn.adn_nombre == ''){
 		globals.lanzarVentanaEmergente(0,'Debe ingresar un nombre de proveedor.','Info',controller.getName(),null,null)
-		elements.vl_nombre.requestFocus()
+		elements.adn_nombre.requestFocus()
 		return
 	}
 	
