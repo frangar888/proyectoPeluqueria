@@ -28,7 +28,7 @@ uuid:"10F9D0C2-004D-490D-AD53-CBEC0773BC0D"
 {
 dataProviderID:"vl_total_saldo",
 editable:false,
-fontType:"Trebuchet MS,0,16",
+fontType:"Trebuchet MS,0,18",
 formIndex:27,
 format:"#,###.00",
 horizontalAlignment:4,
@@ -202,14 +202,13 @@ uuid:"BBAF6F6A-2D69-4652-B273-F16971585CC6"
 {
 dataProviderID:"vl_total_imp",
 editable:false,
-fontType:"Trebuchet MS,0,16",
+fontType:"Trebuchet MS,0,18",
 formIndex:23,
 format:"#,###.00",
 horizontalAlignment:4,
 location:"135,77",
 name:"vl_total_imp",
 size:"140,32",
-styleClass:"disable",
 text:"Vl Total Imp",
 typeid:4,
 uuid:"C39FE1C5-E81C-4184-B745-3C7F7FCD0053"
@@ -228,14 +227,13 @@ uuid:"C7BEE0DD-642D-4E6F-9EE6-ACB0ACFCF9BC"
 {
 dataProviderID:"vl_total_pago",
 editable:false,
-fontType:"Trebuchet MS,0,16",
+fontType:"Trebuchet MS,0,18",
 formIndex:25,
 format:"#,###.00",
 horizontalAlignment:4,
 location:"459,77",
 name:"vl_total_pago",
 size:"140,32",
-styleClass:"disable",
 text:"Vl Total Pago",
 typeid:4,
 uuid:"D60860EC-3FD1-4302-AEDC-1C87E5DD42C0"

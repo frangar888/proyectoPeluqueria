@@ -139,7 +139,7 @@ location:"563,229",
 name:"prd_comision_porc_label",
 size:"86,20",
 styleClass:"fieldlabel",
-text:"Comisión:",
+text:"Comisión $:",
 typeid:7,
 uuid:"47EFEC09-FB1D-4412-B6C6-3E2AFC4F54E1"
 },
@@ -195,7 +195,7 @@ typeid:7,
 uuid:"54EF359D-618D-414F-B362-B220E812A195"
 },
 {
-dataProviderID:"prd_comision_porc",
+dataProviderID:"prd_comision_imp",
 fontType:"Trebuchet MS,0,15",
 formIndex:48,
 format:"#,###.00",
@@ -232,7 +232,7 @@ uuid:"7593A0C5-AEE1-44D1-9A4D-F343F2819525",
 valuelistID:"D1C9E6A3-952D-486E-88D9-46BA4F141B92"
 },
 {
-height:480,
+height:638,
 partType:5,
 typeid:19,
 uuid:"7AA549B8-62D8-44A3-BC33-CBDC5364E331"
@@ -362,6 +362,27 @@ size:"102,20",
 text:"Prd Precio",
 typeid:4,
 uuid:"BBC6F7AA-2DD9-4315-9B49-526DC785B4DA"
+},
+{
+anchors:15,
+formIndex:49,
+items:[
+{
+containsFormID:"CD08B025-0366-4B26-B86E-75D081032264",
+location:"34,437",
+relationName:"prd_productos_to_prd_precios_log",
+text:"Historial de Precios",
+typeid:15,
+uuid:"0232D46C-252B-4BB9-B89B-8DC0CC2518C0"
+}
+],
+location:"0,390",
+name:"tabs",
+printable:false,
+size:"1000,248",
+transparent:true,
+typeid:16,
+uuid:"BCA6868D-6B3D-4396-860B-DD23EF016600"
 },
 {
 dataProviderID:"prd_nombre",

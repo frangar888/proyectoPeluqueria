@@ -1,6 +1,20 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"36B0D0DA-1DFF-44A5-88C4-EBD895B88608",variableType:8}
+ */
+var vl_costo_ini = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"D6FD152C-34FB-4ADF-B597-799DE6009A35",variableType:8}
+ */
+var vl_prec_ini = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"66E7464D-3CC1-4D36-B051-58A8AEB995E5",variableType:8}
  */
 var vl_stock = null;
@@ -40,6 +54,8 @@ function onShow(firstShow, event) {
 	}else{
 		globals.vg_rubro = null
 	}
+	vl_costo_ini = prd_costo
+	vl_prec_ini = prd_precio
 }
 
 /**
@@ -176,6 +192,20 @@ function onActionGrabar(event) {
 			elements.prd_precio.requestFocus()
 			return
 		}
+	}
+	
+	/** @type {JSFoundset<db:/peluqueria/prd_precios_log>}*/
+	var fs_prec = databaseManager.getFoundSet('peluqueria','prd_precios_log')
+	if(prd_precio != vl_prec_ini || prd_costo != vl_costo_ini){
+		fs_prec.newRecord()
+		fs_prec.log_fecha = application.getServerTimeStamp()
+		fs_prec.prd_id = prd_id
+		fs_prec.user_id = globals.vg_user_id
+		fs_prec.prd_prec_ant = vl_prec_ini
+		fs_prec.prd_prec_act = prd_precio
+		fs_prec.prd_costo_ant = vl_costo_ini
+		fs_prec.prd_costo_act = prd_costo
+		databaseManager.saveData(fs_prec)
 	}
 	databaseManager.saveData()
 	forms[vl_form_padre].controller.show()

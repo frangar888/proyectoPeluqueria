@@ -2,13 +2,13 @@ items:[
 {
 formIndex:7,
 imageMediaID:"B8B8ECB9-55CE-4C96-AE85-5C38DF4CEC75",
-location:"17,78",
+location:"17,73",
 mediaOptions:1,
 name:"btn_nuevo_ing",
 onActionMethodID:"E6F62407-5021-4A5E-96AB-CCD139CFE4FF",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
-size:"142,30",
+size:"142,40",
 text:"Nuevo Ingreso",
 typeid:7,
 uuid:"01BD616C-D549-44A8-92F4-510263A17BFC"
@@ -30,13 +30,13 @@ uuid:"08351510-1773-4DAC-B718-118FE937BAC2"
 {
 formIndex:7,
 imageMediaID:"D37E5F09-608A-470E-BBBF-08140144FA44",
-location:"17,44",
+location:"17,28",
 mediaOptions:1,
 name:"btn_nueva_vta",
 onActionMethodID:"17B0FE72-5A7A-45B7-82FF-E4CFAEF5AB23",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
-size:"142,30",
+size:"142,40",
 text:"Nueva Venta",
 typeid:7,
 uuid:"1B73D5BE-3715-4308-8329-57AA05B2F297"
@@ -59,13 +59,13 @@ uuid:"2E1D0C79-E05C-4CE9-AACB-109239E5D991"
 {
 formIndex:7,
 imageMediaID:"883E27E5-27EE-4BD0-8716-4D3ABC8269B5",
-location:"17,113",
+location:"17,119",
 mediaOptions:1,
 name:"btn_nuevo_egr",
 onActionMethodID:"362116C6-FB76-4D00-8069-9761E4F6EC62",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
-size:"142,30",
+size:"142,40",
 text:"Nuevo Egreso",
 typeid:7,
 uuid:"69420947-2AAE-418E-8F35-86F82094238F"
@@ -125,16 +125,6 @@ size:"223,110",
 text:"Empleados",
 typeid:7,
 uuid:"9E0559B0-3DB4-4871-9FBB-171E3F235250"
-},
-{
-formIndex:6,
-horizontalAlignment:0,
-location:"18,19",
-size:"141,20",
-styleClass:"fieldlabel",
-text:"Accesos Rapidos",
-typeid:7,
-uuid:"A0A5C979-B945-496E-B024-C711CAEF56A7"
 },
 {
 borderType:"EmptyBorder,0,0,0,0",

@@ -74,3 +74,13 @@ function onActionNuevaVenta(event) {
 	forms.p_ventas_new.vl_form_padre = controller.getName()
 	forms.p_ventas_new.controller.show()
 }
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"93BC6E38-13E3-4182-AB65-3D6A6866E2D3"}
+ */
+function onActionPrecios(event) {
+	application.showForm(forms.p_precios)
+}

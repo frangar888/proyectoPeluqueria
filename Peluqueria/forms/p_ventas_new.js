@@ -288,8 +288,8 @@ function onActionCerrar(event) {
 		var record = forms.p_ventas_nuevo_prd.foundset.getRecord(index);
 		if(record.prd_id != 0){
 			if(record.pel_ventas_prd_to_prd_productos.prd_tipo == 1){
-				if(record.pel_ventas_prd_to_prd_productos.prd_comision_porc != 0 && record.pel_ventas_prd_to_prd_productos.prd_comision_porc != null){
-					comXprd = record.calc_subtotal * (record.pel_ventas_prd_to_prd_productos.prd_comision_porc / 100)
+				if(record.pel_ventas_prd_to_prd_productos.prd_comision_imp != 0 && record.pel_ventas_prd_to_prd_productos.prd_comision_imp != null){
+					comXprd = record.pel_ventas_prd_to_prd_productos.prd_comision_imp
 				}else{
 					if(pel_ventas_to_adn_vendedores.ven_com_x_prd != 0){
 						comXprd = record.calc_subtotal * (forms.p_ventas_new.pel_ventas_to_adn_vendedores.ven_com_x_prd / 100)
@@ -298,8 +298,8 @@ function onActionCerrar(event) {
 			}
 			
 			if(record.pel_ventas_prd_to_prd_productos.prd_tipo == 2){
-				if(record.pel_ventas_prd_to_prd_productos.prd_comision_porc != 0 && record.pel_ventas_prd_to_prd_productos.prd_comision_porc != null){
-					comXprd = record.calc_subtotal * (record.pel_ventas_prd_to_prd_productos.prd_comision_porc / 100)
+				if(record.pel_ventas_prd_to_prd_productos.prd_comision_imp != 0 && record.pel_ventas_prd_to_prd_productos.prd_comision_imp != null){
+					comXprd = record.pel_ventas_prd_to_prd_productos.prd_comision_imp
 				}else{
 					if(pel_ventas_to_adn_vendedores.ven_com_x_serv != 0){
 						comXprd = record.calc_subtotal * (forms.p_ventas_new.pel_ventas_to_adn_vendedores.ven_com_x_serv / 100)
@@ -308,8 +308,8 @@ function onActionCerrar(event) {
 			}
 			
 			if(record.pel_ventas_prd_to_prd_productos.prd_tipo == 3){
-				if(record.pel_ventas_prd_to_prd_productos.prd_comision_porc != 0 && record.pel_ventas_prd_to_prd_productos.prd_comision_porc != null){
-					comXprd = record.calc_subtotal * (record.pel_ventas_prd_to_prd_productos.prd_comision_porc / 100)
+				if(record.pel_ventas_prd_to_prd_productos.prd_comision_imp != 0 && record.pel_ventas_prd_to_prd_productos.prd_comision_imp != null){
+					comXprd = record.pel_ventas_prd_to_prd_productos.prd_comision_imp
 				}else{
 					if(pel_ventas_to_adn_vendedores.ven_com_x_tt != 0){
 						comXprd = record.calc_subtotal * (forms.p_ventas_new.pel_ventas_to_adn_vendedores.ven_com_x_tt / 100)

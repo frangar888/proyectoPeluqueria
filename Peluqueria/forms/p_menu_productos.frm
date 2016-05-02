@@ -46,6 +46,22 @@ typeid:4,
 uuid:"70D19685-55D7-4AA2-BDD3-134763D196F7"
 },
 {
+borderType:"EmptyBorder,0,0,0,0",
+fontType:"Corbel,0,24",
+formIndex:7,
+imageMediaID:"C3691A2C-46C1-4835-B009-2A2DD492AD35",
+location:"532,162",
+mediaOptions:1,
+name:"btn_precios",
+onActionMethodID:"93BC6E38-13E3-4182-AB65-3D6A6866E2D3",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"306,110",
+text:"Actualización de Precios",
+typeid:7,
+uuid:"777ECA57-CB28-4E47-9E6E-0EFDCD182D5C"
+},
+{
 anchors:11,
 borderType:"SpecialMatteBorder,1.0,0.0,0.0,0.0,#000000,#000000,#000000,#000000,0.0,",
 formIndex:5,

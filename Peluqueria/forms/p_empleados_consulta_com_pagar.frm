@@ -96,14 +96,13 @@ uuid:"96177728-A11A-4989-9FF1-F53D30FBACAB"
 {
 dataProviderID:"vl_total",
 editable:false,
-fontType:"Trebuchet MS,0,15",
+fontType:"Trebuchet MS,0,16",
 formIndex:23,
 format:"#,###.00",
 horizontalAlignment:4,
 location:"153,225",
 name:"vl_total",
 size:"140,27",
-styleClass:"disable",
 text:"Vl Total",
 typeid:4,
 uuid:"BAD5517D-74CA-4D68-A625-E976E2176F24"

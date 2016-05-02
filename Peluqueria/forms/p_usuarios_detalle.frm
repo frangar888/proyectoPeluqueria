@@ -170,7 +170,7 @@ typeid:7,
 uuid:"C3008595-79D1-4E11-973F-7E77FC2205E6"
 },
 {
-anchors:11,
+anchors:15,
 formIndex:15,
 items:[
 {
