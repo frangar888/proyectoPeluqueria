@@ -203,7 +203,7 @@ location:"116,9",
 name:"opcion_nombre",
 size:"453,42",
 styleClass:"title",
-text:"Ingreso / Egreso de Producto",
+text:"Ingreso de Producto",
 transparent:true,
 typeid:7,
 uuid:"A9F75922-05C5-44F9-BAF4-CF15364DF130"

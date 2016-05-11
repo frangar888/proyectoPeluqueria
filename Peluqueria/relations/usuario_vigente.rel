@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/peluqueria/adn_usuarios",
+items:[
+{foreignColumnName:"user_id",primaryDataProviderID:"scopes.globals.vg_user_id",typeid:23,uuid:"E59F6E1A-A8F4-47FA-BD35-1C2BD2BB23F5"}
+],
+joinType:1,
+name:"usuario_vigente",
+primaryDataSource:"db:/peluqueria/adn_usuarios",
+typeid:22,
+uuid:"FC6B072A-79D5-4AF0-9A7D-2CB60769EE46"

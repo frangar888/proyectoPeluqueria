@@ -131,6 +131,18 @@ typeid:7,
 uuid:"7FCFA85D-D01F-4366-A913-B328DD6B37E7"
 },
 {
+dataProviderID:"adn_usuarios_to_adn.adn_foto",
+displayType:9,
+formIndex:19,
+location:"165,269",
+name:"adn_foto",
+scrollbars:36,
+size:"144,145",
+text:"Adn Foto",
+typeid:4,
+uuid:"B6C84B3B-7530-48E9-B84E-3F4D5E9F3CA0"
+},
+{
 formIndex:11,
 labelFor:"user_pass",
 location:"21,184",
@@ -154,6 +166,17 @@ size:"127,30",
 text:"Dar de Baja",
 typeid:7,
 uuid:"BEF84CBE-8885-44EA-8BEB-23883EFF03ED"
+},
+{
+formIndex:18,
+labelFor:"adn_foto",
+location:"21,269",
+name:"adn_foto_label",
+size:"138,20",
+styleClass:"fieldlabel",
+text:"Foto:",
+typeid:7,
+uuid:"D53A3B86-72A4-46D3-BC58-F24DCBC874C8"
 },
 {
 dataProviderID:"user_nombre",

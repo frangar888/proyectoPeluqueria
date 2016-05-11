@@ -207,6 +207,7 @@ valuelistID:"D3A5D94B-E0AC-49CD-843C-D0488A60F1E6"
 },
 {
 dataProviderID:"vl_adn_observa",
+displayType:1,
 fontType:"Trebuchet MS,0,15",
 formIndex:29,
 location:"156,332",

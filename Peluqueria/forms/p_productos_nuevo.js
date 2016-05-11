@@ -185,17 +185,29 @@ function onActionGrabar(event) {
 			return
 		}
 	}
+
 	
 	if(vl_ing_inicial != 0){
 		/** @type {JSFoundset<db:/peluqueria/prd_movimientos>}*/
 		var fs_prd_mov = databaseManager.getFoundSet('peluqueria','prd_movimientos')
 		fs_prd_mov.newRecord()
+		fs_prd_mov.mov_fecha = application.getServerTimeStamp()
 		fs_prd_mov.mov_egr = 0 
 		fs_prd_mov.mov_ing = vl_ing_inicial
 		fs_prd_mov.prd_id = prd_id
 		fs_prd_mov.venta_id = 0
 	}
 	databaseManager.saveData()
+	
+		/** @type {JSFoundset<db:/peluqueria/prd_precios_log>}*/
+	var fs_precios = databaseManager.getFoundSet('peluqueria','prd_precios_log')
+	fs_precios.newRecord()
+	fs_precios.prd_costo_act = prd_costo
+	fs_precios.prd_id = prd_id
+	fs_precios.prd_prec_act = prd_precio
+	fs_precios.user_id = globals.vg_user_id
+	databaseManager.saveData(fs_precios)
+	
 	forms.p_productos.controller.show()
 }
 

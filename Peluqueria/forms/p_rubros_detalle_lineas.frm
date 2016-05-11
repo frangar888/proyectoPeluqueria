@@ -7,7 +7,7 @@ typeid:19,
 uuid:"149D87BF-13FA-4A36-A698-093C2DA0B16F"
 },
 {
-formIndex:6,
+formIndex:2,
 imageMediaID:"D37E5F09-608A-470E-BBBF-08140144FA44",
 location:"240,20",
 mediaOptions:1,
@@ -76,7 +76,7 @@ uuid:"94FAE0B2-54E5-48DD-AA50-8E14D17C577C"
 {
 fontType:"Corbel,2,28",
 foreground:"#000000",
-formIndex:6,
+formIndex:1,
 horizontalAlignment:2,
 location:"15,15",
 name:"opcion_nombre",

@@ -32,7 +32,7 @@ function onShow(firstShow, event) {
 	if(globals.validarLeer(globals.vg_user_id,globals.getFormID(controller.getName()))){
 		globals.validarPermisos(globals.vg_user_id,globals.getFormID(controller.getName()),2,null)
 	}else{
-		forms.p_config.controller.show()
+		forms.p_menu_empleados.controller.show()
 		globals.lanzarVentanaEmergente(0,'No tiene los permisos suficientes para acceder a esta opción.','Info',controller.getName(),null,null)
 	}
 //}

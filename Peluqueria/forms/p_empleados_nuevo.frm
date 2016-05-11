@@ -438,6 +438,7 @@ uuid:"E2FBDCBF-9B46-48A0-95D5-427C476FEC2A"
 },
 {
 dataProviderID:"ven_com_x_tt",
+fontType:"Trebuchet MS,0,15",
 formIndex:50,
 format:"#,###.00",
 horizontalAlignment:4,

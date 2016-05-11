@@ -1,4 +1,9 @@
 /**
+ * @properties={typeid:35,uuid:"9C33119C-C82E-4A0E-A739-9B7DC66B1DFE",variableType:-4}
+ */
+var vl_foto = null;
+
+/**
  * @type {Number}
  *
  * @properties={typeid:35,uuid:"16959B04-A3AF-439C-BD81-5EE697096FE1",variableType:4}
@@ -42,7 +47,7 @@ var vl_adn_nombre = null;
  * @properties={typeid:24,uuid:"75993073-BF25-4D19-825A-AB1FBD8BF233"}
  */
 function onLoad(event) {
-	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,1,forms.p_usuarios.controller.getName())
+	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,1,globals.getFormID(forms.form_padre.controller.getName()))
 }
 
 /**
@@ -103,6 +108,7 @@ function onActionGrabar(event) {
 	fs_adn.newRecord()
 	fs_adn.adn_nombre = vl_adn_nombre
 	fs_adn.adn_email_1 = vl_email
+	fs_adn.adn_foto = vl_foto
 	databaseManager.saveData(fs_adn)
 	
 	controller.newRecord()

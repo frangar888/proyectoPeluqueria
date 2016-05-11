@@ -142,3 +142,14 @@ function onActionDetalle(event) {
 	forms.p_productos_detalle.vl_form_padre = controller.getName()
 	forms.p_productos_detalle.controller.show()
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"956F0D74-0B40-4F38-AC74-EE24E923932A"}
+ */
+function onActionVolver(event) {
+	forms.p_menu_productos.controller.show()
+}

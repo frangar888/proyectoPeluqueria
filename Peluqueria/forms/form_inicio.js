@@ -21,6 +21,28 @@ function onShow(firstShow, event) {
 	}else{
 		elements.btn_nueva_vta.enabled = false
 	}
+	
+	fs_permisos.find()
+	fs_permisos.form_id = globals.getFormID(forms.p_movimientos.controller.getName())
+	fs_permisos.user_id = globals.vg_user_id
+	fs_permisos.cfg_perm_nuevo = 1
+	if(fs_permisos.search() != 0){
+		elements.btn_nuevo_ing.enabled = true
+	}else{
+		elements.btn_nuevo_ing.enabled = false
+	}
+	
+	fs_permisos.find()
+	fs_permisos.form_id = globals.getFormID(forms.p_caja_alt_1.controller.getName())
+	fs_permisos.user_id = globals.vg_user_id
+	fs_permisos.cfg_perm_nuevo = 1
+	if(fs_permisos.search() != 0){
+		elements.btn_nuevo_egr.enabled = true
+	}else{
+		elements.btn_nuevo_egr.enabled = false
+	}
+	
+	
 }
 
 
@@ -173,7 +195,7 @@ function onActionRefresh(event) {
  * @properties={typeid:24,uuid:"362116C6-FB76-4D00-8069-9761E4F6EC62"}
  */
 function onActionNuevoEgr(event) {
-	var win1 = application.createWindow("nuevoEgr", JSWindow.MODAL_DIALOG);
+	var win1 = application.createWindow("nuevoEgrManual", JSWindow.MODAL_DIALOG);
 	win1.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
 	win1.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
 	win1.resizable = false

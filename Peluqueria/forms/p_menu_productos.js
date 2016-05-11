@@ -42,10 +42,42 @@ function onActionPrdMovim(event) {
  * @param {JSEvent} event the event that triggered the action
  *
  * @properties={typeid:24,uuid:"E7152014-ED62-4B39-941A-6D8D3D0B0F3E"}
+ * @AllowToRunInFind
  */
 function onShow(firstShow, event) {
 	var ancho = application.getWindow().getWidth()
 	elements.grp_accesos.setLocation(ancho - elements.grp_accesos.getWidth()/0.9,15)
+	/** @type {JSFoundset<db:/peluqueria/cfg_permisos_2>}*/
+	var fs_permisos = databaseManager.getFoundSet('peluqueria','cfg_permisos_2')
+	fs_permisos.find()
+	fs_permisos.form_id = globals.getFormID(forms.p_ventas.controller.getName())
+	fs_permisos.user_id = globals.vg_user_id
+	fs_permisos.cfg_perm_nuevo = 1
+	if(fs_permisos.search() != 0){
+		elements.btn_nueva_vta.enabled = true
+	}else{
+		elements.btn_nueva_vta.enabled = false
+	}
+	
+	fs_permisos.find()
+	fs_permisos.form_id = globals.getFormID(forms.p_movimientos.controller.getName())
+	fs_permisos.user_id = globals.vg_user_id
+	fs_permisos.cfg_perm_nuevo = 1
+	if(fs_permisos.search() != 0){
+		elements.btn_nuevo_ing.enabled = true
+	}else{
+		elements.btn_nuevo_ing.enabled = false
+	}
+	
+	fs_permisos.find()
+	fs_permisos.form_id = globals.getFormID(forms.p_caja_alt_1.controller.getName())
+	fs_permisos.user_id = globals.vg_user_id
+	fs_permisos.cfg_perm_nuevo = 1
+	if(fs_permisos.search() != 0){
+		elements.btn_nuevo_egr.enabled = true
+	}else{
+		elements.btn_nuevo_egr.enabled = false
+	}
 }
 
 /**

@@ -59,6 +59,18 @@ typeid:7,
 uuid:"2288E818-21C7-44EC-8DB2-FD86E60F3396"
 },
 {
+dataProviderID:"vl_foto",
+displayType:9,
+formIndex:19,
+location:"165,254",
+name:"vl_foto",
+scrollbars:36,
+size:"140,128",
+text:"Vl Foto",
+typeid:4,
+uuid:"4743B9E5-F0EB-4FBE-AF73-77B5D16DFB89"
+},
+{
 dataProviderID:"vl_user_name",
 fontType:"Trebuchet MS,0,15",
 formIndex:16,
@@ -145,6 +157,17 @@ text:"Nuevo Usuario",
 transparent:true,
 typeid:7,
 uuid:"7C29D30D-59CD-49FE-888F-4073FD4DCEA9"
+},
+{
+formIndex:18,
+labelFor:"vl_foto",
+location:"29,254",
+name:"vl_foto_label",
+size:"131,20",
+styleClass:"fieldlabel",
+text:"Foto:",
+typeid:7,
+uuid:"8319E88F-A4C7-49FD-9425-A5706AB66BC5"
 },
 {
 formIndex:11,

@@ -325,7 +325,7 @@ onActionMethodID:"3A13233B-9F7B-4C0E-B898-61F41F2F72B3",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"145,30",
-text:"Ingreso/Egreso",
+text:"Ingreso",
 typeid:7,
 uuid:"BE236E3D-46C4-489B-9841-27796961A826"
 },

@@ -81,7 +81,7 @@ function onActionAgregarPrd(event) {
 			forms.p_ventas_nuevo_prd.venta_id = forms.p_ventas_new.venta_id
 			forms.p_ventas_nuevo_prd.calcularTotal()
 		}else{
-			record.prd_cant =+ 1
+			record.prd_cant += 1
 		}
 	}
 	forms.p_ventas_nuevo_prd.calcularTotal()

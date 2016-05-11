@@ -102,7 +102,7 @@ size:"243,93",
 text:"Vendedor Adn Id",
 typeid:4,
 uuid:"4C4B744F-24A7-431B-8EEA-DDC042DA7125",
-valuelistID:"FB537067-393A-4DF5-B0FE-85B2F613B29D"
+valuelistID:"585581A2-8CED-428A-A15E-BE07DC751F25"
 },
 {
 fontType:"Trebuchet MS,0,17",

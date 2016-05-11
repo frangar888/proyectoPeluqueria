@@ -304,14 +304,13 @@ uuid:"C3404EDB-5EF9-4AC1-91E8-BAC8F846AEDF"
 {
 dataProviderID:"vl_total_saldo",
 editable:false,
-fontType:"Trebuchet MS,0,16",
+fontType:"Trebuchet MS,0,18",
 formIndex:39,
 format:"#,###.00",
 horizontalAlignment:4,
 location:"374,450",
 name:"vl_total_saldo",
 size:"140,27",
-styleClass:"disable",
 text:"Vl Total Saldo",
 typeid:4,
 uuid:"C3AC8FAC-A0ED-410D-A52D-7DDF1D65CCBF"

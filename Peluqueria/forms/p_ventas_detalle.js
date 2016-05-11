@@ -5,7 +5,6 @@
  */
 var vl_form_padre = null;
 
-
 /**
  * Callback method when form is (re)loaded.
  *
