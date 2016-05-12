@@ -17,9 +17,10 @@ uuid:"07F63884-2964-474A-A6F5-47C71F6819DB"
 {
 dataProviderID:"adn_id",
 displayType:10,
-formIndex:5,
+formIndex:7,
 location:"98,102",
 name:"vl_cliente",
+onDataChangeMethodID:"01C614FF-28C4-4B35-9195-23C6D0A02451",
 size:"243,20",
 text:"Vl Cliente",
 typeid:4,
@@ -262,6 +263,20 @@ typeid:4,
 uuid:"9572EA74-8477-420F-8C0E-ADDF076EA743"
 },
 {
+dataProviderID:"vl_saldo_cli",
+editable:false,
+fontType:"Trebuchet MS,0,18",
+formIndex:19,
+format:"#,###.00",
+horizontalAlignment:4,
+location:"352,181",
+name:"vl_saldo_cli",
+size:"125,42",
+text:"Vl Saldo Cli",
+typeid:4,
+uuid:"9A50E978-BAC2-4D9C-8722-E282502A7431"
+},
+{
 formIndex:2,
 imageMediaID:"AA1ECD5F-8EEF-44D9-B015-5240196D7480",
 location:"351,129",
@@ -285,9 +300,10 @@ uuid:"B12E09E9-103E-4EA2-B067-2EA4BAA9D393"
 },
 {
 dataProviderID:"vl_no_cliente",
-formIndex:7,
+formIndex:5,
 location:"98,102",
 name:"vl_no_cliente",
+onDataChangeMethodID:"-1",
 size:"243,20",
 text:"Vl No Cliente",
 typeid:4,
@@ -348,6 +364,17 @@ size:"83,35",
 text:"Vl Resta",
 typeid:4,
 uuid:"C75AFCAB-50FB-4C22-88FF-1C5097F45727"
+},
+{
+formIndex:18,
+labelFor:"vl_saldo_cli",
+location:"352,161",
+name:"vl_saldo_cli_label",
+size:"125,20",
+styleClass:"encabezado",
+text:"Slado Cliente",
+typeid:7,
+uuid:"CE0758B0-7F53-48F2-8C02-A3B4BD3ADD81"
 },
 {
 dataProviderID:"vl_descuento",

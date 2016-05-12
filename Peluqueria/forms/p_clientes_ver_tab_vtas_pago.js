@@ -110,6 +110,7 @@ function onActionGrabar(event) {
 	/** @type {JSFoundset<db:/peluqueria/pel_ventas>}*/
 	var fs_vtas = databaseManager.getFoundSet('peluqueria','pel_ventas')
 	
+	var cantVtas = vl_array_ventas.length - 1
 	if(vl_array_ventas != null){
 		var vl_resto = vl_cj_ing_importe
 		for (var index = 0; index < vl_array_ventas.length; index++) {
@@ -121,9 +122,13 @@ function onActionGrabar(event) {
 				fs_vtas.find()
 				fs_vtas.venta_id = vl_array_ventas[index]
 				if(fs_vtas.search() != 0){
-					if(vl_resto >= fs_vtas.calc_saldo_vta){
+					if(vl_resto >= fs_vtas.calc_saldo_vta && index < cantVtas){
 						cj_ing_importe = fs_vtas.calc_saldo_vta
 						vl_resto = vl_resto - fs_vtas.calc_saldo_vta
+					}
+					if(vl_resto >= fs_vtas.calc_saldo_vta && index == cantVtas){
+						cj_ing_importe = vl_resto
+						vl_resto = 0
 					}
 					if(vl_cj_ing_importe < fs_vtas.calc_saldo_vta){
 						cj_ing_importe = vl_cj_ing_importe

@@ -1,4 +1,11 @@
 /**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"74087287-857A-431C-B401-0C528A1EC76F",variableType:8}
+ */
+var vl_saldo_cli = null;
+
+/**
  * @type {String}
  *
  * @properties={typeid:35,uuid:"3DAEBC5E-0B10-4DF6-936C-64BD7A345364"}
@@ -82,6 +89,7 @@ function onShow(firstShow, event) {
 	elements.vl_cliente.visible = true
 	elements.btn_no_cli.text = 'No Cliente'
 	inicializarVariables()
+vl_saldo_cli = null
 /*	var ancho = elements.tabs.getWidth()
 	var pos = elements.tabs.getLocationX()
 	var posTotales = ancho + pos
@@ -118,6 +126,11 @@ function onActionConsFinal(event) {
 	elements.vl_no_cliente.visible = false
 	vl_no_cliente = null
 	elements.btn_no_cli.text = 'No Cliente'
+	if(adn_id != 0 && adn_id != null && adn_id != globals.obtenerAdnConsFinal()){
+		vl_saldo_cli = globals.calcularSaldoCliente(adn_id)
+	}else{
+		vl_saldo_cli = null
+	}
 }
 
 /**
@@ -204,16 +217,20 @@ function onDataChangePago(oldValue, newValue, event) {
  * @properties={typeid:24,uuid:"3EF6A7AC-91CB-496E-B18F-53EC5E2AF556"}
  */
 function onActionCancelar(event) {
-	vl_pago = vl_total_total
+	if (vl_saldo_cli != 0 && vl_saldo_cli != null){
+		vl_pago = vl_total_total + vl_saldo_cli
+	}else{
+		vl_pago = vl_total_total
+	}
 	vl_saldo = vl_total_total - vl_pago
 	vl_vuelto = vl_pago - vl_total_total
 	if(vl_vuelto < 0){
 		vl_vuelto = 0
 	}
-	if(vl_saldo < 0){
-		vl_saldo = 0
-	}
-	if(vl_saldo != 0){
+//	if(vl_saldo < 0){
+//		vl_saldo = 0
+//	}
+	if(vl_saldo > 0){
 		elements.vl_saldo.bgcolor = '#ff3c3c'
 	}else{
 		elements.vl_saldo.bgcolor = '#80ff80'
@@ -403,4 +420,29 @@ function onActionNoCliente(event) {
 		vl_no_cliente = null
 		elements.btn_no_cli.text = 'No Cliente'
 	}
+	if(adn_id != 0 && adn_id != null && adn_id != globals.obtenerAdnConsFinal()){
+		vl_saldo_cli = globals.calcularSaldoCliente(adn_id)
+	}else{
+		vl_saldo_cli = null
+	}
+}
+
+/**
+ * Handle changed data, return false if the value should not be accepted. In NGClient you can return also a (i18n) string, instead of false, which will be shown as a tooltip.
+ *
+ * @param {String} oldValue old value
+ * @param {String} newValue new value
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @return {Boolean}
+ *
+ * @properties={typeid:24,uuid:"01C614FF-28C4-4B35-9195-23C6D0A02451"}
+ */
+function onDataChangeCliente(oldValue, newValue, event) {
+	if(adn_id != 0 && adn_id != null && adn_id != globals.obtenerAdnConsFinal()){
+		vl_saldo_cli = globals.calcularSaldoCliente(adn_id)
+	}else{
+		vl_saldo_cli = null
+	}
+	return true
 }
