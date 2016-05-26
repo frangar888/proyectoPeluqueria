@@ -1,4 +1,11 @@
 /**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"E8707587-0393-444C-B14C-CE976145F9A6",variableType:4}
+ */
+var vl_empleado = null;
+
+/**
  * @type {Array}
  * @properties={typeid:35,uuid:"291A7B3F-C7B5-4BFC-8630-B8B49FDDEF53",variableType:-4}
  */
@@ -51,6 +58,7 @@ function onShow(firstShow, event) {
 	vl_conc_cod = 1
 	vl_caja_id = null
 	vl_cj_ing_importe = null
+	vl_empleado = null
 	//elements.vl_conc_cod.enabled = false
 	elements.btn_monedas.visible = true
 }
@@ -100,7 +108,12 @@ function onActionCancelarTotal(event) {
  * @AllowToRunInFind
  */
 function onActionGrabar(event) {
-
+	
+	if(vl_empleado == null){
+		globals.lanzarVentanaEmergente(0,'Seleccione un empleado.','Info',controller.getName(),null,null)
+		return
+	}
+	
 	if(vl_cj_ing_importe == 0){
 		globals.lanzarVentanaEmergente(0,'Debe completar el importe del ingreso.','Info',controller.getName(),null,null)
 		elements.vl_cj_ing_importe.requestFocus()
@@ -117,7 +130,7 @@ function onActionGrabar(event) {
 			if(vl_resto > 0){
 				controller.newRecord()
 				cj_ing_fecha = application.getServerTimeStamp()
-			
+				vendedor_adn_id = vl_empleado
 				fs_vtas.loadAllRecords()
 				fs_vtas.find()
 				fs_vtas.venta_id = vl_array_ventas[index]

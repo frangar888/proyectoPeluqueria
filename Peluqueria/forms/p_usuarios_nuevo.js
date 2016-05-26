@@ -47,7 +47,7 @@ var vl_adn_nombre = null;
  * @properties={typeid:24,uuid:"75993073-BF25-4D19-825A-AB1FBD8BF233"}
  */
 function onLoad(event) {
-	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,1,globals.getFormID(forms.form_padre.controller.getName()))
+	globals.grabarFormUUID(controller.getName(),elements.opcion_nombre.text,1,globals.getFormID(forms.p_usuarios.controller.getName()))
 }
 
 /**
